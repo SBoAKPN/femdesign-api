@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetainingWall", "RetainingWall.csproj", "{DC11CF85-2E0E-46F4-B36E-15F9416AF696}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC11CF85-2E0E-46F4-B36E-15F9416AF696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC11CF85-2E0E-46F4-B36E-15F9416AF696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC11CF85-2E0E-46F4-B36E-15F9416AF696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC11CF85-2E0E-46F4-B36E-15F9416AF696}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B2F25F4-4F10-4343-85DF-E57642A5EC75}
+	EndGlobalSection
+EndGlobal
