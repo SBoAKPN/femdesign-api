@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example 8 - SlabReinforcement", "Example 8 - SlabReinforcement.csproj", "{BEC4FB61-E232-4680-8B90-F154BF3C5884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FemDesign.Core", "..\..\..\FemDesign.Core\FemDesign.Core.csproj", "{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEC4FB61-E232-4680-8B90-F154BF3C5884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC4FB61-E232-4680-8B90-F154BF3C5884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC4FB61-E232-4680-8B90-F154BF3C5884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC4FB61-E232-4680-8B90-F154BF3C5884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEE1C17D-87F4-4D19-A35D-DF1E4B98C61F}
+	EndGlobalSection
+EndGlobal
