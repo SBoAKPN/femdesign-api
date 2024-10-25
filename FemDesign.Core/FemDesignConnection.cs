@@ -393,7 +393,7 @@ namespace FemDesign
                 this.RunScript(script, "RunAnalysis");
             }
 
-            if (analysis.Freq != null || analysis.Footfall != null)
+            if (analysis.Freq != null || analysis.Footfall != null || analysis.PeriodicEx != null || analysis.ExForce != null || analysis.GroundAcc != null)
             {
                 script = new FdScript(
                     logfile,
@@ -498,7 +498,6 @@ namespace FemDesign
 
             var script = new FdScript(
                     logfile,
-                    new CmdUser(CmdUserModule.RESMODE),
                     new CmdApplyDesignChanges()
                 );
 
@@ -750,10 +749,7 @@ namespace FemDesign
                 listGenCommands.Add(new CmdListGen(bscPaths[i], csvPaths[i]));
 
             // FdScript commands
-            List<CmdCommand> scriptCommands = new List<CmdCommand>
-            {
-                new CmdUser(CmdUserModule.RESMODE),
-            };
+            List<CmdCommand> scriptCommands = new List<CmdCommand>();
             scriptCommands.AddRange(resultPoints);
             scriptCommands.AddRange(listGenCommands);
 
@@ -772,7 +768,7 @@ namespace FemDesign
         /// <param name="outputCsvPath"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public List<string> GetResultsFromBsc(string inputBscPath, string outputCsvPath = null)
+        public List<string> GetResultsFromBsc(string inputBscPath, string outputCsvPath = null, List<IStructureElement> element = null)
         {
             // Check input
             if (outputCsvPath == null)
@@ -783,7 +779,7 @@ namespace FemDesign
                 throw new Exception("Extension output file must be .csv");
 
             // Create .fdscript and list results
-            _listResultsByFdScript("GetResultsFromBsc", new List<string> { inputBscPath }, new List<string> { outputCsvPath });
+            _listResultsByFdScript("GetResultsFromBsc", new List<string> { inputBscPath }, new List<string> { outputCsvPath }, element);
 
             // Read results
             var results = System.IO.File.ReadAllLines(outputCsvPath, System.Text.Encoding.UTF8).Select(x => x.Replace("\t", ",")).ToList();
@@ -1020,10 +1016,6 @@ namespace FemDesign
 
         public void LoadGroupToLoadComb(bool fu = true, bool fua = true, bool fus = true, bool fsq = true, bool fsf = true, bool fsc = true, bool fSeisSigned = true, bool fSeisTorsion = true, bool fSeisZdir = true, bool fSkipMinDL = true, bool fForceTemp = true, bool fShortName = true)
         {
-            var version = Int32.Parse(this._process.MainModule.FileVersionInfo.FileVersion.Replace(".", ""), CultureInfo.InvariantCulture);
-            if (version < 22040)
-                throw new Exception("FEM-Design 22.00.004 or greater is required!");
-
             var cmdLoadGroupToLoadComb = new CmdLoadGroupToLoadComb(fu, fua, fus, fsq, fsf, fsc, fSeisSigned, fSeisTorsion, fSeisZdir, fSkipMinDL, fForceTemp, fShortName);
 
             string logfile = OutputFileHelper.GetLogfilePath(OutputDir);
@@ -1073,16 +1065,27 @@ namespace FemDesign
             // TODO: Delete the files when they are not locked by FEM-Design
             this._deleteOutputDirectories();
         }
+
         private void _deleteOutputDirectories()
         {
             foreach (string dir in _outputDirsToBeDeleted)
                 if (Directory.Exists(dir))
                     _deleteFolderIfNotUsed(dir);
         }
+
         private static void _deleteFolderIfNotUsed(string folderPath)
         {
+            _removeReadOnlyAttribute(folderPath, out List<string> subDirectories);
+
             try
             {
+                // update directory info
+                foreach (var dir in subDirectories)
+                {
+                    var directoryInfo = new DirectoryInfo(dir);
+                    directoryInfo.Refresh();
+                }
+
                 Directory.Delete(folderPath, true);
             }
             catch (IOException ex)
@@ -1095,6 +1098,32 @@ namespace FemDesign
                 }
                 // The exception is not related to a file or folder being in use, rethrow it
                 throw;
+            }
+        }
+
+        private static void _removeReadOnlyAttribute(string folderPath, out List<string> subDirectories)
+        {
+            // get directories & subdirectories
+            subDirectories = new List<string> { folderPath };
+            int i = 0;
+            while (i < subDirectories.Count)
+            {
+                var subSubDirs = Directory.GetDirectories(subDirectories[i]).ToList();
+                if (subSubDirs?.Count > 0)
+                    subDirectories.AddRange(subSubDirs);
+
+                i++;
+            }
+
+            // check if directory is read-only
+            foreach (var dir in subDirectories)
+            {
+                var directoryInfo = new DirectoryInfo(dir);
+                if ((directoryInfo.Attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+                {
+                    // Remove read-only attribute
+                    directoryInfo.Attributes &= ~FileAttributes.ReadOnly;
+                }
             }
         }
 
@@ -1180,10 +1209,7 @@ namespace FemDesign
         private void _listResultsByFdScript(string scriptFileName, List<string> bscPaths, List<string> csvPaths, List<FemDesign.GenericClasses.IStructureElement> elements = null)
         {
             // FdScript commands
-            List<CmdCommand> scriptCommands = new List<CmdCommand>
-            {
-                new CmdUser(CmdUserModule.RESMODE)
-            };
+            List<CmdCommand> scriptCommands = new List<CmdCommand>();
             for (int i = 0; i < bscPaths.Count; i++)
                 scriptCommands.Add(new CmdListGen(bscPaths[i], csvPaths[i], elements));
 
@@ -1792,7 +1818,7 @@ namespace FemDesign
         {
             string dir = Path.Combine(baseDir, _scriptsDirectory);
             if (!Directory.Exists(dir))
-                Directory.CreateDirectory(dir);
+                Directory.CreateDirectory(dir);            
             fileName = Path.GetFileName(Path.ChangeExtension(fileName, _fdscriptFileExtension));
             string path = Path.GetFullPath(Path.Combine(dir, fileName));
             return path;

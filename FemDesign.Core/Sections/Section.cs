@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using FuzzySharp.Extractor;
+using System.IO;
 
 namespace FemDesign.Sections
 {
@@ -217,13 +218,15 @@ namespace FemDesign.Sections
                 return sections[extr.Index];
         }
 
-        public static List<Results.SectionProperties> GetSectionProperties(this Section section, Results.SectionalData sectionUnits = Results.SectionalData.mm, string fdInstallationDir = null)
+
+        public static Results.SectionProperties GetSectionProperties(this Section section, Results.SectionalData sectionUnits = Results.SectionalData.mm, string fdInstallationDir = null)
         {
             // Check input
             if (section == null)
                 throw new ArgumentNullException("'section' input cannot be null!");
 
-            return GetSectionProperties(new List<Section> { section }, sectionUnits, fdInstallationDir);
+            var secProp = GetSectionProperties(new List<Section> { section }, sectionUnits, fdInstallationDir);
+            return secProp[0];
         }
 
         public static List<Results.SectionProperties> GetSectionProperties(this List<Section> sections, Results.SectionalData sectionUnits = Results.SectionalData.mm, string fdInstallationDir = null)
@@ -279,8 +282,6 @@ namespace FemDesign.Sections
                 units.SectionalData = sectionUnits;
 
                 secProp = femDesign._getResults<Results.SectionProperties>(units, timeStamp: true);
-
-                //femDesign.Disconnect();     // Check this. FEM-Design should not be left open after the process!
             }
 
             // Method that reorder the secProp list to match the input order using the section name

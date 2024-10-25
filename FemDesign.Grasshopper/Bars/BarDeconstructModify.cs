@@ -2,7 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FemDesign.Bars;
+using FemDesign.Grasshopper.Extension.ComponentExtension;
+using FemDesign.Loads;
 using Grasshopper.Kernel;
+using Grasshopper.Kernel.Special;
 using Rhino.Geometry;
 
 namespace FemDesign.Grasshopper
@@ -14,33 +18,41 @@ namespace FemDesign.Grasshopper
         {
 
        }
+
+        protected override void BeforeSolveInstance()
+        {
+            ValueListUtils.UpdateValueLists(this, 12, Enum.GetNames(typeof(Bars.ShellModelType)).ToList(), null, GH_ValueListMode.DropDown);
+        }
        protected override void RegisterInputParams(GH_InputParamManager pManager)
        {
-           pManager.AddGenericParameter("Bar", "Bar", "Bar element", GH_ParamAccess.item);
-           pManager.AddBooleanParameter("NewGuid", "NewGuid", "Generate a new guid for this bar?", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddCurveParameter("Curve", "Curve", "LineCurve or ArcCurve", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("Material", "Material", "Material.", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("Section", "Section", "Section. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("Connectivity", "Connectivity", "Connectivity. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end. Optional, default value if undefined.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("Eccentricity", "Eccentricity", "Eccentricity. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end. Optional, default value if undefined.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddVectorParameter("LocalY", "LocalY", "Set local y-axis. Vector must be perpendicular to Curve mid-point local x-axis. This parameter overrides OrientLCS", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("Stirrups", "Stirrups", "Stirrups to add to bar. Item or list. New reinforcement will overwrite the original.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("LongitudinalBars", "LongBars", "Longitudinal reinforcement to add to bar. Item or list. New reinforcement will overwrite the original.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("PTC", "PTC", "Post-tensioning cables. New PTC will overwrite the original.", GH_ParamAccess.list);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddGenericParameter("StiffnessModifier", "StiffnessModifier", "", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
-           pManager.AddTextParameter("Identifier", "Identifier", "Identifier. Optional, default value if undefined.", GH_ParamAccess.item);
-           pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Bar", "Bar", "Bar element", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("NewGuid", "NewGuid", "Generate a new guid for this bar?", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddCurveParameter("Curve", "Curve", "LineCurve or ArcCurve", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Material", "Material", "Material.", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Section", "Section", "Section. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Connectivity", "Connectivity", "Connectivity. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end. Optional, default value if undefined.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Eccentricity", "Eccentricity", "Eccentricity. If 1 item this item defines both start and end. If two items the first item defines the start and the last item defines the end. Optional, default value if undefined.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddVectorParameter("LocalY", "LocalY", "Set local y-axis. Vector must be perpendicular to Curve mid-point local x-axis. This parameter overrides OrientLCS", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("Stirrups", "Stirrups", "Stirrups to add to bar. Item or list. New reinforcement will overwrite the original.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("LongitudinalBars", "LongBars", "Longitudinal reinforcement to add to bar. Item or list. New reinforcement will overwrite the original.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("PTC", "PTC", "Post-tensioning cables. New PTC will overwrite the original.", GH_ParamAccess.list);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddGenericParameter("StiffnessModifier", "StiffnessModifier", "", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddTextParameter("ShellModel", "ShellModel", "Analytical model of the bar. Optional, default value is 'None'.\nConnect 'ValueList' to get the options:\nNone\nSimple\nComplex\n\n" +
+                "Note:\n'None' = Bar model;\n'Simple = Shell model. Contains only shell elements;\n'Complex = Shell model. Fictitious bars on the boundary of the shell model;", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
+            pManager.AddTextParameter("Identifier", "Identifier", "Identifier. Optional, default value if undefined.", GH_ParamAccess.item);
+            pManager[pManager.ParamCount - 1].Optional = true;
 
        } 
        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
@@ -57,6 +69,7 @@ namespace FemDesign.Grasshopper
            pManager.AddGenericParameter("LongitudinalBars", "LongBars", "Longitudinal reinforcement for bar.", GH_ParamAccess.list);
            pManager.AddGenericParameter("PTC", "PTC", "Post-tensioning cables.", GH_ParamAccess.list);
            pManager.AddGenericParameter("StiffnessModifier", "StiffnessModifier", "", GH_ParamAccess.item);
+           pManager.AddTextParameter("ShellModel", "ShellModel", "Analytical model of the bar.", GH_ParamAccess.item);
            pManager.AddTextParameter("Identifier", "Identifier", "Structural element ID.", GH_ParamAccess.item);
         }
        protected override void SolveInstance(IGH_DataAccess DA)
@@ -210,8 +223,14 @@ namespace FemDesign.Grasshopper
                 bar.BarPart.StiffnessModifiers = new List<Bars.BarStiffnessFactors>() { stiffnessFactors };
             }
 
+            string shellModel = ShellModelType.None.ToString();
+            if (DA.GetData(12, ref shellModel))
+            {
+                bar.ShellModel = FemDesign.GenericClasses.EnumParser.Parse<ShellModelType>(shellModel);
+            }
+
             string identifier = null;
-            if (DA.GetData(12, ref identifier))
+            if (DA.GetData(13, ref identifier))
             {
                 bar.Identifier = identifier;
             }
@@ -278,7 +297,8 @@ namespace FemDesign.Grasshopper
 
             DA.SetDataList(10, bar.Ptc);
             DA.SetData(11, bar.BarPart.StiffnessModifiers);
-            DA.SetData(12, bar.Name);
+            DA.SetData(12, bar.ShellModel);
+            DA.SetData(13, bar.Name);
         }
         protected override System.Drawing.Bitmap Icon
        {
@@ -289,7 +309,7 @@ namespace FemDesign.Grasshopper
        }
        public override Guid ComponentGuid
        {
-           get { return new Guid("3A6FD9BA-6EBB-4822-B1A8-B3E3E297ED99"); }
+           get { return new Guid("{CF1E80D0-6236-4BCC-A8FB-6EBD8DA76CBF}"); }
        }
         public override GH_Exposure Exposure => GH_Exposure.secondary;
 
