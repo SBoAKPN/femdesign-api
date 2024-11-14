@@ -23,16 +23,11 @@ With Dynamo installed, any of the Dynamo examples are ready to run. Download an 
 The examples are ready to run out-of-the-box, but you might have to set a file path or file name. You'll know either from instructions in the file, or because some components give an error.
 
 ### 🐍 Python
-The python example folder contains an example (`using_pythonnet.py`) on how to run the C# (`FemDesign.Core`) API from Python. This example uses the python package Python.NET (clr) (http://pythonnet.github.io/).
-
-**NOTE**: A complete Python wrapper is [planned in the future](https://github.com/strusoft/femdesign-api/issues/221), but pythonnet can be used already today to access all of the functionality of the C# API.
-
-The example have been tested using
-- IronPython 2.7 (pythonnet pre-installed)
-- CPython 3.7 (with [pip package pythonnet](https://pypi.org/project/pythonnet/))
+`pip install FEM-Design` to install the library and any of the python examples are ready to run.
 
 ## Maintenance
-The examples and samples here are created and mainatained by StruSoft. 
+The examples and samples here are created and maintained by StruSoft.
+
 ## Questions and feedback
 If you have any questions regarding the examples and how they work, feel free to contact us. We also welcome any feedback, as well as suggestions for future examples. You can reach us at support@strusoft.freshdesk.com or at https://strusoft.freshdesk.com/en/support/tickets/new.
 

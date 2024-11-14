@@ -4,13 +4,10 @@
 
 [![NuGet Downloads](https://img.shields.io/nuget/dt/FemDesign.Core)](https://www.nuget.org/packages/FemDesign.Core)
 
-
-
 # femdesign-api
 This repository contains source code for the FEM-Design API wrapper. It consists of the `C#`-Core together with the `Dynamo` and `Grasshopper` plugins. 
 
 ## 🚗 Road-map
-
 https://github.com/strusoft/femdesign-api/milestones
 
 ## Installation
@@ -28,15 +25,15 @@ Either
 - Download the grasshopper package with [Package Manager](https://femdesign-api-docs.onstrusoft.com/docs/grasshopper/get-started/#installation)
 - Or download it manually by downloading `FemDesign.Grasshopper.zip` from [latest release](https://github.com/strusoft/femdesign-api/releases/latest), unblock the file and unzip to the grasshopper libraries folder (e.g `C:\Users\USERNAME\AppData\Roaming\Grasshopper\Libraries`).
 
+### 🐍 Python
+There are multiple ways to install Python, but one of them is to download the installer from [Python.org](https://www.python.org/downloads/).
+
 ### 🤖 Dynamo (Deprecated)
 Either
 - Install it from within Dynamo using Online Package Search. Search for `FemDesign`. (Guide on [installing dynamo package](https://www.dynamonow.com/downloading-installing-packages/))
 - Or Install it manually by downloading `FemDesign.Dynamo.zip` from [latest release](https://github.com/strusoft/femdesign-api/releases/latest), unblock the file and unzip to the dynamo package folder of the version of Revit/Dynamo of your choice (e.g `C:\Users\USERNAME\AppData\Roaming\Dynamo\Dynamo Revit\2.6\packages` for Dynamo Revit 2.6 etc.)
 
 _**NOTE:** The Dynamo package is no longer being actively maintained, and the most recently tested version is 21.6.0._
-
-### 🐍 Python
-There are multiple ways to install Python, but one of them is to download the installer from [Python.org](https://www.python.org/downloads/).
 
 ## Examples
 Examples can be found in the folder [FemDesign.Examples/](https://github.com/strusoft/femdesign-api/tree/master/FemDesign.Examples). More examples are planned to be added in the future.
@@ -45,14 +42,14 @@ Examples can be found in the folder [FemDesign.Examples/](https://github.com/str
 [FEM-Design API docs](https://femdesign-api-docs.onstrusoft.com)
 
 ## Contributing
-Feel free to fork this repo as you seem fit. Please let us know with an issue what feature you want and how you plan on implement it and we (the [authors](#Authors)) will guide you. 
+Feel free to fork this repo as you seem fit. Please let us know with an issue what feature you want and how you plan on implement it and we (the [authors](#Authors)) will guide you.
 If you want to contribute please follow our [contribution guide](https://github.com/strusoft/femdesign-api/wiki/Contribute).
 
 ## Versioning
 Future versioning will be using the following structure: `major.minor.patch` where major follows the FEM-Design version.
 
 ## Authors
-The FEM-Design API repository is developed and maintained by [StruSoft](https://strusoft.com/). 
+The FEM-Design API repository is developed and maintained by [StruSoft](https://strusoft.com/).
 
 ## Disclaimer
 In addition to the disclaimer under the license ([LICENSE.md](LICENSE)) - All files and related documentation is for illustrative and educational purposes and may not interact with FEM-Design in a reliable way depending on your version, installation and content of the files. Furthermore, Strusoft won´t guarantee full support of the package. 😊
