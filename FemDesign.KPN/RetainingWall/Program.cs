@@ -13,7 +13,9 @@ using FemDesign.Materials;
 using FemDesign.ModellingTools;
 using FemDesign.Reinforcement;
 using FemDesign.Releases;
+using FemDesign.Results;
 using FemDesign.Shells;
+using FemDesign.Utils;
 using StruSoft.Interop.StruXml.Data;
 
 namespace FemDesign.RetainingWall
@@ -46,11 +48,11 @@ namespace FemDesign.RetainingWall
             // Neg = compression, Pos = Tension
             var KSupp = new List<double> { 5e3, 5e3, 5e3, 5e3, 10e3, 0 };
 
-            double creepUls = 1;
-            double creepSlq = 1;
-            double creepSlf = 1;
-            double creepSlc = 1;
-            double shrinkage = 1;
+            double creepUls = 0.5;
+            double creepSlq = 0.5;
+            double creepSlf = 0.5;
+            double creepSlc = 0.5;
+            double shrinkage = 0.5;
 
             // ------------------
 
@@ -74,10 +76,10 @@ namespace FemDesign.RetainingWall
 
             // Corner points of Slab 3 BPL-MUR
             // X-kord , Y-kord , Z-kord, thickness
-            var PP3_0 = new List<double> { PP2_0[0], PP2_0[1], PP1_0[2], PP1_0[3] };
-            var PP3_1 = new List<double> { PP2_1[0], PP2_1[1], PP2_0[2], PP1_0[3] };
-            var PP3_2 = new List<double> { PP2_2[0], PP2_2[1], PP2_3[2], PP1_0[3] };
-            var PP3_3 = new List<double> { PP2_3[0], PP2_3[1], PP1_3[2] };
+            var PP3_0 = new List<double> { PP2_1[0], PP2_1[1], PP2_1[2], PP1_0[3] };
+            var PP3_1 = new List<double> { PP2_1[0], PP2_1[1], PP1_0[2], PP1_0[3] };
+            var PP3_2 = new List<double> { PP2_2[0], PP2_2[1], PP1_3[2], PP1_0[3] };
+            var PP3_3 = new List<double> { PP2_2[0], PP2_2[1], PP2_2[2] };
 
             // Corner points of Slab3 (Point) 
             var P3_0 = new Point3d(PP3_0[0], PP3_0[1], PP3_0[2]);
@@ -87,8 +89,10 @@ namespace FemDesign.RetainingWall
 
             //Define properties
             var materialDatabase = FemDesign.Materials.MaterialDatabase.GetDefault();
-            var materialBtg = materialDatabase.MaterialByName("C35/45");
+            Material materialBtg = materialDatabase.MaterialByName("C35/45");
             //var materialBtgNoEG = materialDatabase.MaterialByName("C35/45NoEG");
+
+            materialBtg = FemDesign.Materials.Material.ConcreteMaterialProperties(materialBtg, creepUls, creepSlq, creepSlf, creepSlc, shrinkage);
 
             // Define elements
             var SlabAlignBottom = new ShellEccentricity(VerticalAlignment.Bottom, 0, false, false);
@@ -98,8 +102,6 @@ namespace FemDesign.RetainingWall
 
             Slab1.UpdateThickness(P1, SlabThickness1);
             Slab2.UpdateThickness(P2, SlabThickness2);
-
-            // Fråga 1 material.Concrete.SetMaterialParameters(creepUls, creepSlq, creepSlf, creepSlc, shrinkage);
 
             // Define support
             var regionBPL = Slab1.Region;
@@ -155,20 +157,37 @@ namespace FemDesign.RetainingWall
 
 
             // CREATING LOAD GROUPS
-            var LG1 = new ModelGeneralLoadGroup(new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesDeadLoads, ELoadGroupRelationship.Entire, 1.2/1.35, "LG1"));
+            var LGPerm = new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesDeadLoads, ELoadGroupRelationship.Entire, 1.2/1.35, "LGPerm");
 
-            var LG2 = new ModelGeneralLoadGroup(new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesEarthloadsULS, ELoadGroupRelationship.Entire, 1.1/1.35, "LG2"));
-            var LG3 = new ModelGeneralLoadGroup(new LoadGroupPermanent(1, 1, 1, 1, loadCasesEarthloadsKar, ELoadGroupRelationship.Entire, 1, "LG3"));
+            var LGEarthUls = new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesEarthloadsULS, ELoadGroupRelationship.Entire, 1.1/1.35, "LGEarthUls");
+            var LGEarthKar = new LoadGroupPermanent(1, 1, 1, 1, loadCasesEarthloadsKar, ELoadGroupRelationship.Entire, 1, "LGEarthKar");
 
-            var LG4 = new ModelGeneralLoadGroup(new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesWaterloadsULS, ELoadGroupRelationship.Custom, 1.1 / 1.35, "LG4"));
-            var LG5 = new ModelGeneralLoadGroup(new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesWaterloadsKar, ELoadGroupRelationship.Entire, 1.1 / 1.35, "LG5"));
+            var LGWaterULS = new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesWaterloadsULS, ELoadGroupRelationship.Custom, 1.1 / 1.35, "LGWaterULS");
+            var LGWaterKar = new LoadGroupPermanent(1, 1.35, 1, 1, loadCasesWaterloadsKar, ELoadGroupRelationship.Entire, 1.1 / 1.35, "LGWaterKar");
 
-            var LG6 = new ModelGeneralLoadGroup(new LoadGroupTemporary(1.5, 0.75, 0.75, 0.0, true, loadCasesSurchargeloadsULS, ELoadGroupRelationship.Simultaneous, "LG6"));
-            var LG7 = new ModelGeneralLoadGroup(new LoadGroupTemporary(1.5, 0.75, 0.75, 0.0, true, loadCasesSurchargeloadsPerm, ELoadGroupRelationship.Simultaneous, "LG7"));
+            var LGÖlUls = new LoadGroupTemporary(1.5, 0.75, 0.75, 0.0, true, loadCasesSurchargeloadsULS, ELoadGroupRelationship.Simultaneous, "LGÖlUls");
+            var LGÖlPerm = new LoadGroupTemporary(1.5, 0.75, 0.75, 0.0, true, loadCasesSurchargeloadsPerm, ELoadGroupRelationship.Simultaneous, "LGÖlPerm");
 
-            var LG8 = new ModelGeneralLoadGroup(new LoadGroupAccidental(1.5, 0.75, 0.75, 0.0, true, loadCasesAccLoads, ELoadGroupRelationship.Simultaneous, "LG7"));
+            //  var LGAcc = new ModelGeneralLoadGroup(new LoadGroupAccidental(Safty factor 1.00, using psi1 = true, loadCasesAccLoads, ELoadGroupRelationship.Alternative, "LGAcc"));
 
-            var loadGroups = new List<ModelGeneralLoadGroup> { LG1, LG2, LG3, LG4, LG5, LG6, LG7, LG8 };
+            var loadGroups = new List<LoadGroupBase>() { LGPerm, LGEarthUls, LGEarthKar, LGWaterULS, LGWaterKar, LGÖlUls, LGÖlPerm }; //, LGAcc };
+
+            // Wrap the load groups so that they can be added to the load group table 
+            var generalLoadGroups = new List<ModelGeneralLoadGroup>() 
+            { 
+                new ModelGeneralLoadGroup(LGPerm), 
+                new ModelGeneralLoadGroup(LGEarthUls), 
+                new ModelGeneralLoadGroup(LGEarthKar),
+                new ModelGeneralLoadGroup(LGWaterULS),
+                new ModelGeneralLoadGroup(LGWaterKar),
+                new ModelGeneralLoadGroup(LGÖlUls),
+                new ModelGeneralLoadGroup(LGÖlPerm),
+            };
+
+            // Generate ULS and SLS Combinations
+            LoadCombinationTable loadCombinationTable = new LoadCombinationTable();
+            CombineULS(loadGroups, loadCombinationTable);
+            CombineSLS(loadGroups, loadCombinationTable);
 
             // Combination method??? Ex EC 6.10.a Sup 1
 
@@ -355,8 +374,8 @@ namespace FemDesign.RetainingWall
 
             double SlabThickness1_min = SlabThickness1.AsQueryable().Min();
             double SlabThickness1_max = SlabThickness1.AsQueryable().Max();
-            double AreaBPL = FemDesign.Results.QuantityEstimationConcrete.Slab1.Area;
-            double VolumeBPL = FemDesign.Results.QuantityEstimationConcrete.Slab1.Volume;
+            //double AreaBPL = FemDesign.Results.QuantityEstimationConcrete.Slab1.Area;
+            //double VolumeBPL = FemDesign.Results.QuantityEstimationConcrete.Slab1.Volume;
 
             if (HHW >= SlabThickness1_max)
             {
@@ -367,17 +386,17 @@ namespace FemDesign.RetainingWall
 
                 // 3.0.2 lift
                 // BPL
-                var LiftLoadBPL = new Vector3d(0,0, VolumeBPL * qW/ AreaBPL);
-                var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW,false,"");
+               // var LiftLoadBPL = new Vector3d(0,0, VolumeBPL * qW/ AreaBPL);
+               // var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW,false,"");
 
                 // MUR
                 double meanZMur = (PP2_0[2] + PP2_3[2]) / 2;
                 double AndelliftMur = (HHW - SlabThickness1_max)/ meanZMur;
-                double AreaMur = FemDesign.Results.QuantityEstimationConcrete.Slab2.Area;
-                double VolumeMur = FemDesign.Results.QuantityEstimationConcrete.Slab2.Volume;
-                var LiftLoadMur = new Vector3d(0, 0, AndelliftMur * VolumeMur * qW/ AreaMur);
+              //  double AreaMur = FemDesign.Results.QuantityEstimationConcrete.Slab2.Area;
+              //  double VolumeMur = FemDesign.Results.QuantityEstimationConcrete.Slab2.Volume;
+              //  var LiftLoadMur = new Vector3d(0, 0, AndelliftMur * VolumeMur * qW/ AreaMur);
                 var regionMur = Slab2.Region;
-                var SurfaceLoadHHW_liftMur = new FemDesign.Loads.SurfaceLoad(regionMur, LiftLoadMur, loadCaseHHW, false, "");
+              //  var SurfaceLoadHHW_liftMur = new FemDesign.Loads.SurfaceLoad(regionMur, LiftLoadMur, loadCaseHHW, false, "");
 
             }
             else if (HHW > 0)
@@ -385,8 +404,8 @@ namespace FemDesign.RetainingWall
                 // 3.0.2 lift BPL
                 double meanZBPL = (SlabThickness1_min + SlabThickness1_max) / 2;
                 double AndelliftBPL = HHW / meanZBPL;
-                var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL*VolumeBPL * qW / AreaBPL);
-                var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW, false, "");
+             //   var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL*VolumeBPL * qW / AreaBPL);
+             //   var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW, false, "");
             }
 
             // --- 3.1 Eff J HHW ---
@@ -580,6 +599,7 @@ namespace FemDesign.RetainingWall
             model.AddLoads(loads);
             model.AddLoadCases(loadCases);
             model.AddLoadCombinations(loadComb);
+            model.AddLoadGroupTable(generalLoadGroups,false);
 
             // Define the analysis settings
             var analysis = Analysis.StaticAnalysis(calcCase: true, calccomb: true);
@@ -593,9 +613,30 @@ namespace FemDesign.RetainingWall
                 // Inside the "using..." we can send commands to FEM-Design.
                 femDesign.Open(model);
                 femDesign.RunAnalysis(analysis);
-                femDesign.RunDesign(RCDESIGN, design, null);
+                //femDesign.RunDesign(RCDESIGN, design, null);
                 
             }
+
+        }
+
+        public static void CombineULS(List<LoadGroupBase> generalLoadGroups, LoadCombinationTable loadCombinationTable)
+        {
+            //Generate load combinations from the load groups
+            List<string> loadCombTypeNames = new List<string>() { "6.10a", "6.10b" };
+            List<ELoadCombinationType> loadCombTypes = new List<ELoadCombinationType>() { ELoadCombinationType.SixTenA, ELoadCombinationType.SixTenB };
+
+            for (int i = 0; i < loadCombTypes.Count; i++)
+                loadCombinationTable.GenerateLoadCombinations(generalLoadGroups, loadCombTypeNames[i], loadCombTypes[i], ENationalAnnex.EKS);
+        }
+
+
+        public static void CombineSLS(List<LoadGroupBase> generalloadGroups, LoadCombinationTable loadCombinationTable)
+        {
+            //Generate load combinations from the load groups
+            List<string> loadCombTypeNames = new List<string>() { "Characteristic", "Frequent", "Quasi-permanent" };
+            List<ELoadCombinationType> loadCombTypes = new List<ELoadCombinationType>() { ELoadCombinationType.Characteristic, ELoadCombinationType.Frequent, ELoadCombinationType.QuasiPermanent };
+            for (int i = 0; i < loadCombTypes.Count; i++)
+                loadCombinationTable.GenerateLoadCombinations(generalloadGroups, loadCombTypeNames[i], loadCombTypes[i], ENationalAnnex.TSFS);
         }
     }
 }
