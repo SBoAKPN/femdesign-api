@@ -38,3 +38,7 @@ FemDesign.Tests/Results/**/*.log
 !**/Assets/*.str
 !**/Assets/*.strFEM
 *.pyc
+
+
+/FemDesign.Python/packaging/dist
+/FemDesign.Python/packaging/src/fem_design.egg-info
