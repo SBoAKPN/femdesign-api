@@ -99,6 +99,11 @@ namespace FemDesign.Materials
             this.Shrinkage = shrinkage;
         }
 
+        internal void SetMaterialParameters(double mass)
+        {
+            this.Mass = mass;
+        }
+
         internal void SetPlasticity(bool plastic = true, bool hardening = true, CrushingCriterion crushing = CrushingCriterion.Prager, bool tensionStrength = true, TensionStiffening tensionStiffening = TensionStiffening.Hinton, ReducedCompression reducedCompression = ReducedCompression.Vecchio1, bool reducedTransverse = false, bool ultimateStrainRebars = true )
         {
             var plasticity = new StruSoft.Interop.StruXml.Data.Concrete_pl_attribs();
