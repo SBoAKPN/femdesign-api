@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RetainingWall", "RetainingWall.csproj", "{FF87B551-22AA-43AD-8A59-8A8AB6B4B298}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FemDesign.Core", "..\..\FemDesign.Core\FemDesign.Core.csproj", "{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retainingwall_dev", "..\Retainingwall_dev\Retainingwall_dev.csproj", "{83C7D2F9-EC9A-4854-82DE-CE3A585B9EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF87B551-22AA-43AD-8A59-8A8AB6B4B298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF87B551-22AA-43AD-8A59-8A8AB6B4B298}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF87B551-22AA-43AD-8A59-8A8AB6B4B298}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF87B551-22AA-43AD-8A59-8A8AB6B4B298}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D91EBF4-A473-4C5B-A171-AB2DA1B7017B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C7D2F9-EC9A-4854-82DE-CE3A585B9EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C7D2F9-EC9A-4854-82DE-CE3A585B9EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C7D2F9-EC9A-4854-82DE-CE3A585B9EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C7D2F9-EC9A-4854-82DE-CE3A585B9EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
