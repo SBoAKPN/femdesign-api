@@ -108,8 +108,14 @@ namespace RetainingWall
 
         public static List<FemDesign.GenericClasses.IStructureElement> supports(List<Slab> slabs)
         {
-            // Definition from input data
+            // Predefinition from input data
             Slab SlabBPL = slabs[0];
+            //var Conerpoints = new List<Point3d> { SlabBPL.SlabPart.Region.Contours[0].Edges[0].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[1].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[2].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[3].Points[0] };
+            var Conerpoints = SlabBPL.SlabPart.Region.Contours[0].Points;// new List<Point3d> { SlabBPL.SlabPart.Region.Contours[0].Edges[0].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[1].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[2].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[3].Points[0] };
+            Conerpoints.Remove(Conerpoints[^1]);
+            double AvrageX = new List<double> { Conerpoints[0].X, Conerpoints[1].X, Conerpoints[2].X, Conerpoints[3].X }.Average();
+            double AvrageY = new List<double> { Conerpoints[0].Y, Conerpoints[1].Y, Conerpoints[2].Y, Conerpoints[3].Y }.Average();
+            double AvrageZ = new List<double> { Conerpoints[0].Z, Conerpoints[1].Z, Conerpoints[2].Z, Conerpoints[3].Z }.Average();
 
             // ----- INDATA -----
             // Styvhet för upplag
@@ -125,12 +131,15 @@ namespace RetainingWall
             var motionsUpplagBPL = new FemDesign.Releases.Motions(KSupp[0], KSupp[1], KSupp[2], KSupp[3], KSupp[4], KSupp[5]);
 
             var supportBPL = new FemDesign.Supports.SurfaceSupport(regionBPL, motionsUpplagBPL, "BPL_Upplag");
+            //supportBPL.
+
             var supports = new List<FemDesign.GenericClasses.IStructureElement> { supportBPL };
             return supports;
         }
 
         public static List<FemDesign.GenericClasses.IStructureElement> elements(List<Slab> slabs, List<IStructureElement> supports )
         {
+            // Predefinition from input data
             Slab SlabBPL = slabs[0];
             Slab SlabMUR = slabs[1];
             IStructureElement supportBPL = supports[0];
