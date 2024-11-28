@@ -19,18 +19,23 @@ namespace RetainingWall
         {
 
             // ----- INDATA -----
-            // Corner points of BPL (part1)
-            // X-kord , Y-kord , Z-kord, thickness
-            var PP1_0 = new List<double> { 0, 0, 0, 1.0 };
-            var PP1_1 = new List<double> { 4.0, 0, 0, 0.9 };
-            var PP1_2 = new List<double> { 4.0, 1.0, 0, 0.9 };
-            var PP1_3 = new List<double> { 0, 1.0, 0 };
-            // Corner points of MUR (parSlabThickness2)
-            // X-kord [0] , Y-kord [1], Z-kord [2], thickness [3]
-            var PP2_0 = new List<double> { 0.5 + 1.0 / 2, 0, 6.0, 0.5 };
-            var PP2_1 = new List<double> { 0.5 + 1.0 / 2, 0, PP1_0[3], 1.0 };
-            var PP2_2 = new List<double> { 0.5 + 1.0 / 2, 1, PP1_0[3], 1.0 };
-            var PP2_3 = new List<double> { 0.5 + 1.0 / 2, 1, 6.0 };
+            // Corner points of Slab1 BPL 
+            var P1_0 = new Point3d(0.000, 0.000, 0.000);
+            var P1_1 = new Point3d(4.000, 0.000, 0.000);
+            var P1_2 = new Point3d(4.000, 1.000, 0.000);
+            var P1_3 = new Point3d(0.000, 1.000, 0.000);
+
+            var P_BPL = new List<Point3d> { P1_0, P1_1, P1_2 };
+            var T_BPL = new List<double> { 1.000, 0.900, 0.900 };
+
+            // Corner points of MUR 
+            var P2_0 = new Point3d(1.000, 0.000, 6.000);
+            var P2_1 = new Point3d(1.000, 0.000, T_BPL[0]);
+            var P2_2 = new Point3d(1.000, 1.000, T_BPL[0]);
+            var P2_3 = new Point3d(1.000, 1.000, 6.000);
+
+            var P_MUR = new List<Point3d> { P2_0, P2_1, P2_2 };
+            var T_MUR = new List<double> { 0.500, 1.000, 1.000 };
 
             double creepUlsBPL  = 0.1;
             double creepSlqBPL  = 0.1;
@@ -46,36 +51,13 @@ namespace RetainingWall
 
             // ------------------
 
-            // Corner points of Slab1 BPL 
-            var P1_0 = new Point3d(PP1_0[0], PP1_0[1], PP1_0[2]);
-            var P1_1 = new Point3d(PP1_1[0], PP1_1[1], PP1_1[2]);
-            var P1_2 = new Point3d(PP1_2[0], PP1_2[1], PP1_2[2]);
-            var P1_3 = new Point3d(PP1_3[0], PP1_3[1], PP1_3[2]);
-            // Points for thickness
-            var PointsBPL = new List<Point3d> { P1_0, P1_1, P1_2 };
-            var ThicknessBPL = new List<double> { PP1_0[3], PP1_1[3], PP1_2[3] };
-
-            // Corner points of Slab2 MUR 
-            var P2_0 = new Point3d(PP2_0[0], PP2_0[1], PP2_0[2]);
-            var P2_1 = new Point3d(PP2_1[0], PP2_1[1], PP2_1[2]);
-            var P2_2 = new Point3d(PP2_2[0], PP2_2[1], PP2_2[2]);
-            var P2_3 = new Point3d(PP2_3[0], PP2_3[1], PP2_3[2]);
-            // Points for thickness
-            var PointsMUR = new List<Point3d> { P2_0, P2_1, P2_2 };
-            var ThicknessMUR = new List<double> { PP2_0[3], PP2_1[3], PP2_2[3] };
-
-            // Corner points of Slab 3 BPL-MUR
-            // X-kord , Y-kord , Z-kord, thickness
-            var PP3_0 = new List<double> { PP2_1[0], PP2_1[1], PP2_1[2], PP1_0[3] };
-            var PP3_1 = new List<double> { PP2_1[0], PP2_1[1], PP1_0[2], PP1_0[3] };
-            var PP3_2 = new List<double> { PP2_2[0], PP2_2[1], PP1_3[2], PP1_0[3] };
-            var PP3_3 = new List<double> { PP2_2[0], PP2_2[1], PP2_2[2] };
+            // Corner points of BPL-MUR
 
             // Corner points of Slab3 (Point) 
-            var P3_0 = new Point3d(PP3_0[0], PP3_0[1], PP3_0[2]);
-            var P3_1 = new Point3d(PP3_1[0], PP3_1[1], PP3_1[2]);
-            var P3_2 = new Point3d(PP3_2[0], PP3_2[1], PP3_2[2]);
-            var P3_3 = new Point3d(PP3_3[0], PP3_3[1], PP3_3[2]);
+            var P3_0 = new Point3d(P2_1.X, P2_1.Y, P2_1.Z);
+            var P3_1 = new Point3d(P2_1.X, P2_1.Y, P1_0.Z);
+            var P3_2 = new Point3d(P2_2.X, P2_2.Y, P1_3.Z);
+            var P3_3 = new Point3d(P2_2.X, P2_2.Y, P2_2.Z);
 
             //Define properties
             var materialDatabase = FemDesign.Materials.MaterialDatabase.GetDefault();
@@ -92,14 +74,16 @@ namespace RetainingWall
 
             // Define elements
             var SlabAlignBottom = new ShellEccentricity(VerticalAlignment.Bottom, 0, false, false);
-            Slab SlabBPL    = FemDesign.Shells.Slab.FromFourPoints(P1_0, P1_1, P1_2, P1_3, ThicknessBPL[0], materialBPL,       EdgeConnection.Default, SlabAlignBottom, null, "BPL");
-            Slab SlabMUR    = FemDesign.Shells.Slab.FromFourPoints(P2_0, P2_1, P2_2, P2_3, ThicknessMUR[0], materialMUR,       EdgeConnection.Default, null, null, "MUR");
-            Slab SlabBPLMUR = FemDesign.Shells.Slab.FromFourPoints(P3_0, P3_1, P3_2, P3_3, ThicknessBPL[0], materialBPLNoMass, EdgeConnection.Default, null, null, "BPL-MUR");
+            Slab SlabBPL    = FemDesign.Shells.Slab.FromFourPoints(P1_0, P1_1, P1_2, P1_3, T_BPL[0], materialBPL,       EdgeConnection.Default, SlabAlignBottom, null, "BPL");
+            Slab SlabMUR    = FemDesign.Shells.Slab.FromFourPoints(P2_0, P2_1, P2_2, P2_3, T_MUR[0], materialMUR,       EdgeConnection.Default, null, null, "MUR");
+            Slab SlabBPLMUR = FemDesign.Shells.Slab.FromFourPoints(P3_0, P3_1, P3_2, P3_3, T_BPL[0], materialBPLNoMass, EdgeConnection.Default, null, null, "BPL-MUR");
 
-            SlabBPL.UpdateThickness(PointsBPL, ThicknessBPL);
-            SlabMUR.UpdateThickness(PointsMUR, ThicknessMUR);
+            SlabBPL.UpdateThickness(P_BPL, T_BPL);
+            SlabMUR.UpdateThickness(P_MUR, T_MUR);
             SlabBPL.SlabPart.MeshSize = MeshSize;
             SlabMUR.SlabPart.MeshSize = MeshSize;
+
+            //SlabBPL.SlabPart.LocalPos();
 
             var slabs = new List<Slab> { SlabBPL, SlabMUR };
             return slabs;
@@ -110,9 +94,8 @@ namespace RetainingWall
         {
             // Predefinition from input data
             Slab SlabBPL = slabs[0];
-            //var Conerpoints = new List<Point3d> { SlabBPL.SlabPart.Region.Contours[0].Edges[0].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[1].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[2].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[3].Points[0] };
-            var Conerpoints = SlabBPL.SlabPart.Region.Contours[0].Points;// new List<Point3d> { SlabBPL.SlabPart.Region.Contours[0].Edges[0].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[1].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[2].Points[0], SlabBPL.SlabPart.Region.Contours[0].Edges[3].Points[0] };
-            Conerpoints.Remove(Conerpoints[^1]);
+            
+            var Conerpoints = SlabBPL.SlabPart.Region.Contours[0].Points;
             double AvrageX = new List<double> { Conerpoints[0].X, Conerpoints[1].X, Conerpoints[2].X, Conerpoints[3].X }.Average();
             double AvrageY = new List<double> { Conerpoints[0].Y, Conerpoints[1].Y, Conerpoints[2].Y, Conerpoints[3].Y }.Average();
             double AvrageZ = new List<double> { Conerpoints[0].Z, Conerpoints[1].Z, Conerpoints[2].Z, Conerpoints[3].Z }.Average();
@@ -128,10 +111,11 @@ namespace RetainingWall
             // Define support   
             var regionBPL = SlabBPL.Region;
 
+
             var motionsUpplagBPL = new FemDesign.Releases.Motions(KSupp[0], KSupp[1], KSupp[2], KSupp[3], KSupp[4], KSupp[5]);
 
             var supportBPL = new FemDesign.Supports.SurfaceSupport(regionBPL, motionsUpplagBPL, "BPL_Upplag");
-            //supportBPL.
+            supportBPL.Plane.Origin = new Point3d(AvrageX, AvrageY, AvrageZ);
 
             var supports = new List<FemDesign.GenericClasses.IStructureElement> { supportBPL };
             return supports;
