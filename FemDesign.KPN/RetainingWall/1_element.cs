@@ -37,17 +37,20 @@ namespace RetainingWall
             var P_MUR = new List<Point3d> { P2_0, P2_1, P2_2 };
             var T_MUR = new List<double> { 0.500, 1.000, 1.000 };
 
-            double creepUlsBPL  = 0.1;
-            double creepSlqBPL  = 0.1;
-            double creepSlfBPL  = 0.1;
-            double creepSlcBPL  = 0.1;
-            double shrinkageBPL = 0.1;
+            //Calculated with https://concrete-creep.strusoft.com/
+            //RH = 100, Ac=0.95, u=3.9, t0=5
+            double creepUlsBPL  = 0.000;
+            double creepSlqBPL  = 1.6435;
+            double creepSlfBPL  = 1.6435;
+            double creepSlcBPL  = 1.6435;
+            double shrinkageBPL = 0.0625e-3;
 
-            double creepUlsMUR = 0.1;
-            double creepSlqMUR = 0.1;
-            double creepSlfMUR = 0.1;
-            double creepSlcMUR = 0.1;
-            double shrinkageMUR = 0.1;
+            //RH = 80, Ac=0.75, u=3.5, t0=5
+            double creepUlsMUR = 0.000;
+            double creepSlqMUR = 2.0238;
+            double creepSlfMUR = 2.0238;
+            double creepSlcMUR = 2.0238;
+            double shrinkageMUR = 0.24258e-3;
 
             // ------------------
 

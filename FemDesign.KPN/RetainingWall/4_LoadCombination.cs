@@ -45,6 +45,7 @@ namespace RetainingWall
             var loadComb10 = new LoadCombination("LC10 Bruk-kvasi, 6.16 ÖLP", LoadCombType.ServiceabilityQuasiPermanent, (loadCaseDL, 1.00), (loadCaseR, 1.00), (loadCaseJK, 1.00), (loadCaseMW, 1.00), (loadCaseEffJMW, 1.00), (loadCaseÖLHP, 1.00), (loadCaseÖLVP, 1.00));
             var loadComb11 = new LoadCombination("LC11  Olycks, 6.11", LoadCombType.UltimateAccidental, (loadCaseDL, 1.00), (loadCaseR, 1.00), (loadCaseJK, 1.00), (loadCaseMW, 1.00), (loadCaseEffJMW, 1.00), (loadCaseAcc, 1.00));
 
+
             ////Load combination when water adds weight
             //var loadComb1 = new LoadCombination("LC1  A, 6.10  Vmin_Hmax", LoadCombType.UltimateOrdinary, (loadCaseDL, 0.90), (loadCaseR, 0.90), (loadCaseJU, 1.10), (loadCaseLLW, 0.90), (loadCaseEffJLLW, 0.90), (loadCaseÖLHU, 1.40));
             //var loadComb2 = new LoadCombination("LC2  B, 6.10a Vmin_Hmax", LoadCombType.UltimateOrdinary, (loadCaseDL, 1.00), (loadCaseR, 1.00), (loadCaseJU, 1.35), (loadCaseLLW, 1.00), (loadCaseEffJLLW, 1.00), (loadCaseÖLHU, 1.05));
@@ -73,6 +74,7 @@ namespace RetainingWall
                 loadComb11,
                 };
             return loadcombinations;
+
         }
      }
 }
