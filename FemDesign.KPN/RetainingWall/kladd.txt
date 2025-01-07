@@ -1,0 +1,172 @@
+
+dF
+dw
+αfund 
+β
+Kontroll
+γfyll
+γ_fyll
+γuK_BPL
+γ_uK_BPL
+Dränerade_förhållande
+Platttyp
+Meterstrimla
+bx
+ly
+
+Lastfall
+Lasttyp
+Fv
+FHx
+FHy
+FH,ed
+Mx
+My
+ex =
+ey =
+θ =
+bef
+lef 
+Aef
+
+Ncd =
+dc =
+sc =
+mb =
+ml =
+m =
+ic =
+gc =
+bc =
+ξc =
+qbc =
+
+
+q' =
+Nq =
+dq =
+sq =
+iq =
+gq =
+bq =
+ξq =
+
+qbq =
+
+γeq =
+Nγ  =
+dγ  =
+sγ =
+iγ =
+gγ =
+bγ  =
+ξγ  =
+
+qbγ  =
+
+qb,rd =
+qb,ed =
+Ug =
+Kontroll =
+
+
+
+γM_dr                
+ηdr_18               
+φ_eff                
+φd                   
+γM_odr               
+ηodr_18              
+cuk                  
+cud                  
+dF                   
+dW                   
+α                    
+β                    
+Kontroll_Metod       
+γfyll                
+γ_fyll               
+γuK_BPL              
+γ_uK_BPL             
+Platttyp             
+Meterstrimla         
+bx                   
+ly                   
+Fv                   
+FHx                  
+FHy                  
+FH_ed                
+Mx                   
+My                   
+ex                   
+ey                   
+θ                    
+bef                  
+lef                  
+Aef                  
+mb                   
+ml                   
+m                    
+qd                   
+Nqd                  
+dq                   
+sq                   
+iq                   
+gq                   
+bq                   
+ξq                   
+qbq                  
+Ncd                  
+dc                   
+sc                   
+ic                   
+gc                   
+bc                   
+ξc                   
+qbc                  
+γeq                  
+Nγd                  
+dγ                   
+sγ                   
+iγ                   
+gγ                   
+bγ                   
+ξγ                   
+qbγ                  
+qb_rd                
+qb_ed                
+Ug_b          
+
+ηdr_18        
+φ_eff   
+φd      
+γM_odr  
+ηodr_18 
+cuk     
+cud     
+Platttyp
+bx      
+ly      
+Fv      
+FHx     
+FHy     
+FH_ed   
+Mx      
+My      
+ex      
+ey      
+bef     
+lef     
+Aef     
+δd      
+FH_drän 
+FH_odrän
+FH_rd   
+Ug_g    
+
+bx     
+Fv     
+My     
+ex     
+bef    
+bef_min

@@ -27,7 +27,7 @@ namespace RetainingWall
 
             // ----- INDATA -----
 
-            var Mur_Points = new List<Point3d>() { P_BPL[1], P_BPL[2], P_BPL[0], P_BPL[3] };
+            var Mur_Points = new List<Point3d>() { P_MUR[1], P_MUR[2], P_MUR[0], P_MUR[3] };
 
             var LS_MUR_Points = PointInterpolate(Mur_Points, 8);
 
@@ -164,7 +164,7 @@ namespace RetainingWall
 
             }
 
-            if (Pointlist.Count == 2 && InterpolatePoints > 0)
+            else if (Pointlist.Count == 2 && InterpolatePoints > 0)
             {
                 //Step size
                 Double[] Step =

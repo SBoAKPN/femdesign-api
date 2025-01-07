@@ -15,27 +15,27 @@ namespace RetainingWall
 {
     internal class Element
     {
-        public static List<FemDesign.Shells.Slab> slabs(double MeshSize)
+        public static List<FemDesign.Shells.Slab> slabs(double bx_BPL, double MeshSize)
         {
 
             // ----- INDATA -----
             // Corner points of Slab1 BPL 
             var P1_0 = new Point3d(0.000, 0.000, 0.000);
-            var P1_1 = new Point3d(4.000, 0.000, 0.000);
-            var P1_2 = new Point3d(4.000, 1.000, 0.000);
-            var P1_3 = new Point3d(0.000, 1.000, 0.000);
+            var P1_1 = new Point3d(bx_BPL, 0.000, 0.000);
+            var P1_2 = new Point3d(bx_BPL, 10.000, 0.000);
+            var P1_3 = new Point3d(0.000, 10.000, 0.000);
 
             var P_BPL = new List<Point3d> { P1_0, P1_1, P1_2 };
-            var T_BPL = new List<double> { 1.000, 0.900, 0.900 };
+            var T_BPL = new List<double> { 0.400, 0.400, 0.400 };
 
             // Corner points of MUR 
-            var P2_0 = new Point3d(1.000, 0.000, 6.000);
-            var P2_1 = new Point3d(1.000, 0.000, T_BPL[0]);
-            var P2_2 = new Point3d(1.000, 1.000, T_BPL[0]);
-            var P2_3 = new Point3d(1.000, 1.000, 6.000);
+            var P2_0 = new Point3d(0.650, 0.000, 4.000);
+            var P2_1 = new Point3d(0.650, 0.000, T_BPL[0]);
+            var P2_2 = new Point3d(0.650, 10.000, T_BPL[0]);
+            var P2_3 = new Point3d(0.650, 10.000, 4.000);
 
             var P_MUR = new List<Point3d> { P2_0, P2_1, P2_2 };
-            var T_MUR = new List<double> { 0.500, 1.000, 1.000 };
+            var T_MUR = new List<double> { 0.300, 0.300, 0.300 };
 
             //Calculated with https://concrete-creep.strusoft.com/
             //RH = 100, Ac=0.95, u=3.9, t0=5

@@ -14,7 +14,7 @@ namespace RetainingWall
 {
     internal class ReinForcement
     {
-        public static List<FemDesign.GenericClasses.IStructureElement> straightReinfElements(List<Slab> slabs, string ReinfMaterial)
+        public static (List<Slab> , List<FemDesign.GenericClasses.IStructureElement>) straightReinfElements(List<Slab> slabs, string ReinfMaterial)
         {
             // Predefinition from input data
             // slabs
@@ -23,6 +23,8 @@ namespace RetainingWall
 
             var P_BPL = SlabBPL.SlabPart.Region.Contours[0].Points;
             var P_MUR = SlabMUR.SlabPart.Region.Contours[0].Points;
+
+            var slabstoRemove = new List<Slab>{ SlabBPL , SlabMUR };
 
             // ----- INDATA -----
 
@@ -199,7 +201,8 @@ namespace RetainingWall
 
             var reinfMUR = FemDesign.Reinforcement.SurfaceReinforcement.AddReinforcementToSlab(SlabMUR, srfReinf_MUR);
             var straightReinfElements = new List<FemDesign.GenericClasses.IStructureElement> { reinfBPL, reinfMUR };
-            return straightReinfElements;
+
+            return (slabstoRemove, straightReinfElements);
         }
         public static List<FemDesign.GenericClasses.IStructureElement> shearReinfElements (List<Slab> slabs, string ReinfMaterial)
         {
