@@ -146,9 +146,9 @@ namespace FemDesign.RetainingWall
             {
                 ReinforcementDesignFEM.Open(model);
                 ReinforcementDesignFEM.SetConfig(config);
+            }
 
                 ReinforcementDesignFEM.RunAnalysis(analysis);
-
                 var SupportResultant = ReinforcementDesignFEM.GetLoadCombinationResults<Results.SurfaceSupportResultant>();
 
                 // Resultprocessing
@@ -179,5 +179,6 @@ namespace FemDesign.RetainingWall
             Console.WriteLine("Calculation complete");
             Console.ReadKey();
         }
+
     }
 }

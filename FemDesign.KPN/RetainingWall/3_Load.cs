@@ -49,6 +49,7 @@ namespace RetainingWall
             double qR = 1;      // Räckestyngd
             // --- Earth ---
             // JordH Tillbakafyll_PO, Tillbakafyll_P1, Motfyll_PO, Motfyll_PO
+
             var JordH = new List<double> { 0.0, 0.0, 0.8, 0.8 }; // Tillbakafyllning visningshöjd (ÖK MUR) 0/1 / Motfyllning fyllningshöjd (UK BPL) 0/1
             var AlfaJ = new List<double> { Math.PI / 180 * 0, Math.PI / 180 * -10 }; // Marklutning utifrån MUR Tillbakafyllning, Motfyllning
 
@@ -64,16 +65,19 @@ namespace RetainingWall
             double qW = 10; // Vatten tyngd
             double HHW = 2; // Vattenpelare från UK BPL 
             double MW = 1;
+
             double LLW = 0;
 
             double T_BPL_min = T_BPL[1].Value;
             double T_BPL_max = T_BPL[0].Value;
             // --- Surcharge ---
+
             double QÖLU0 = 15; // (270 + 180) / 2;     // Överlaststyngd (kN)
             double LU0 = 1; //  2.2;                   // Längd för spridning vid ytan
             double BU0 = 1; //  3.0;                   // Bredd för spridning vid ytan
             // Spridökning per djup
             double SpridLU = 0;  // Math.Tan(30 * Math.PI / 180); // Eruokod 4.9.1 ansätter spridning till 30 grader genom omsorgsfullt komprimerad fyllning
+
             var SpridBU = new List<double> { 0, 0 };  // OBS! KB Tabell 7.1-5, ka 4.9.1 "Spridning får inte göras utanför betraktad konstruktions utsträckning". 
 
             double QÖLP0 = 10;
@@ -106,6 +110,9 @@ namespace RetainingWall
             //  V
             var PBaktass_0 = new Point3d(P_MUR[1].X + T_MUR[1].Value / 2, P_MUR[1].Y, P_BPL[1].Z);
             //var PBaktass_1 = new Point3d(P_MUR[2].X + T_MUR[1].Value / 2, P_MUR[2].Y, P_BPL[2].Z);
+
+            var PBaktass_1 = new Point3d(P_MUR[2].X + T_MUR[1].Value / 2, P_MUR[2].Y, P_BPL[2].Z);
+
             var LBaktass = new List<double> { P_BPL[1].X - (P_MUR[1].X + T_MUR[0].Value / 2), P_BPL[2].X - (P_MUR[2].X + T_MUR[0].Value / 2) };
             // JordH in points: PBaktass_0 , P_BPL[1], P_BPL[2], PBaktass_1
             var JordH_baktass = new List<double> { P_MUR[0].Z - P_MUR[1].Z - JordH[0], (P_MUR[0].Z - P_MUR[1].Z - JordH[0]) + LBaktass[0] * Math.Tan(AlfaJ[0]),
@@ -179,6 +186,7 @@ namespace RetainingWall
                 var SurfaceLoadJUH_pack2 = new FemDesign.Loads.SurfaceLoad(regionLoadMUR_pack2, LoadJUH_pack2, LoaddirJH, loadCaseJU, false, "");
 
             }
+
 
 
             // ---  Motfyllning ---
@@ -269,6 +277,7 @@ namespace RetainingWall
             var qJAH_L1 = new Vector3d(-qJAH_LL[1] * T_BPL[0].Value, 0, 0);
             var lineLoadJAH = new FemDesign.Loads.LineLoad(LineBPL_TillH, qJAH_L0, qJAH_L1, loadCaseJA, ForceLoadType.Force, "", true, false);
 
+
             // Packning
             if (qhJUH[0] * Hpack1 > qpack)
             {
@@ -302,6 +311,7 @@ namespace RetainingWall
                 var SurfaceLoadJUH_pack2 = new FemDesign.Loads.SurfaceLoad(regionLoadMUR_pack2, LoadJUH_pack2, LoaddirJH, loadCaseJA, false, "");
 
             }
+
 
             // ---  Motfyllning ---
             //  V
@@ -435,16 +445,20 @@ namespace RetainingWall
             }
 
             // --- 4.1 Eff J HHW ---
+
             double qj_eff = qJ[0] - qJ[1];
+
             if (HHW >= T_BPL_max)
             {
                 //  V
                 double EffJbaktass_max = Math.Min(HHW, JordH_baktass[0]);
+
                 var HHWLoadVbaktass = new Vector3d(0, 0, -(EffJbaktass_max - T_BPL[0].Value) * qj_eff);
                 var SurfaceLoadHHW_V_baktass = new FemDesign.Loads.SurfaceLoad(regionBaktass, HHWLoadVbaktass, loadCaseEffJHHW, false, "");
 
                 double EffJframtass_max = Math.Min(HHW, JordH_baktass[0]);
                 var HHWLoadVframtass = new Vector3d(0, 0, -(EffJbaktass_max - T_BPL[0].Value) * qj_eff);
+
                 var SurfaceLoadHHW_V_framtass = new FemDesign.Loads.SurfaceLoad(regionFramtass, HHWLoadVframtass, loadCaseEffJHHW, false, "");
             }
             // --- 5.0 MW ---

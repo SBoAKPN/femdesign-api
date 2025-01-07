@@ -11,6 +11,9 @@ using FemDesign.Shells;
 using FemDesign.Loads;
 using static System.Reflection.Metadata.BlobBuilder;
 
+using FemDesign.Geometry;
+using FemDesign.Shells;
+
 namespace RetainingWall
 {
     internal class Resultprocessing
