@@ -138,26 +138,32 @@ namespace RetainingWall
             var qb_ed_List = new List<double>();
             
             var Ug_B_List = new List<double>();
+            Boolean Kontroll_Metod;
 
             // ----- INDATA -----  
             // Dränerad/Odränerad analys
             // Kontrollera att antalet i listan stämmer med antalet lastkombinationer
             var DränFörhållande = new List<Boolean>
                 {
+                    //true,       // 1
+                    //true,       // 2
+                    //true,       // 3
+                    //true,       // 4
+                    //true,       // 5
+                    //true,       // 6
+                    //true,       // 7
+                    //false,      // 8
+                    //false,      // 9
+                    //false,      // 10
+                    //false,      // 11
+                    //false,      // 12
+                    //false,      // 13
+                    //false,      // 14
                     true,       // 1
                     true,       // 2
-                    true,       // 3
-                    true,       // 4
-                    true,       // 5
-                    true,       // 6
-                    true,       // 7
-                    false,      // 8
-                    false,      // 9
-                    false,      // 10
-                    false,      // 11
-                    false,      // 12
-                    false,      // 13
-                    false,      // 14
+                    false,      // 3
+                    false,      // 4
+
                 };
 
             for (int i = 0; i < SupportResultant_B.Count; i++)
@@ -168,32 +174,39 @@ namespace RetainingWall
 
                 // Dränerade egenskaper
                 γM_dr = (DränFörhållande[i])   ? 1.3  :   1.3;
-                ηdr_18  =  1.00;                          
-                φ_eff   = (DränFörhållande[i]) ? 30   :   0;
+                ηdr_18  =  1.05;                          
+                φ_eff   = (DränFörhållande[i]) ? 37   :   0;
                                                           
                 // Odränerade egenskaper                  
                 γM_odr  = (DränFörhållande[i]) ? 1.3  :   1.5;
                 ηodr_18 =  0.8;                          
-                cuk     = (DränFörhållande[i]) ? 30   :   300;
+                cuk     = (DränFörhållande[i]) ? 0.00 :   300;
                 
                 // Geoteknisk indata
-                double dF              = 0.9;
-                double dW              = 1.0;
-                double α               = 0;
-                double β               = 0;
+                double dF              = 0.8;
+                double dW              = 0.0;
+                double α               = 0.0;
+                double β               = 10;
                 
-                double γfyll           = 22;
-                double γ_fyll          = 12;
-                double γuK_BPL         = 21;
-                double γ_uK_BPL        = 11;
+                double γfyll           = 17.5;
+                double γ_fyll          = 10.5;
+                double γuK_BPL         = 17.5;
+                double γ_uK_BPL        = 10.5;
 
-                Boolean Meterstrimla = true;
+                Boolean Meterstrimla = false;
 
                 // ------------------
 
                 φd = Math.Atan(Math.Tan((φ_eff * Math.PI / 180)) / γM_dr * ηdr_18) * 180 / Math.PI;
                 cud = cuk / γM_odr * ηodr_18;
-                Boolean Kontroll_Metod = (β <= 2 / 3 * φd) ? true : false;
+                if (DränFörhållande[i]==true)
+                {
+                    Kontroll_Metod = (β <= (2.0 / 3.0) * φd) ? true : false;
+                }
+                else
+                {
+                    Kontroll_Metod = true;
+                }
 
                 double bx = SlabBPL.SlabPart.Region.Contours[0].Edges[0].Length;
                 double ly = SlabBPL.SlabPart.Region.Contours[0].Edges[1].Length;
@@ -293,7 +306,8 @@ namespace RetainingWall
                         γeq = γ_uK_BPL;
                     }
 
-                    double Nγd = (0.08705 + 0.3231 * Math.Sin(2 * φd_rad) - 0.04836 * Math.Pow(Math.Sin(2 * φd_rad), 2)) * ((1 + Math.Sin(φd_rad)) / (1 - Math.Sin(φd_rad)) * Math.Exp(3 * Math.PI / 2 * Math.Tan(φd_rad)) - 1);
+                    double Nγd = DränFörhållande[i] ? (0.08705 + 0.3231 * Math.Sin(2 * φd_rad) - 0.04836 * Math.Pow(Math.Sin(2 * φd_rad), 2)) * ((1 + Math.Sin(φd_rad)) / (1 - Math.Sin(φd_rad)) * Math.Exp(3 * Math.PI / 2 * Math.Tan(φd_rad)) - 1) : -2 * Math.Sin(β_rad);
+
                     double dγ  = 1;
                     if (Meterstrimla)
                     {
@@ -521,20 +535,25 @@ namespace RetainingWall
             // Kontrollera att antalet i listan stämmer med antalet lastkombinationer
             var DränFörhållande = new List<Boolean>
                 {
+                    //true,       // 1
+                    //true,       // 2
+                    //true,       // 3
+                    //true,       // 4
+                    //true,       // 5
+                    //true,       // 6
+                    //true,       // 7
+                    //false,      // 8
+                    //false,      // 9
+                    //false,      // 10
+                    //false,      // 11
+                    //false,      // 12
+                    //false,      // 13
+                    //false,      // 14
+
                     true,       // 1
                     true,       // 2
-                    true,       // 3
-                    true,       // 4
-                    true,       // 5
-                    true,       // 6
-                    true,       // 7
-                    false,      // 8
-                    false,      // 9
-                    false,      // 10
-                    false,      // 11
-                    false,      // 12
-                    false,      // 13
-                    false,      // 14
+                    false,      // 3
+                    false,      // 4
                 };
 
             String Platttyp = "PLATSGJUTEN"; // PLATSGJUTEN/FÖRTILLVERKAD
@@ -544,13 +563,13 @@ namespace RetainingWall
 
                 // Dränerade egenskaper
                 γM_dr = (DränFörhållande[i]) ? 1.3 : 1.3;
-                ηdr_18 = 1.00;
-                φ_eff = (DränFörhållande[i]) ? 30 : 0;
+                ηdr_18 = 1.05;
+                φ_eff = (DränFörhållande[i]) ? 37 : 0;
 
                 // Odränerade egenskaper                  
                 γM_odr = (DränFörhållande[i]) ? 1.3 : 1.5;
                 ηodr_18 = 0.8;
-                cuk = (DränFörhållande[i]) ? 30 : 300;
+                cuk = (DränFörhållande[i]) ? 0 : 300;
 
                 // ------------------
 
@@ -574,7 +593,7 @@ namespace RetainingWall
                 double lef = ly - 2 * ey; // OBS! lef > bef
                 double Aef = bef * lef;
 
-                double δd = (Platttyp == "PLATSGJUTEN") ? φd : φd * 2 / 3;
+                double δd = (Platttyp == "PLATSGJUTEN") ? φd : φd * 2.0 / 3.0;
 
                 // Omvandling av grader till radianer
                 double δd_rad = δd * Math.PI / 180;
@@ -752,7 +771,7 @@ namespace RetainingWall
             var qb_ed_List = new List<double>();
             var Ug_SLS_List = new List<double>();
 
-            double qb_rd_SLS = qb_rd_ULS * 2 / 3;
+            double qb_rd_SLS = (2.0 / 3.0) * qb_rd_ULS;
 
             double bx = SlabBPL.SlabPart.Region.Contours[0].Edges[0].Length;
             double ly = SlabBPL.SlabPart.Region.Contours[0].Edges[1].Length;

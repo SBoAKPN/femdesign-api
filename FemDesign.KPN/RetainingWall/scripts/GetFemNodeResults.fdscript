@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fdscriptheader>
+    <title>FEM-Design script</title>
+    <version>2300</version>
+    <module>SFRAME</module>
+    <logfile>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\logfile.log</logfile>
+  </fdscriptheader>
+  <cmduser command="; CXL $MODULE RESMODE" />
+  <cmdlistgen command="$ MODULECOM LISTGEN" bscfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\scripts\bsc\FemNode.bsc" outfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\results\FemNode.csv" regional="false" headers="true" fillcells="true" ignorecasename="false" />
+</fdscript>

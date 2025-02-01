@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fdscriptheader>
+    <title>FEM-Design script</title>
+    <version>2300</version>
+    <module>SFRAME</module>
+    <logfile>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\logfile.log</logfile>
+  </fdscriptheader>
+  <cmdprojdescr command="$ MODULECOM PROJDESCR" read="0" reset="0" szProject="Testproj" szDescription="Description" szDesigner="Designer" szSignature="Signature" szComment="Comment" />
+</fdscript>

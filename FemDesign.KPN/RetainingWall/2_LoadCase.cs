@@ -24,9 +24,9 @@ namespace RetainingWall
             LoadCase loadCaseMW         = new LoadCase("MW", LoadCaseType.Static, LoadCaseDuration.Permanent);
             LoadCase loadCaseLLW        = new LoadCase("LLW", LoadCaseType.Static, LoadCaseDuration.Permanent);
 
-            LoadCase loadCaseEffJHHW    = new LoadCase("Eff J HHW", LoadCaseType.Static, LoadCaseDuration.Permanent);
-            LoadCase loadCaseEffJMW     = new LoadCase("Eff J MW", LoadCaseType.Static, LoadCaseDuration.Permanent);
-            LoadCase loadCaseEffJLLW    = new LoadCase("Eff J LLW", LoadCaseType.Static, LoadCaseDuration.Permanent);
+            //LoadCase loadCaseEffJHHW    = new LoadCase("Eff J HHW", LoadCaseType.Static, LoadCaseDuration.Permanent);
+            //LoadCase loadCaseEffJMW     = new LoadCase("Eff J MW", LoadCaseType.Static, LoadCaseDuration.Permanent);
+            //LoadCase loadCaseEffJLLW    = new LoadCase("Eff J LLW", LoadCaseType.Static, LoadCaseDuration.Permanent);
 
             LoadCase loadCaseÖLVU       = new LoadCase("ÖLVU", LoadCaseType.Static, LoadCaseDuration.ShortTerm);
             LoadCase loadCaseÖLHU       = new LoadCase("ÖLHU", LoadCaseType.Static, LoadCaseDuration.ShortTerm);
@@ -35,6 +35,10 @@ namespace RetainingWall
             LoadCase loadCaseÖLHP       = new LoadCase("ÖLHP", LoadCaseType.Static, LoadCaseDuration.Permanent);
 
             LoadCase loadCaseAcc        = new LoadCase("Olycka", LoadCaseType.Static, LoadCaseDuration.Instantaneous);
+
+            //LoadCase Testlast1 = new LoadCase("Testlast1", LoadCaseType.Static, LoadCaseDuration.Instantaneous);
+            //LoadCase Testlast2 = new LoadCase("Testlast2", LoadCaseType.Static, LoadCaseDuration.Instantaneous);
+            //LoadCase Testlast3 = new LoadCase("Testlast3", LoadCaseType.Static, LoadCaseDuration.Instantaneous);
 
             var loadcases = new List<LoadCase> 
             { 
@@ -46,14 +50,17 @@ namespace RetainingWall
                 loadCaseHHW,
                 loadCaseMW,
                 loadCaseLLW,
-                loadCaseEffJHHW,
-                loadCaseEffJMW,
-                loadCaseEffJLLW,
+                //loadCaseEffJHHW,
+                //loadCaseEffJMW,
+                //loadCaseEffJLLW,
                 loadCaseÖLVU,
                 loadCaseÖLHU,
                 loadCaseÖLVP,
                 loadCaseÖLHP,
-                loadCaseAcc, 
+                loadCaseAcc,
+                //Testlast1,
+                //Testlast2,
+                //Testlast3,
             };
             return loadcases;
         }
