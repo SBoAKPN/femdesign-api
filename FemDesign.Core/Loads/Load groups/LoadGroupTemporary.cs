@@ -80,10 +80,6 @@ namespace FemDesign.Loads
         [System.Xml.Serialization.XmlElementAttribute("load_cases_of_moving_load")]
         public System.Collections.Generic.List<Temporary_load_groupLoad_cases_of_moving_load> Load_cases_of_moving_load { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("subgroup")]
-        public System.Collections.Generic.List<Load_subgroup> Subgroup { get; set; }
-
         /// parameterless constructor for serialization///
         public LoadGroupTemporary() { }
 

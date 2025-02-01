@@ -43,10 +43,24 @@ namespace FemDesign.Grasshopper
             DA.SetData(0, obj.Guid);
             DA.SetDataList(1, obj.References);
             DA.SetDataList(2, rhinoLines);
-            DA.SetData(3, obj.Rigidity.Motions);
-            DA.SetData(4, obj.Rigidity.PlasticLimitForces);
-            DA.SetData(5, obj.Rigidity.Rotations);
-            DA.SetData(6, obj.Rigidity.PlasticLimitMoments);
+
+            
+            
+            if(obj.Rigidity != null)
+            {
+                DA.SetData(3, obj.Rigidity.Motions);
+                DA.SetData(4, obj.Rigidity.PlasticLimitForces);
+                DA.SetData(5, obj.Rigidity.Rotations);
+                DA.SetData(6, obj.Rigidity.PlasticLimitMoments);
+            }
+            else
+            {
+                DA.SetData(3, obj.PredefRigidity.Rigidity.Motions);
+                DA.SetData(4, obj.PredefRigidity.Rigidity.PlasticLimitForces);
+                DA.SetData(5, obj.PredefRigidity.Rigidity.Rotations);
+                DA.SetData(6, obj.PredefRigidity.Rigidity.PlasticLimitMoments);
+            }
+
             DA.SetData(7, obj.LocalX.ToRhino());
             DA.SetData(8, obj.LocalY.ToRhino());
             DA.SetData(9, obj.Name);
@@ -60,7 +74,7 @@ namespace FemDesign.Grasshopper
         }
         public override Guid ComponentGuid
         {
-            get { return new Guid("{0327EABF-6045-439C-AB65-B1E34DB190C6}"); }
+            get { return new Guid("{47290B88-5004-4565-861F-D9AEB2C3CFF6}"); }
         }
 
         public override GH_Exposure Exposure => GH_Exposure.senary;

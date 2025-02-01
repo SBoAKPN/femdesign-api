@@ -1,11 +1,12 @@
 [project]
 name = "FEM-Design"
-version = "0.0.2"
+version = "0.0.7"
 authors = [
   { name="FEM-Design", email="femdesign.api@strusoft.com" },
 ]
 maintainers = [
-  {name = "Marco Pellegrino", email = "marco.pellegrino@strusoft.com"}
+  {name = "Marco Pellegrino", email = "marco.pellegrino@strusoft.com"},
+  {name = "Illyés Zoltán", email = "sinnach@strusoft.hu"},
 ]
 description = "The FEM-Design API package"
 readme = "README.md"
@@ -19,5 +20,5 @@ keywords = ["fem", "fea", "structures", "strusoft", "FEM-Design API"]
 
 [project.urls]
 Homepage = "https://femdesign-api-docs.onstrusoft.com"
-Repository = "https://github.com/strusoft/femdesign-api"
+Repository = "https://github.com/strusoft/femdesign-api/tree/master/FemDesign.Python"
 Issues = "https://github.com/strusoft/femdesign-api/issues"

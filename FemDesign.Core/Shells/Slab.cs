@@ -118,6 +118,15 @@ namespace FemDesign.Shells
             return shell;
         }
 
+        public static Slab Plate(string identifier, Materials.Material material, Geometry.Region region, EdgeConnection shellEdgeConnection, ShellEccentricity eccentricity, ShellOrthotropy orthotropy, double thickness)
+        {
+            var thicknesses = new List<Thickness>();
+            var corner = region.Contours[0].Edges[0].Points[0];
+            thicknesses.Add(new Thickness(corner, thickness));
+            var shell = Slab.Plate(identifier, material, region, shellEdgeConnection, eccentricity, orthotropy, thicknesses);
+            return shell;
+        }
+
         /// <summary>
         /// Construct a rectangular slab in the XY plane
         /// </summary>
@@ -225,6 +234,16 @@ namespace FemDesign.Shells
             SlabPart slabPart = SlabPart.Define(type, identifier, region, thickness, material, shellEdgeConnection, eccentricity, orthotropy);
 
             Slab shell = new Slab(type, identifier, slabPart, material);
+            return shell;
+        }
+
+        public static Slab Wall(string identifier, Materials.Material material, Geometry.Region region, EdgeConnection shellEdgeConnection, ShellEccentricity eccentricity, ShellOrthotropy orthotropy, double thickness)
+        {
+            var thicknesses = new List<Thickness>();
+            var corner = region.Contours[0].Edges[0].Points[0];
+            thicknesses.Add(new Thickness(corner, thickness));
+
+            var shell = Slab.Wall(identifier, material, region, shellEdgeConnection, eccentricity, orthotropy, thicknesses);
             return shell;
         }
 

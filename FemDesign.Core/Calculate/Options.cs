@@ -15,6 +15,14 @@ namespace FemDesign.Calculate
     [System.Serializable]
     public partial class Options
     {
+        [System.Serializable]
+        public class Sort
+        {
+            [XmlElement("sort")]
+            public int Value { get; set; } = 1;
+        }
+
+
         [XmlElement("bar")]
         public int Bar { get; set; }
 
@@ -32,6 +40,8 @@ namespace FemDesign.Calculate
         [XmlElement("surface")]
         public int SrfValues { get; set; }
 
+        [XmlElement("utilcmax")]
+        public Sort UtilCMax { get; set; }
 
         /// <summary>
         /// Parameterless constructor for serialization.
@@ -86,6 +96,14 @@ namespace FemDesign.Calculate
             else if (r.StartsWith("ShellDisplacement") || r.StartsWith("ShellStress") || r.StartsWith("ShellInternalForce") || r.StartsWith("ShellDerivedForce") || r.StartsWith("SurfaceSupportReaction"))
             {
                 return new Options(1, "srf");
+            }
+            else if (r.StartsWith("QuantityEstimation"))
+            {
+                var option = new Options
+                {
+                    UtilCMax = new Sort()
+                };
+                return option;
             }
             else
             {

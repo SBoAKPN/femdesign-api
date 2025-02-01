@@ -164,7 +164,7 @@ namespace FemDesign.Geometry
         /// <summary>
         /// Reverse direction of edges in this contour
         /// </summary>
-        internal void Reverse()
+        public void Reverse()
         {
             // reverse every edge
             foreach (Edge edge in this.Edges)

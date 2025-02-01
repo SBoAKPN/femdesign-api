@@ -623,21 +623,6 @@ namespace FemDesign
         }
 
         /// <summary>
-        /// Read and parse result data from .csv files
-        /// </summary>
-        public List<T> ParseCsvFiles<T>(List<string> csvPaths) where T : Results.IResult
-        {
-            List<T> results = new List<T>();
-            foreach (string resultFile in csvPaths)
-            {
-                results.AddRange(
-                    Results.ResultsReader.Parse(resultFile).ConvertAll(r => (T)r)
-                );
-            }
-            return results;
-        }
-
-        /// <summary>
         /// Retrieve node geometry data from the finite element mesh.
         /// </summary>
         /// <param name="length">Unit of length measurement. Default is meter.</param>
@@ -758,7 +743,7 @@ namespace FemDesign
             var script = new FdScript(logfile, scriptCommands.ToArray());
             this.RunScript(script, $"Get{typeof(T).Name}Results");
 
-            return ParseCsvFiles<T>(csvPaths);
+            return Results.ResultsReader.ParseCsvFiles<T>(csvPaths);
         }
 
         /// <summary>
@@ -1237,7 +1222,7 @@ namespace FemDesign
             // Generate .csv result files
             _listResultsByFdScript($"Get{typeof(T).Name}Results" + currentTime, bscPaths, csvPaths, elements);
 
-            return ParseCsvFiles<T>(csvPaths);
+            return Results.ResultsReader.ParseCsvFiles<T>(csvPaths);
         }
 
         /// <summary>

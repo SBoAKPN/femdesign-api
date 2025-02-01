@@ -20,7 +20,7 @@ namespace FemDesign.Grasshopper
             pManager.AddNumberParameter("E", "E", "E Modulus [kN/m2]", GH_ParamAccess.item);
             pManager.AddNumberParameter("Thickness", "Thickness", "Thickness [m]", GH_ParamAccess.item);
             pManager.AddNumberParameter("Density", "Density", "Unit Mass [t/m3]", GH_ParamAccess.item);
-            pManager.AddGenericParameter("LimitStress", "LimitStress", "LimitStress [N/mm2]", GH_ParamAccess.item);
+            pManager.AddNumberParameter("LimitStress", "LimitStress", "LimitStress [N/mm2]", GH_ParamAccess.item);
             pManager.AddNumberParameter("GammaMu", "GammaMu", "", GH_ParamAccess.item, 1.2);
             pManager[pManager.ParamCount - 1].Optional = true;
             pManager.AddNumberParameter("GammaMuas", "GammaMuas", "", GH_ParamAccess.item, 1.0);
@@ -37,20 +37,19 @@ namespace FemDesign.Grasshopper
             DA.GetData(0, ref e);
 
             double thickness = 0.0;
-            DA.GetData(0, ref thickness);
+            DA.GetData(1, ref thickness);
 
             double density = 0.0;
-            DA.GetData(0, ref density);
-
-            double gamma_m_u = 1.2;
-            DA.GetData(0, ref gamma_m_u);
-
-            double gamma_m_uas = 1.0;
-            DA.GetData(0, ref gamma_m_uas);
+            DA.GetData(2, ref density);
 
             double limitStress = 0.0;
-            DA.GetData(0, ref limitStress);
+            DA.GetData(3, ref limitStress);
 
+            double gamma_m_u = 1.2;
+            DA.GetData(4, ref gamma_m_u);
+
+            double gamma_m_uas = 1.0;
+            DA.GetData(5, ref gamma_m_uas);
 
             var insulation = new FemDesign.Foundations.Insulation(e, thickness, density, limitStress, gamma_m_u, gamma_m_uas);
 

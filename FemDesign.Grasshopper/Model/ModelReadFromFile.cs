@@ -31,11 +31,6 @@ namespace FemDesign.Grasshopper
             string filePath = null;
             DA.GetData(0, ref filePath);
 
-
-            if (_FileName.IsASCII(filePath))
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "File path has special characters. This might cause problems.");
-
-
             bool fileExist = OnPingDocument().IsFilePathDefined;
             if (!fileExist)
             {
@@ -50,9 +45,6 @@ namespace FemDesign.Grasshopper
                 var dirName = System.IO.Path.GetDirectoryName(ghFilePath);
                 System.IO.Directory.SetCurrentDirectory(dirName);
             }
-
-
-
 
             Model model = null;
 
@@ -82,9 +74,6 @@ namespace FemDesign.Grasshopper
             {
                 model = Model.DeserializeFromFilePath(filePath);
             }
-
-
-
 
             // get output
             DA.SetData(0, model);

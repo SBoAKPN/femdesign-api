@@ -383,6 +383,30 @@ class CmdSaveDocx(Command):
         return cmd_save_docx
 
 
+class CmdChild(Command):
+    """class to represent the fdscript cmdsavedocx command
+    """
+    def __init__(self, file_name : str):
+        """Constructor for the CmdChild class
+
+        Args:
+            file_name (str): path to the file to save
+        """
+        if not file_name.endswith(".dsc"):
+            raise ValueError("file_name must have suffix .dsc")
+
+        self.file_name = os.path.abspath(file_name)
+
+    def to_xml_element(self) -> ET.Element:
+        """Convert the CmdChild object to an xml element
+
+        Returns:
+            ET.Element: xml element representing the CmdChild object
+        """
+        cmd_child = ET.Element("cmdchild")
+        cmd_child.text = self.file_name
+
+        return cmd_child
 
 
 class CmdListGen:
@@ -406,7 +430,7 @@ class CmdListGen:
             raise ValueError("outfile must have suffix .csv")
 
         if not outfile:
-            outfile = pathlib.Path(self.bscfile).with_suffix(".csv")
+            outfile = pathlib.Path(bscfile).with_suffix(".csv")
 
         if not os.path.exists(os.path.dirname(os.path.abspath(outfile))):
             os.makedirs(os.path.dirname(os.path.abspath(outfile)))
@@ -443,3 +467,70 @@ class CmdListGen:
                 guid_elem.text = str(guid)
 
         return cmd_listgen
+
+class CmdConfig(Command):
+    """class to represent the fdscript cmdconfig command
+    """
+    def __init__(self, file_name : str):
+        """Constructor for the CmdConfig class
+
+        Args:
+            file_name (str): path to the config file
+        """
+        if not file_name.endswith(".xml"):
+            raise ValueError("file_name must have suffix .xml")
+
+        self.file_name = os.path.abspath(file_name)
+
+    def to_xml_element(self) -> ET.Element:
+        """Convert the CmdConfig object to an xml element
+
+        Returns:
+            ET.Element: xml element representing the CmdConfig object
+        """
+        cmd_config = ET.Element("cmdconfig")
+
+        attributes = {
+            "command": "$ MODULECOM APPLYCFG",
+            "file": self.file_name
+        }
+        cmd_config.attrib = attributes
+
+        return cmd_config
+    
+# <cmdinteractionsurface command="$ CODE_COM INTERACTIONSURFACE" guid="2e290437-e86a-4e36-af7d-acde6a6146c8" offset="0.0" fUlt="false" outfile="e:\res\a.txt"  />
+class CmdInteractionSurface(Command):
+    """class to represent the fdscript cmdinteraction surface command
+    """
+    def __init__(self, guid : uuid.UUID, outfile : str, offset : float = 0.0, fUlt : bool = False):
+        """Constructor for the CmdInteractionSurface class
+
+        Args:
+            guid (uuid.UUID): guid of an existing bar. make sure you pass the analytical bar!
+            outfile (str): path to the output file
+            offset (float): offset is cross-section position, measured along the bar from the starting point [m]
+            fUlt (bool): fUlt is true for Ultimate, false for Accidental or Seismic combination (different gammaC)
+        """
+        self.guid = guid
+        self.offset = offset
+        self.fUlt = fUlt
+        self.outfile = os.path.abspath(outfile)
+
+    def to_xml_element(self) -> ET.Element:
+        """Convert the CmdInteractionSurface object to an xml element
+
+        Returns:
+            ET.Element: xml element representing the CmdInteractionSurface object
+        """
+        cmd_interaction_surface = ET.Element("cmdinteractionsurface")
+
+        attributes = {
+            "command": "$ CODE_COM INTERACTIONSURFACE",
+            "guid": str(self.guid),
+            "offset": str(self.offset),
+            "fUlt": str(self.fUlt).lower(),
+            "outfile": self.outfile
+        }
+        cmd_interaction_surface.attrib = attributes
+
+        return cmd_interaction_surface

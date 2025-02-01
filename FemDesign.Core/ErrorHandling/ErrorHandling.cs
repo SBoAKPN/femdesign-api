@@ -22,10 +22,10 @@ namespace FemDesign.Utils
             "None of the Construction stages contains any load case.",
             "Time-dependent analysis is requested, but none of the object has Time-dependent property.",
             "Unknown error.",
-            "Model loading problems",
             "The loading process aborted!",
             @"^Error",
             @"^ERROR",
+            "Error:",
         };
         
         public readonly static List<string> WarningMessage = new List<string>{
@@ -35,6 +35,8 @@ namespace FemDesign.Utils
             "Applied reinforcement is missing for cracked section analysis.",
             @"^Warning",
             @"^WARNING",
+            "Warning:",
+            "Model loading problems",
         };
 
 

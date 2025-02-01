@@ -16,7 +16,7 @@ namespace FemDesign.Foundations
         public List<StruSoft.Interop.StruXml.Data.Lnfoundation_type> wall_foundationField = new List<StruSoft.Interop.StruXml.Data.Lnfoundation_type>();
 
         [XmlElement("foundation_slab")]
-        public List<StruSoft.Interop.StruXml.Data.Sffoundation_type> foundation_slabField = new List<StruSoft.Interop.StruXml.Data.Sffoundation_type>();
+        public List<SlabFoundation> SlabFoundations = new List<SlabFoundation>();
 
 
         public List<dynamic> GetFoundations()
@@ -24,7 +24,7 @@ namespace FemDesign.Foundations
             var objs = new List<dynamic>();
             objs.AddRange(this.IsolatedFoundations);
             objs.AddRange(this.wall_foundationField); // to implement
-            objs.AddRange(this.foundation_slabField); // to implement
+            objs.AddRange(this.SlabFoundations); // to implement
             return objs;
         }
     }

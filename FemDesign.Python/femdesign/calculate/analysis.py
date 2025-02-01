@@ -304,7 +304,7 @@ class Analysis:
                  elemfine : bool = True,
                  diaphragm : bool = False,
                  peaksmoothings : bool = False,
-                 comb : CombSettings = None,
+                 combSettings : CombSettings = None,
                  stage : Stage = None,
                  freq : Freq = None,
                  footfall : Footfall = None,
@@ -334,7 +334,7 @@ class Analysis:
         self.peaksmoothings = peaksmoothings
         
         self.stage = stage
-        self.comb = comb
+        self.comb = combSettings
         self.freq = freq
         self.footfall = footfall
         #self.bedding = bedding
@@ -388,8 +388,12 @@ class Analysis:
         return analysis
 
     @classmethod
-    def StaticAnalysis(cls, comb : CombSettings = CombSettings.Default(), calcCase : bool = True, calcComb : bool = True):
-        return cls(calcCase = calcCase, calcComb = calcComb, comb = comb)
+    def StaticAnalysis(cls, calcCase : bool = True, calcComb : bool = True):
+        return cls(calcCase = calcCase, calcComb = calcComb)
+    
+    def SetCombinations(self, combSettings : CombSettings, combitems : list[CombItem]):
+        self.comb = combSettings
+        self.comb.combitems = combitems
     
     @classmethod
     def FrequencyAnalysis(cls, num_shapes : int = 5, auto_iter : int = 0, max_sturm : int = 0, norm_unit : Freq.ShapeNormalization  = Freq.ShapeNormalization.MassMatrix, x : bool = True, y : bool = True, z : bool = True, top : bool = -0.01):
@@ -397,8 +401,20 @@ class Analysis:
         return cls(calcFreq = True, freq = freq)
     
     @classmethod
-    def FootfallAnalysis(cls, footfall : Footfall, calcFootfall : bool = True):
-        return cls(calcFootfall = calcFootfall, footfall = footfall)
+    def FootfallAnalysis(cls, footfall : Footfall):
+        return cls(calcFootfall = True, footfall = footfall)
+
+    @classmethod
+    def GroundAcceleration(cls, thgroundacc : ThGroundAcc):
+        return cls(calcThGrounAcc = True, thgroundacc = thgroundacc)
+    
+    @classmethod
+    def ExcitationForce(cls, thexforce : ThExForce):
+        return cls(calcThExforce = True, thexforce = thexforce)
+    
+    @classmethod
+    def PeriodicExcitation(cls, periodicexc : PeriodicExc):
+        return cls(calcPeriodicExc = True, periodicexc = periodicexc)
 
 # class Bedding:
 #     def __init__(self, Ldcomb="a", Meshprep=0, Stiff_X=0.5, Stiff_Y=0.5):

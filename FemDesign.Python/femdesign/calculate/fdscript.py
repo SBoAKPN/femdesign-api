@@ -12,6 +12,9 @@ class FdscriptHeader:
         self.version = str(version)
         self.module = module
         self.logfile = os.path.abspath(log_file)
+    
+        self.continue_on_error = True
+        self.ignore_Parse_error = True
 
 
     def to_xml_element(self) -> ET.Element:
@@ -21,7 +24,7 @@ class FdscriptHeader:
             ET.Element: xml element representing the FdscriptHeader object
         """
         fdscript_header = ET.Element("fdscriptheader")
-        
+
         title_elem = ET.SubElement(fdscript_header, "title")
         title_elem.text = self.title
 
@@ -34,6 +37,13 @@ class FdscriptHeader:
         logfile_elem = ET.SubElement(fdscript_header, "logfile")
         logfile_elem.text = self.logfile
 
+        ## add attributes
+        attributes = {
+            "fContinueOnError" : int(self.continue_on_error).__str__(),
+            "fIgnoreParseError" : int(self.ignore_Parse_error).__str__()
+        }
+
+        fdscript_header.attrib = attributes
 
         return fdscript_header
 
@@ -74,7 +84,7 @@ class Fdscript:
             fdscript.append(command.to_xml_element())
 
         return fdscript
-    
+
     def serialise_to_file(self, file_name : str):
         """Serialise the Fdscript object to a file
 

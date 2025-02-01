@@ -1,0 +1,6 @@
+Quantity estimation, Concrete
+Storey	Struct.	Identifier	Quality	Section/	Height	Width	Total length[m]/	Volume	Total weight	Formwork	Reinforcement	CO2 footprint (A1-A3)
+	type			Thickness[m]	[m]	[m]	Total area[m2]	[m3]	[t]	[m2]	[kg/m, kg/m2]	[kg CO2e]
+-	Plate	P.1	C30/37	0.150			100.000	15.000	38.226	106.000	0.000	4,434.3
+TOTAL								15.000	38.226	106.000		4,434.3
+

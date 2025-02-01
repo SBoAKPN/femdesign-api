@@ -1,3 +1,7 @@
+"""
+Created with FemDesign API 0.0.6
+"""
+
 from femdesign.comunication import FemDesignConnection, Verbosity
 from femdesign.calculate.command import DesignModule, CmdOpen, CmdUser, CmdCalculation, CmdSave, CmdListGen, CmdProjDescr, User
 from femdesign.calculate.analysis import Analysis, Design, CombSettings, CombItem

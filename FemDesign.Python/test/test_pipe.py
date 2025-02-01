@@ -1,6 +1,6 @@
-from command import *
-from analysis import Analysis, Comb, Design
-from fdpipe import FemDesignConnection
+from femdesign.calculate.command import *
+from femdesign.calculate.analysis import Analysis, CombSettings, Design
+from femdesign.comunication import FemDesignConnection
 import pytest
 
 def test_pipe():
@@ -21,8 +21,17 @@ def test_pipe():
         connection.Open("myModel.3dm")
     except Exception as e:
         assert isinstance(e, ValueError)
-        assert str(e) == "File myModel.3dm must have extension .struxml or .str"
+        assert str(e) == "file_name must have extension .struxml or .str"
 
+    connection.__exit__()
 
-    connection.RunDesign(DesignModule.STEELDESIGN, design)
+def test_interaction_surface():
+    connection = FemDesignConnection(minimized=True)
+    connection.Open(r"test/assets/concrete_beam.struxml")
+    guid = "c71d1619-420a-46fe-bbb7-423bf20fdcda"
+    connection.GenerateInteractionSurface(guid, "test/assets/interaction_surface.txt", 0.5, True)
 
+    assert os.path.exists("test/assets/interaction_surface.txt")
+    assert os.path.getsize("test/assets/interaction_surface.txt") > 0
+
+    os.remove("test/assets/interaction_surface.txt")

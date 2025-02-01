@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace FemDesign.AuxiliaryResults
 {
     /// <summary>
-    /// Class to contain list in entities. For serialization purposes only.
+    /// Class to contain list in entities. For serialization purposes only. Use LabelledSection to create the object
     /// </summary>
     [System.Serializable]
     public partial class LabelledSectionsGeometry
