@@ -119,6 +119,21 @@ namespace FemDesign.Results
         }
 
         /// <summary>
+        /// Read and parse result data from .csv files
+        /// </summary>
+        public static List<T> ParseCsvFiles<T>(List<string> csvPaths) where T : Results.IResult
+        {
+            List<T> results = new List<T>();
+            foreach (string resultFile in csvPaths)
+            {
+                results.AddRange(
+                    Results.ResultsReader.Parse(resultFile).ConvertAll(r => (T)r)
+                );
+            }
+            return results;
+        }
+
+        /// <summary>
         /// Tries to figure out the corresponding type of the upcoming lines that are being read.
         /// </summary>
         /// <returns></returns>

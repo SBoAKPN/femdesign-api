@@ -87,7 +87,6 @@ namespace FemDesign.Grasshopper
         {
             ValueListUtils.UpdateValueLists(this, 4, new List<string>
             { "Simple", "SurfaceSupportGroup"}, null, GH_ValueListMode.DropDown);
-
         }
 
         public override GH_Exposure Exposure => GH_Exposure.primary;

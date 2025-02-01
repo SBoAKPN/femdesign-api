@@ -28,7 +28,20 @@ namespace FemDesign.Foundations
         public double Gamma_m_uas { get; set; }
 
         [XmlAttribute("limit_stress")]
-        public double Limit_stress { get; set; }
+        public double _limit_stress { get; set; }
+
+        [XmlIgnore]
+        public double Limit_stress
+        {
+            get
+            {
+                return  this._limit_stress;
+            }
+            set
+            {
+                _limit_stress = RestrictedDouble.ValueInClosedInterval(value, 1, 1e8);
+            }
+        }
 
         public Insulation()
         {

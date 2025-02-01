@@ -30,11 +30,14 @@ from femdesign.calculate.analysis import Analysis, Design, CombSettings, CombIte
 pipe = FemDesignConnection()
 try:
     pipe.SetVerbosity(Verbosity.SCRIPT_LOG_LINES)
-    pipe.Open(r"example/simple_beam.str")
+    pipe.Open(r"simple_beam.str")
+
+    static_analysis = Analysis.StaticAnalysis()
+    pipe.RunAnalysis(static_analysis)
+
     pipe.RunAnalysis(Analysis.FrequencyAnalysis(num_shapes=5))
-    pipe.Save(r"example\to_delete\simple_beam_out_2.str")
-    pipe.GenerateListTables(bsc_file=r"example\bsc\quantity-estimation-steel.bsc",
-                            csv_file=r"example\output\quantity-estimation-steel.csv")
+    pipe.Save(r"simple_beam_out_2.str")
+
     pipe.Exit()
 except Exception as err:
     pipe.KillProgramIfExists()

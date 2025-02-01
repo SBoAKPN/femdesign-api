@@ -63,7 +63,7 @@ namespace FemDesign.Calculate
         [XmlIgnore]
         public List<FemDesign.GenericClasses.IStructureElement> Elements { get; set; }
 
-        private CmdDesignGroup()
+        public CmdDesignGroup()
         {
 
         }

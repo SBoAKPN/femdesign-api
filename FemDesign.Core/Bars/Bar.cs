@@ -526,9 +526,10 @@ namespace FemDesign.Bars
                 if (this.BarPart.HasComplexCompositeRef)
                 {
                     var compositeSection = this.BarPart.ComplexCompositeObj.CompositeSections[0];
+                    var name = compositeSection.ParameterDictionary[Composites.CompositeSectionParameterType.Name];
                     List<string> compositeMaterials = compositeSection.Materials.Select(m => m.Name).ToList();
 
-                    return $"{this.Type} Start: {this.BarPart.Edge.Points.First()}, End: {this.BarPart.Edge.Points.Last()}, Length: {this.BarPart.Edge.Length} m, Section: Composite - {compositeSection.Type}, Materials: {string.Join(", ", compositeMaterials)}";
+                    return $"{this.Type} Start: {this.BarPart.Edge.Points.First()}, End: {this.BarPart.Edge.Points.Last()}, Length: {this.BarPart.Edge.Length} m, Section: Composite-{compositeSection.Type}/{name}, Materials: {string.Join(", ", compositeMaterials)}";
                 }
                 if (this.BarPart.HasDeltaBeamComplexSectionRef)
                 {

@@ -136,7 +136,7 @@ namespace FemDesign.Results
         {
             get
             {
-                return new Regex(@"^Quantity estimation, Concrete|^Storey\tStruct\.\tIdentifier\tQuality\tSection/\tHeight\tWidth\tTotal\tlength\[m\]/\tVolume\tTotal weight\tFormwork\tReinforcement\tCO2 footprint \(A1-A3\)|\t*\[.+\]|^TOTAL\t");
+                return new Regex(@"^Quantity estimation, Concrete|^Storey\tStruct\.\tIdentifier\tQuality\tSection/\tHeight\tWidth\tTotal length\[m\]/\tVolume\tTotal weight\tFormwork\tReinforcement\tCO2 footprint \(A1-A3\)|\t*\[.+\]|^TOTAL\t");
             }
         }
 
@@ -147,13 +147,13 @@ namespace FemDesign.Results
             string id = row[2];
             string quality = row[3];
             string section = row[4];
-            double height = row[5] == "" ? 0 : Double.Parse(row[4], CultureInfo.InvariantCulture);
-            double width = row[6] == "" ? 0 : Double.Parse(row[4], CultureInfo.InvariantCulture);
-            double subTotal = double.Parse(row[7], CultureInfo.InvariantCulture);
+            double height = row[5] == "" ? 0 : Double.Parse(row[5], CultureInfo.InvariantCulture);
+            double width = row[6] == "" ? 0 : Double.Parse(row[6], CultureInfo.InvariantCulture);
+            double subTotal = row[7] == "" ? 0 : Double.Parse(row[7], CultureInfo.InvariantCulture);
             double volume = double.Parse(row[8], CultureInfo.InvariantCulture);
             double totalWeight = double.Parse(row[9], CultureInfo.InvariantCulture);
             double formwork = double.Parse(row[10], CultureInfo.InvariantCulture);
-            double reinforcement = double.Parse(row[11], CultureInfo.InvariantCulture);
+            double reinforcement = row[11] == "" ? 0 : Double.Parse(row[11], CultureInfo.InvariantCulture);
 
             double? co2Footprint;
             if (row[12].Contains("there is no matching value in the CO2 database!"))

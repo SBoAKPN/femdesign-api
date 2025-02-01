@@ -16,7 +16,7 @@ namespace FemDesign.Foundations
         [XmlAttribute("ref_slab")]
         public Guid RefSlab { get; set; }
 
-        private RefParts()
+        public RefParts()
         {
         }
 
@@ -28,6 +28,7 @@ namespace FemDesign.Foundations
             this.RefSupport = Guid.NewGuid();                   // What ref is referencing with the Guid?
             if (refSlab) { this.RefSlab = Guid.NewGuid(); }     // What ref is referencing with the Guid?
         }
+
 
     }
 }

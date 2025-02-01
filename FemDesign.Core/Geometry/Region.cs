@@ -79,12 +79,26 @@ namespace FemDesign.Geometry
         public Region(List<Contour> contours)
         {
             this.Contours = contours;
+            this.Plane = contours[0].Edges[0].Plane;
         }
 
         public Region(List<Contour> contours, Plane plane)
         {
             this.Contours = contours;
             this.Plane = plane;
+        }
+
+        /// <summary>
+        /// Construct a region with holes from an outer contour and inner contours.
+        /// The direction of the holes contours are assumed to be opposite to the outer.
+        /// </summary>
+        /// <param name="outerContour"></param>
+        /// <param name="holesContours"></param>
+        public Region(Contour outerContour, List<Contour> holesContours)
+        {
+            this.Contours = new List<Contour> { outerContour };
+            this.Contours.AddRange(holesContours);
+            this.Plane = outerContour.Edges[0].Plane;
         }
 
         public bool IsPlanar
@@ -146,6 +160,22 @@ namespace FemDesign.Geometry
             this.Plane = plane;
         }
 
+        public static Region RectangleXZ(Point3d corner, double widthX, double heightZ)
+        {
+            var points0 = corner + new Vector3d(0, 0, 0);
+            var points1 = corner + new Vector3d(widthX, 0, 0);
+            var points2 = corner + new Vector3d(widthX, 0, heightZ);
+            var points3 = corner + new Vector3d(0, 0, heightZ);
+
+            var points = new List<Point3d>() { points0, points1, points2, points3 };
+
+            var plane = new Plane(points0, points1, points3);
+
+            // set properties
+            var region = new Region(points, plane);
+
+            return region;
+        }
         public static Region RectangleXZ(double width, double height)
         {
             var points0 = new Point3d(0,0,0);
@@ -179,7 +209,55 @@ namespace FemDesign.Geometry
 
             return region;
         }
+        public static Region RectangleXY(double widthX, double widthY)
+        {
+            var points0 = new Point3d(0, 0, 0);
+            var points1 = new Point3d(widthX, 0, 0);
+            var points2 = new Point3d(widthX, widthY, 0);
+            var points3 = new Point3d(0, widthY, 0);
 
+            var points = new List<Point3d>() { points0, points1, points2, points3 };
+
+            var plane = new Plane(points0, points1, points3);
+
+            // set properties
+            var region = new Region(points, plane);
+
+            return region;
+        }
+
+        public static Region RectangleYZ(Point3d corner, double widthY, double heightZ)
+        {
+            var points0 = corner + new Vector3d(0, 0, 0);
+            var points1 = corner + new Vector3d(0, widthY, 0);
+            var points2 = corner + new Vector3d(0, widthY, heightZ);
+            var points3 = corner + new Vector3d(0, 0, heightZ);
+
+            var points = new List<Point3d>() { points0, points1, points2, points3 };
+
+            var plane = new Plane(points0, points1, points3);
+
+            // set properties
+            var region = new Region(points, plane);
+
+            return region;
+        }
+        public static Region RectangleYZ(double widthY, double heightZ)
+        {
+            var points0 = new Point3d(0, 0, 0);
+            var points1 = new Point3d(0, widthY, 0);
+            var points2 = new Point3d(0, widthY, heightZ);
+            var points3 = new Point3d(0, 0, heightZ);
+
+            var points = new List<Point3d>() { points0, points1, points2, points3 };
+
+            var plane = new Plane(points0, points1, points3);
+
+            // set properties
+            var region = new Region(points, plane);
+
+            return region;
+        }
 
         /// <summary>
         /// Reverse the contours in this region

@@ -1,5 +1,5 @@
-from command import *
-from analysis import Analysis, Comb, Design
+from femdesign.calculate.command import *
+from femdesign.calculate.analysis import Analysis, CombSettings, Design
 
 def test_design():
     xmlDesign = Design(True, True, True).to_xml_element()

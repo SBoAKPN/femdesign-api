@@ -6,12 +6,15 @@ from enum import Enum
 from femdesign.calculate.analysis import Analysis, Design
 from femdesign.calculate.fdscript import Fdscript
 from femdesign.utilities.filehelper import OutputFileHelper
-from femdesign.calculate.command import DesignModule, CmdUser, CmdCalculation, CmdListGen, CmdOpen, CmdProjDescr, CmdSave
+from femdesign.calculate.command import *
 
 import win32file
 import win32pipe
 
 import os
+import shutil
+
+import uuid
 
 """
 FEM - Design usage with pipe
@@ -98,7 +101,7 @@ def GetElapsedTime(start_time):
 
 class _FdConnect:
 
-    def __exit__(self, exc_type, exc_value, traceback):
+    def __exit__(self):
         self.Detach()
         self.ClosePipe()
 
@@ -293,18 +296,17 @@ class Verbosity(Enum):
     PROGRESS_WINDOW_TITLE = 32
 
 
-## define a private class
-
-
 class FemDesignConnection(_FdConnect):
     def __init__(self,
                  fd_path : str = r"C:\Program Files\StruSoft\FEM-Design 23\fd3dstruct.exe",
                  pipe_name : str ="FdPipe1",
                  verbose : Verbosity = Verbosity.SCRIPT_LOG_LINES,
                  output_dir : str = None,
-                 minimized : bool = False,):
+                 minimized : bool = False,
+                 delete_dir : bool = True):
         super().__init__(pipe_name)
 
+        self.delete_dir = delete_dir
         self._output_dir = output_dir
 
         os.environ["FD_NOLOGO"] = "1"
@@ -314,6 +316,14 @@ class FemDesignConnection(_FdConnect):
         
         self.Start(fd_path)
         self.LogLevel(verbose)
+
+    def __exit__(self):
+        super().__exit__()
+        if(self.delete_dir):
+            try:
+                shutil.rmtree(os.path.join(self.output_dir, "scripts"))
+            except:
+                pass
 
     @property
     def output_dir(self):
@@ -327,7 +337,6 @@ class FemDesignConnection(_FdConnect):
         self._output_dir = os.path.abspath(value)
         if not os.path.exists(value):
             os.makedirs(os.path.abspath(value))
-
     
     def RunScript(self, fdscript : Fdscript, file_name : str = "script"):
         """
@@ -429,7 +438,7 @@ class FemDesignConnection(_FdConnect):
         log = OutputFileHelper.GetLogFilePath(self.output_dir)
 
         if not file_name.endswith(".struxml") and not file_name.endswith(".str"):
-            raise ValueError(f"File {file_name} must have extension .struxml or .str")
+            raise ValueError(f"file_name must have extension .struxml or .str")
         if not os.path.exists(file_name):
             raise FileNotFoundError(f"File {file_name} not found")
 
@@ -447,8 +456,86 @@ class FemDesignConnection(_FdConnect):
         fdscript = Fdscript(log, [cmd_results])
         self.RunScript(fdscript, "generate_list_tables")
         
+    def SaveDocx(self, file_name : str, template_file : str = None):
+        """Save the project as docx
+
+        Args:
+            file_name (str): name of the file to save
+
+        Examples
+        --------
+        >>> pipe = FemDesignConnection()
+        >>> pipe.SaveDocx(r"outputFile.docx")
+        """
+        log = OutputFileHelper.GetLogFilePath(self.output_dir)
+
+
+        if template_file:
+            self.ApplyDocumentationTemplate(template_file)
+
+        cmd_save_docx = CmdSaveDocx(file_name)
+
+
+        fdscript = Fdscript(log, [cmd_save_docx])
+        self.RunScript(fdscript, "save_docx")
+    
+    def ApplyDocumentationTemplate(self, template_file : str):
+        """Apply documentation template
+
+        Args:
+            template_file (str): template file path
+        """
+        log = OutputFileHelper.GetLogFilePath(self.output_dir)
+
+        cmd_child = CmdChild(template_file)
+        fdscript = Fdscript(log, [cmd_child])
+        self.RunScript(fdscript, "apply_documentation_template")
+
+    def GenerateInteractionSurface(self, guid : uuid.UUID, outfile : str, offset : float = 0.0, fUlt : bool = True):
+        """Generate interaction surface
+
+        Args:
+            guid (uuid.UUID): guid of an existing bar. make sure you pass the analytical bar!
+            outfile (str): path to the output file
+            offset (float): offset is cross-section position, measured along the bar from the starting point [m]
+            fUlt (bool): fUlt is true for Ultimate, false for Accidental or Seismic combination (different gammaC)
+        """
+        log = OutputFileHelper.GetLogFilePath(self.output_dir)
+
+        cmd_interaction_surface = CmdInteractionSurface(guid, outfile, offset, fUlt)
+        fdscript = Fdscript(log, [cmd_interaction_surface])
+        self.RunScript(fdscript, "generate_interaction_surface")
+    
+    def SetDesignParameters(self, file_path : str):
+        """Set design parameters
+
+        Args:
+            file_path (str): path to the file
+        """
+        log = OutputFileHelper.GetLogFilePath(self.output_dir)
+
+        cmd_design_parameters = CmdConfig(file_path)
+        fdscript = Fdscript(log, [cmd_design_parameters])
+        self.RunScript(fdscript, "set_design_parameters")
 
     ## it does not work
-    def Disconnect(self):
+    # def DumpDesignParameters(self, file_path : str):
+    #     """Dump calculation and design parameters
+
+    #     Args:
+    #         file_path (str): xml file path where the design and calculation parameters will be dumped
+    #     """
+    #     if not file_path.endswith(".xml"):
+    #         raise ValueError("file_name must have suffix .xml")
+
+    #     file_path = os.path.abspath(file_path)
+    #     message = f"; CXL MODULECOM WXMLCFG:{file_path}"
+    #     self.Send(message)
+
+    # ## it does not work
+    # def Disconnect(self):
         super().Detach()
         win32pipe.DisconnectNamedPipe(self.pipe_send)
+
+    def Close(self):
+        self.__exit__()

@@ -21,12 +21,32 @@ namespace FemDesign.Calculate
         [XmlElement("logfile")]
         public string LogFile { get; set; } // SZPATH
 
+        [XmlAttribute("fContinueOnError")]
+        public int _continueOnError { get; set; } = 1;
+
+        [XmlAttribute("fIgnoreParseError")]
+        public int _ignoreParseError { get; set; } = 1;
+
+        [XmlIgnore]
+        public bool ContinueOnError
+        {
+            get { return this._continueOnError == 1; }
+            set { this._continueOnError = System.Convert.ToInt32(value); }
+        }
+
+        [XmlIgnore]
+        public bool IgnoreParseError
+        {
+            get { return this._ignoreParseError == 1; }
+            set { this._ignoreParseError = System.Convert.ToInt32(value); }
+        }
+
+
         /// <summary>
         /// Parameterless constructor for serialization.
         /// </summary>
-        private FdScriptHeader()
+        public FdScriptHeader()
         {
-            
         }
         public FdScriptHeader(string title, string logfile)
         {

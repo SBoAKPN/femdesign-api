@@ -58,7 +58,7 @@ namespace FemDesign.Grasshopper
 
         protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
-            pManager.AddGenericParameter("Model", "Model", "Model to open.", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Model", "Model", "Model to open. File as .str and .struxml are also accepted", GH_ParamAccess.item);
             pManager.AddGenericParameter("Analysis", "Analysis", "Analysis.", GH_ParamAccess.item);
             pManager[pManager.ParamCount - 1].Optional = true;
             pManager.AddGenericParameter("Design", "Design", "Design.", GH_ParamAccess.item);
@@ -89,7 +89,7 @@ namespace FemDesign.Grasshopper
 
             pManager.AddTextParameter("DocxTemplatePath", "DocxTemplatePath", "File path to documentation template file (.dsc). The documentation will be saved in the `FEM-Design API` folder. Optional parameter.", GH_ParamAccess.item);
             pManager[pManager.ParamCount - 1].Optional = true;
-            pManager.AddTextParameter("SaveFilePath", "SaveFilePath", "File path where to save the model as .struxml.\nIf not specified, the file will be saved in the `FEM-Design API` folder adjacent to your .gh script.", GH_ParamAccess.item);
+            pManager.AddTextParameter("SaveFilePath", "SaveFilePath", "File path where to save the model as .struxml or .str.\nIf not specified, the file will be saved in the `FEM-Design API` folder adjacent to your .gh script.", GH_ParamAccess.item);
             pManager[pManager.ParamCount - 1].Optional = true;
             pManager.AddBooleanParameter("RunNode", "RunNode", "If true node will execute. If false node will not execute.", GH_ParamAccess.item, false);
             pManager[pManager.ParamCount - 1].Optional = true;
@@ -107,7 +107,7 @@ namespace FemDesign.Grasshopper
         {
             List<Results.IResult> mixedResults = new List<Results.IResult>();
             MethodInfo genericMethod = typeof(FemDesign.FemDesignConnection).GetMethod("_getResults", BindingFlags.Instance | BindingFlags.NonPublic).MakeGenericMethod(resultType);
-            dynamic result = genericMethod.Invoke(connection, new object[] { units, options, elements, true });
+            dynamic result = genericMethod.Invoke(connection, new object[] { units, options, elements, false });
             mixedResults.AddRange(result);
             return mixedResults;
         }
@@ -205,6 +205,16 @@ namespace FemDesign.Grasshopper
                 string tempPath = System.IO.Path.GetTempPath();
                 System.IO.Directory.SetCurrentDirectory(tempPath);
             }
+            else if(saveFilePath != null)
+            {
+                var currentDir = System.IO.Path.GetDirectoryName(saveFilePath);
+                // check if folder exist. If not, create a new one
+                if (!System.IO.Directory.Exists(currentDir))
+                {
+                    System.IO.Directory.CreateDirectory(currentDir);
+                }
+                System.IO.Directory.SetCurrentDirectory(currentDir);
+            }
             else
             {
                 var filePath = OnPingDocument().FilePath;
@@ -300,7 +310,7 @@ namespace FemDesign.Grasshopper
                 {
                     foreach (var type in types)
                     {
-                        var res = _getResults(connection, type, units, options);
+                        var res = _getResults(connection, type, units, options, null);
                         resultsTree.AddRange(res, new GH_Path(iteration, i));
                         i++;
                     }
@@ -364,7 +374,7 @@ namespace FemDesign.Grasshopper
         }
         public override Guid ComponentGuid
         {
-            get { return new Guid("{D8FB0474-D57A-4DFC-80E3-2D1D0F5D2FD4}"); }
+            get { return new Guid("{64EF2A60-5694-4901-B493-57AF83C04969}"); }
         }
 
         public override GH_Exposure Exposure => GH_Exposure.primary;

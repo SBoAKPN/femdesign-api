@@ -21,6 +21,9 @@ namespace FemDesign.Results
         /// Bar name identifier
         /// </summary>
         public string Id { get; }
+        /// <summary>
+        /// Maximum utilization
+        /// </summary>
         public double Max { get; }
         /// <summary>
         /// Section utilization
@@ -38,7 +41,6 @@ namespace FemDesign.Results
         /// Torsional utilization
         /// </summary>
         public double T { get; }
-
         /// <summary>
         /// Utilization for crack width
         /// </summary>
@@ -93,8 +95,8 @@ namespace FemDesign.Results
                 double c = row[4] == "-" ? 0 : double.Parse(row[4], CultureInfo.InvariantCulture);
                 double t = row[5] == "-" ? 0 : double.Parse(row[5], CultureInfo.InvariantCulture);
                 double cw = row[6] == "-" ? 0 : double.Parse(row[6], CultureInfo.InvariantCulture);
-                string lc = HeaderData["casename"]; ;
-                return new RCBarUtilization(id, max, sec, st, c, t, cw, lc);  
+                string lc = HeaderData["casename"];
+                return new RCBarUtilization(id, max, sec, st, c, t, cw, lc);
             }
             else
             {

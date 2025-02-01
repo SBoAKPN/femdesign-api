@@ -5,6 +5,7 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 using System.Reflection;
+using FemDesign.Utils;
 
 namespace FemDesign.Calculate
 {
@@ -120,7 +121,33 @@ namespace FemDesign.Calculate
         }
 
 
-        
+        [TestMethod("FdscriptHeader")]
+        public void FdscriptHeaderTest()
+        {
+            var header = new FdScriptHeader("title", "logfile.log");
+            header.IgnoreParseError = true;
+            header.ContinueOnError = true;
+
+            Assert.IsTrue(header.Title == "title");
+            Assert.IsTrue(header.Version == FdScript.Version);
+            Assert.IsTrue(header.Module == "sframe");
+            Assert.IsTrue(header.LogFile == "logfile.log");
+            Assert.IsTrue(header._continueOnError == 1);
+            Assert.IsTrue(header._ignoreParseError == 1);
+
+            var xmlHeader = header.SerializeObjectToXml();
+            Console.WriteLine(xmlHeader);
+
+            header.IgnoreParseError = false;
+            header.ContinueOnError = false;
+
+            Assert.IsTrue(header._continueOnError == 0);
+            Assert.IsTrue(header._ignoreParseError == 0);
+
+
+            xmlHeader = header.SerializeObjectToXml();
+            Console.WriteLine(xmlHeader);
+        }
 
     }
 }

@@ -42,3 +42,10 @@ FemDesign.Tests/Results/**/*.log
 
 /FemDesign.Python/packaging/dist
 /FemDesign.Python/packaging/src/fem_design.egg-info
+/FemDesign.Python/examples/run-analysis/FEM-Design API
+/FemDesign.Examples/Python/jupyter-notebook/bsc/.ipynb_checkpoints
+/FemDesign.Examples/Python/jupyter-notebook/results
+/FemDesign.Examples/Python/jupyter-notebook/FEM-Design API
+/FemDesign.Examples/Python/jupyter-notebook/.ipynb_checkpoints
+/FemDesign.Python/packaging/src
+/FemDesign.Python/FEM-Design API

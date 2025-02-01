@@ -2659,6 +2659,11 @@ namespace FemDesign
                 this.AddIsolatedFoundation((Foundations.IsolatedFoundation)obj, overwrite);
                 this.AddMaterial(((Foundations.IsolatedFoundation)obj).ComplexMaterialObj, overwrite);
             }
+            else if (obj.GetType() == typeof(Foundations.SlabFoundation))
+            {
+                this.AddSlabFoundation((Foundations.SlabFoundation)obj, overwrite);
+                this.AddMaterial(((Foundations.IsolatedFoundation)obj).ComplexMaterialObj, overwrite);
+            }
             else
             {
                 throw new System.ArgumentException("Passed object must be IsolatedFoundation. LineFoundation or WallFoundation NOT YET implemented!");
@@ -2703,6 +2708,52 @@ namespace FemDesign
             }
             return false;
         }
+
+
+
+
+
+        /// <summary>
+        /// Add Slab foundation to Model.
+        /// </summary>
+        private void AddSlabFoundation(Foundations.SlabFoundation obj, bool overwrite)
+        {
+            // in model?
+            bool inModel = this.SlabFoundationInModel(obj);
+
+            // in model, don't overwrite
+            if (inModel && !overwrite)
+            {
+                throw new System.ArgumentException($"{obj.GetType().FullName} with guid: {obj.Guid} has already been added to model. Are you adding the same element twice?");
+            }
+
+            // in model, overwrite
+            else if (inModel && overwrite)
+            {
+                this.Entities.Foundations.SlabFoundations.RemoveAll(x => x.Guid == obj.Guid);
+            }
+
+            // add obj
+            this.Entities.Foundations.SlabFoundations.Add(obj);
+        }
+
+        /// <summary>
+        /// Check if Slab foundation in Model.
+        /// </summary>
+        private bool SlabFoundationInModel(Foundations.SlabFoundation obj)
+        {
+            foreach (Foundations.SlabFoundation elem in this.Entities.Foundations.SlabFoundations)
+            {
+                if (elem.Guid == obj.Guid)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
 
 
 
@@ -3315,7 +3366,7 @@ namespace FemDesign
         /// <summary>
         /// Add LabelledSection to Model
         /// </summary>
-        private void AddLabelledSection(AuxiliaryResults.LabelledSection obj, bool overwrite)
+        public void AddLabelledSection(AuxiliaryResults.LabelledSection obj, bool overwrite)
         {
             if (this.Entities.LabelledSections == null)
             {
@@ -3753,6 +3804,7 @@ namespace FemDesign
 
         #region FOUNDATIONS
         private void AddEntity(Foundations.IsolatedFoundation obj, bool overwrite) => AddIsolatedFoundation(obj, overwrite);
+        private void AddEntity(Foundations.SlabFoundation obj, bool overwrite) => AddSlabFoundation(obj, overwrite);
 
         private void AddEntity(Soil.SoilElements obj, bool overwrite) => AddSoil(obj, overwrite);
 
