@@ -22,14 +22,14 @@ namespace RetainingWall
             LoadCase loadCaseHHW = loadcases[5];
             LoadCase loadCaseMW = loadcases[6];
             LoadCase loadCaseLLW = loadcases[7];
-            LoadCase loadCaseEffJHHW = loadcases[8];
-            LoadCase loadCaseEffJMW = loadcases[9];
-            LoadCase loadCaseEffJLLW = loadcases[10];
-            LoadCase loadCaseÖLVU = loadcases[11];
-            LoadCase loadCaseÖLHU = loadcases[12];
-            LoadCase loadCaseÖLVP = loadcases[13];
-            LoadCase loadCaseÖLHP = loadcases[14];
-            LoadCase loadCaseAcc = loadcases[15];
+            //LoadCase loadCaseEffJHHW = loadcases[8];
+            //LoadCase loadCaseEffJMW = loadcases[9];
+            //LoadCase loadCaseEffJLLW = loadcases[10];
+            LoadCase loadCaseÖLVU = loadcases[8];
+            LoadCase loadCaseÖLHU = loadcases[9];
+            LoadCase loadCaseÖLVP = loadcases[10];
+            LoadCase loadCaseÖLHP = loadcases[11];
+            LoadCase loadCaseAcc = loadcases[12];
 
             // ----- Define load combination -----
             // Load combination when water adds lift
@@ -61,14 +61,14 @@ namespace RetainingWall
 
             // Load combination example
             var yd = 0.91;
-            var loadComb1 = new LoadCombination("LC1  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S ", LoadCombType.UltimateOrdinary, (loadCaseDL, yd * 1.35), (loadCaseJU, yd * 1.10), (loadCaseÖLHU, yd * 1.40));
-            var loadComb2 = new LoadCombination("LC2  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S ", LoadCombType.UltimateOrdinary, (loadCaseDL, 1.00), (loadCaseJU, 1.00));
-
-            var loadComb3 = new LoadCombination("LC3  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS", LoadCombType.ServiceabilityQuasiPermanent, (loadCaseDL, 1.00), (loadCaseJK, 1.00), (loadCaseÖLHP, 1.00));
-            var loadComb4 = new LoadCombination("LC4  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS", LoadCombType.ServiceabilityQuasiPermanent, (loadCaseDL, 1.00), (loadCaseJK, 1.00));
-
-            var loadComb5 = new LoadCombination("LC5  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn ", LoadCombType.ServiceabilityFrequent, (loadCaseDL, 1.00), (loadCaseJK, 1.00), (loadCaseÖLHU, 0.75));
-
+            //SLS anges först för att LC1 och LC2 alltid kan användas för utskrift av deformation
+            var loadComb1 = new LoadCombination("LC1  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn "         , LoadCombType.ServiceabilityFrequent, (loadCaseDL, 1.00), (loadCaseJK, 1.00), (loadCaseÖLVU, 0.75), (loadCaseÖLHU, 0.75));
+            var loadComb2 = new LoadCombination("LC2  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS", LoadCombType.ServiceabilityQuasiPermanent, (loadCaseDL, 1.00), (loadCaseJK, 1.00), (loadCaseÖLVP, 1.00), (loadCaseÖLHP, 1.00));
+            var loadComb3 = new LoadCombination("LC3  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS", LoadCombType.ServiceabilityQuasiPermanent, (loadCaseDL, 1.00), (loadCaseJK, 1.00));
+            //ULS
+            var loadComb4 = new LoadCombination("LC4  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S "  , LoadCombType.UltimateOrdinary, (loadCaseDL, yd * 1.35), (loadCaseJU, yd * 1.10), (loadCaseÖLVU, yd * 1.40), (loadCaseÖLHU, yd * 1.40));
+            var loadComb5 = new LoadCombination("LC5  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S "  , LoadCombType.UltimateOrdinary, (loadCaseDL, 1.00), (loadCaseJU, 1.00));
+                                                                                                      
             var loadcombinations = new List<LoadCombination>
                 {
                 loadComb1,

@@ -60,6 +60,7 @@ namespace RetainingWall
             double sq;
             double iq;
             double γeq;
+            double Nγd;
             double sγ;
             double iγ;
 
@@ -163,7 +164,6 @@ namespace RetainingWall
                     true,       // 2
                     false,      // 3
                     false,      // 4
-
                 };
 
             for (int i = 0; i < SupportResultant_B.Count; i++)
@@ -306,7 +306,15 @@ namespace RetainingWall
                         γeq = γ_uK_BPL;
                     }
 
-                    double Nγd = DränFörhållande[i] ? (0.08705 + 0.3231 * Math.Sin(2 * φd_rad) - 0.04836 * Math.Pow(Math.Sin(2 * φd_rad), 2)) * ((1 + Math.Sin(φd_rad)) / (1 - Math.Sin(φd_rad)) * Math.Exp(3 * Math.PI / 2 * Math.Tan(φd_rad)) - 1) : -2 * Math.Sin(β_rad);
+                    if (DränFörhållande[i])
+                    {
+                        Nγd = (φd == 0) ? 0 : (0.08705 + 0.3231 * Math.Sin(2 * φd_rad) - 0.04836 * Math.Pow(Math.Sin(2 * φd_rad), 2)) * ((1 + Math.Sin(φd_rad)) / (1 - Math.Sin(φd_rad)) * Math.Exp(3 * Math.PI / 2 * Math.Tan(φd_rad)) - 1);
+                    }
+                    else
+                    {
+                        Nγd = (φd == 0) ? 0 : -2 * Math.Sin(β_rad) ;
+                    }
+                    
 
                     double dγ  = 1;
                     if (Meterstrimla)
@@ -317,7 +325,7 @@ namespace RetainingWall
                     else
                     {
                         sγ = 1 - 0.4 * bef / lef;
-                        iγ = Math.Pow((1 - FH_ed / (Fv + bef * lef * cud * (1 / Math.Tan(φd_rad)))), (m + 1));
+                        iγ = (φd == 0) ? 1 : Math.Pow((1 - FH_ed / (Fv + bef * lef * cud * (1 / Math.Tan(φd_rad)))), (m + 1));
                     }
                     double gγ  = 1 - Math.Sin(2 * β_rad);
                     double bγ  = Math.Pow(1 - α_rad * Math.Tan(φd_rad), 2);
@@ -549,7 +557,6 @@ namespace RetainingWall
                     //false,      // 12
                     //false,      // 13
                     //false,      // 14
-
                     true,       // 1
                     true,       // 2
                     false,      // 3
@@ -618,6 +625,7 @@ namespace RetainingWall
                     ηodr_18_List.Add(ηodr_18);
                     cuk_List.Add(cuk);
                     cud_List.Add(cud);
+                    Platttyp_List.Add(Platttyp);
                     bx_List.Add(bx);
                     ly_List.Add(ly);
                     Fv_List.Add(Fv);
@@ -640,34 +648,34 @@ namespace RetainingWall
 
             if (KontrollUtskrift)
             {
-             Console.WriteLine("LoadCombination name  = " + "; " + string.Join(", ", LoadComb_List));
-             Console.WriteLine("γM_dr  = " + "; " + string.Join(", ", γM_dr_List));
-             Console.WriteLine("ηdr_18  = " + "; " + string.Join(", ", ηdr_18_List));
-             Console.WriteLine("φ_eff  = " + "; " + string.Join(", ", φ_eff_List));
-             Console.WriteLine("φd  = " + "; " + string.Join(", ", φd_List));
-             Console.WriteLine("γM_odr  = " + "; " + string.Join(", ", γM_odr_List));
-             Console.WriteLine("ηodr_18  = " + "; " + string.Join(", ", ηodr_18_List));
-             Console.WriteLine("cuk  = " + "; " + string.Join(", ", cuk_List));
-             Console.WriteLine("cud  = " + "; " + string.Join(", ", cud_List));
-             Console.WriteLine("Platttyp  = " + "; " + string.Join(", ", Platttyp_List));
-             Console.WriteLine("bx  = " + "; " + string.Join(", ", bx_List));
-             Console.WriteLine("ly  = " + "; " + string.Join(", ", ly_List));
-             Console.WriteLine("Fv  = " + "; " + string.Join(", ", Fv_List));
-             Console.WriteLine("FHx  = " + "; " + string.Join(", ", FHx_List));
-             Console.WriteLine("FHy  = " + "; " + string.Join(", ", FHy_List));
-             Console.WriteLine("FH_ed  = " + "; " + string.Join(", ", FH_ed_List));
-             Console.WriteLine("Mx  = " + "; " + string.Join(", ", Mx_List));
-             Console.WriteLine("My  = " + "; " + string.Join(", ", My_List));
-             Console.WriteLine("ex  = " + "; " + string.Join(", ", ex_List));
-             Console.WriteLine("ey  = " + "; " + string.Join(", ", ey_List));
-             Console.WriteLine("bef  = " + "; " + string.Join(", ", bef_List));
-             Console.WriteLine("lef  = " + "; " + string.Join(", ", lef_List));
-             Console.WriteLine("Aef  = " + "; " + string.Join(", ", Aef_List));
-             Console.WriteLine("δd  = " + "; " + string.Join(", ", δd_List));
-             Console.WriteLine("FH_drän  = " + "; " + string.Join(", ", FH_drän_List));
-             Console.WriteLine("FH_odrän  = " + "; " + string.Join(", ", FH_odrän_List));
-             Console.WriteLine("FH_rd  = " + "; " + string.Join(", ", FH_rd_List));
-             Console.WriteLine("Ug_g  = " + "; " + string.Join(", ", Ug_G_List));
+             Console.WriteLine("LoadCombination name  = " + "; " + string.Join("; ", LoadComb_List));
+             Console.WriteLine("γM_dr  = " + "; " + string.Join("; ", γM_dr_List));
+             Console.WriteLine("ηdr_18  = " + "; " + string.Join("; ", ηdr_18_List));
+             Console.WriteLine("φ_eff  = " + "; " + string.Join("; ", φ_eff_List));
+             Console.WriteLine("φd  = " + "; " + string.Join("; ", φd_List));
+             Console.WriteLine("γM_odr  = " + "; " + string.Join("; ", γM_odr_List));
+             Console.WriteLine("ηodr_18  = " + "; " + string.Join("; ", ηodr_18_List));
+             Console.WriteLine("cuk  = " + "; " + string.Join("; ", cuk_List));
+             Console.WriteLine("cud  = " + "; " + string.Join("; ", cud_List));
+             Console.WriteLine("Platttyp  = " + "; " + string.Join("; ", Platttyp_List));
+             Console.WriteLine("bx  = " + "; " + string.Join("; ", bx_List));
+             Console.WriteLine("ly  = " + "; " + string.Join("; ", ly_List));
+             Console.WriteLine("Fv  = " + "; " + string.Join("; ", Fv_List));
+             Console.WriteLine("FHx  = " + "; " + string.Join("; ", FHx_List));
+             Console.WriteLine("FHy  = " + "; " + string.Join("; ", FHy_List));
+             Console.WriteLine("FH_ed  = " + "; " + string.Join("; ", FH_ed_List));
+             Console.WriteLine("Mx  = " + "; " + string.Join("; ", Mx_List));
+             Console.WriteLine("My  = " + "; " + string.Join("; ", My_List));
+             Console.WriteLine("ex  = " + "; " + string.Join("; ", ex_List));
+             Console.WriteLine("ey  = " + "; " + string.Join("; ", ey_List));
+             Console.WriteLine("bef  = " + "; " + string.Join("; ", bef_List));
+             Console.WriteLine("lef  = " + "; " + string.Join("; ", lef_List));
+             Console.WriteLine("Aef  = " + "; " + string.Join("; ", Aef_List));
+             Console.WriteLine("δd  = " + "; " + string.Join("; ", δd_List));
+             Console.WriteLine("FH_drän  = " + "; " + string.Join("; ", FH_drän_List));
+             Console.WriteLine("FH_odrän  = " + "; " + string.Join("; ", FH_odrän_List));
+             Console.WriteLine("FH_rd  = " + "; " + string.Join("; ", FH_rd_List));
+             Console.WriteLine("Ug_g  = " + "; " + string.Join("; ", Ug_G_List));
             }
 
                 return Ug_G_List;
@@ -734,14 +742,14 @@ namespace RetainingWall
             
             if (KontrollUtskrift)
             {
-                Console.WriteLine("LoadCombination name  = " + "; " + string.Join(", ", LoadComb_List));
-                Console.WriteLine("bx  = " + "; " + string.Join(", ", bx_List     ));
-                Console.WriteLine("Fv  = " + "; " + string.Join(", ", Fv_List      ));
-                Console.WriteLine("My  = " + "; " + string.Join(", ", My_List      ));
-                Console.WriteLine("ex  = " + "; " + string.Join(", ", ex_List      ));
-                Console.WriteLine("bef  = " + "; " + string.Join(", ", bef_List     ));
-                Console.WriteLine("bef_min  = " + "; " + string.Join(", ", bef_min_List ));
-                Console.WriteLine("Ug_S  = " + "; " + string.Join(", ", Ug_S_List));
+                Console.WriteLine("LoadCombination name  = " + "; " + string.Join("; ", LoadComb_List));
+                Console.WriteLine("bx  = " + "; " + string.Join("; ", bx_List     ));
+                Console.WriteLine("Fv  = " + "; " + string.Join("; ", Fv_List      ));
+                Console.WriteLine("My  = " + "; " + string.Join("; ", My_List      ));
+                Console.WriteLine("ex  = " + "; " + string.Join("; ", ex_List      ));
+                Console.WriteLine("bef  = " + "; " + string.Join("; ", bef_List     ));
+                Console.WriteLine("bef_min  = " + "; " + string.Join("; ", bef_min_List ));
+                Console.WriteLine("Ug_S  = " + "; " + string.Join("; ", Ug_S_List));
             }
 
 
@@ -767,7 +775,8 @@ namespace RetainingWall
             var bef_List = new List<double>();
             var lef_List = new List<double>();
             var Aef_List = new List<double>();
-            
+
+            var qb_rd_SLS_List = new List<double>();
             var qb_ed_List = new List<double>();
             var Ug_SLS_List = new List<double>();
 
@@ -808,24 +817,26 @@ namespace RetainingWall
                     bef_List.Add(bef);
                     lef_List.Add(lef);
                     Aef_List.Add(Aef);
+                    qb_rd_SLS_List.Add(qb_rd_SLS);
                     qb_ed_List.Add(qb_ed);
                 }
             }
             if (KontrollUtskrift)
             {
-                Console.WriteLine("LoadCombination name  = " + "; " + string.Join(", ", LoadComb_List));
-                Console.WriteLine("bx  = " + "; " + string.Join(", ", bx_List));
-                Console.WriteLine("ly  = " + "; " + string.Join(", ", ly_List));
-                Console.WriteLine("Fv  = " + "; " + string.Join(", ", Fv_List));
-                Console.WriteLine("Mx  = " + "; " + string.Join(", ", Mx_List));
-                Console.WriteLine("My  = " + "; " + string.Join(", ", My_List));
-                Console.WriteLine("ex  = " + "; " + string.Join(", ", ex_List));
-                Console.WriteLine("ey  = " + "; " + string.Join(", ", ey_List));
-                Console.WriteLine("bef  = " + "; " + string.Join(", ", bef_List));
-                Console.WriteLine("lef  = " + "; " + string.Join(", ", lef_List));
-                Console.WriteLine("Aef  = " + "; " + string.Join(", ", Aef_List));
-                Console.WriteLine("qb_ed  = " + "; " + string.Join(", ", qb_ed_List));
-                Console.WriteLine("Ug_SLS  = " + "; " + string.Join(", ", Ug_SLS_List));
+                Console.WriteLine("LoadCombination name  = " + "; " + string.Join("; ", LoadComb_List));
+                Console.WriteLine("bx  = " + "; " + string.Join("; ", bx_List));
+                Console.WriteLine("ly  = " + "; " + string.Join("; ", ly_List));
+                Console.WriteLine("Fv  = " + "; " + string.Join("; ", Fv_List));
+                Console.WriteLine("Mx  = " + "; " + string.Join("; ", Mx_List));
+                Console.WriteLine("My  = " + "; " + string.Join("; ", My_List));
+                Console.WriteLine("ex  = " + "; " + string.Join("; ", ex_List));
+                Console.WriteLine("ey  = " + "; " + string.Join("; ", ey_List));
+                Console.WriteLine("bef  = " + "; " + string.Join("; ", bef_List));
+                Console.WriteLine("lef  = " + "; " + string.Join("; ", lef_List));
+                Console.WriteLine("Aef  = " + "; " + string.Join("; ", Aef_List));
+                Console.WriteLine("qb_rd_SLS  = " + "; " + string.Join("; ", qb_rd_SLS_List));
+                Console.WriteLine("qb_ed  = " + "; " + string.Join("; ", qb_ed_List));
+                Console.WriteLine("Ug_SLS  = " + "; " + string.Join("; ", Ug_SLS_List));
             }
             return Ug_SLS_List;
         }

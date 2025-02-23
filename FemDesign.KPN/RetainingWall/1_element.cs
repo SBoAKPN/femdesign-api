@@ -38,19 +38,19 @@ namespace RetainingWall
             var T_MUR = new List<double> { 0.300, 0.300, 0.300 };
 
             //Calculated with https://concrete-creep.strusoft.com/
-            //RH = 100, Ac=0.95, u=3.9, t0=5
+            //RH = 100, Ac=0.40, u=2.8, t0=5
             double creepUlsBPL  = 0.000;
             double creepSlqBPL  = 1.6435;
             double creepSlfBPL  = 1.6435;
             double creepSlcBPL  = 1.6435;
             double shrinkageBPL = 0.0625e-3;
 
-            //RH = 80, Ac=0.75, u=3.5, t0=5
+            //RH = 80, Ac=0.30, u=2.6, t0=5
             double creepUlsMUR = 0.000;
-            double creepSlqMUR = 2.0238;
-            double creepSlfMUR = 2.0238;
-            double creepSlcMUR = 2.0238;
-            double shrinkageMUR = 0.24258e-3;
+            double creepSlqMUR = 2.1179;
+            double creepSlfMUR = 2.1179;
+            double creepSlcMUR = 2.1179;
+            double shrinkageMUR = 0.26921e-3;
 
             // ------------------
 
@@ -79,7 +79,7 @@ namespace RetainingWall
             var SlabAlignBottom = new ShellEccentricity(VerticalAlignment.Bottom, 0, false, false);
             Slab SlabBPL    = FemDesign.Shells.Slab.FromFourPoints(P1_0, P1_1, P1_2, P1_3, T_BPL[0], materialBPL,       EdgeConnection.Default, SlabAlignBottom, null, "BPL");
             Slab SlabMUR    = FemDesign.Shells.Slab.FromFourPoints(P2_0, P2_1, P2_2, P2_3, T_MUR[0], materialMUR,       EdgeConnection.Default, null, null, "MUR");
-            Slab SlabBPLMUR = FemDesign.Shells.Slab.FromFourPoints(P3_0, P3_1, P3_2, P3_3, T_BPL[0], materialBPLNoMass, EdgeConnection.Default, null, null, "BPL-MUR");
+            Slab SlabBPLMUR = FemDesign.Shells.Slab.FromFourPoints(P3_0, P3_1, P3_2, P3_3, T_BPL[0], materialBPLNoMass, EdgeConnection.Default, null, null, "BPLMUR");
 
             SlabBPL.UpdateThickness(P_BPL, T_BPL);
             SlabMUR.UpdateThickness(P_MUR, T_MUR);
@@ -87,8 +87,12 @@ namespace RetainingWall
             SlabMUR.SlabPart.MeshSize = MeshSize;
             SlabBPLMUR.SlabPart.MeshSize = MeshSize;
 
-            //SlabBPL.SlabPart.LocalPos();
+            // Set static Guid 
+            SlabBPL.SlabPart.Guid = new Guid("A951B736-3394-4FE4-B38F-D17F1161EB3A");
+            SlabMUR.SlabPart.Guid = new Guid("F42D2623-FB17-4F39-9A21-EDDA24944298");
+            SlabBPLMUR.SlabPart.Guid = new Guid("2E290437-E86A-4E36-AF7D-ACDE6A6146C8");
 
+            //SlabBPL.SlabPart.LocalPos();
             var slabs = new List<Slab> { SlabBPL, SlabMUR, SlabBPLMUR };
             return slabs;
 
@@ -106,19 +110,22 @@ namespace RetainingWall
 
             // ----- INDATA -----
             // Styvhet för upplag
-            // KxNeg [0] , KxPos [1], KyNeg [2] , KyPos [3], KzNeg [4] , KzPos [5]
+            // KxNeg [0] = KSupp_H , KxPos [1] = KSupp_H, KyNeg [2] = KSupp_H , KyPos [3] = KSupp_H, KzNeg [4] = KSupp_V_Neg , KzPos [5] = KSupp_V_Pos
             // Neg = compression, Pos = Tension
-            var KSupp = new List<double> { 5e3, 5e3, 5e3, 5e3, 10e3, 0 };
-
+            var KSupp_V_Neg = 10e3;
+            var KSupp_V_Pos = 0;
+            var Phi_d = Math.Atan(Math.Tan(37.0 * Math.PI/180)/1.3*1.05);
+            var KSupp_H = KSupp_V_Neg * Math.Tan(Phi_d);
+            
             // ------------------
+
 
             // Define support   
             var regionBPL = SlabBPL.Region;
 
+            var motionsUpplagBPL = new FemDesign.Releases.Motions(KSupp_H, KSupp_H, KSupp_H, KSupp_H, KSupp_V_Neg, KSupp_V_Pos);
 
-            var motionsUpplagBPL = new FemDesign.Releases.Motions(KSupp[0], KSupp[1], KSupp[2], KSupp[3], KSupp[4], KSupp[5]);
-
-            var supportBPL = new FemDesign.Supports.SurfaceSupport(regionBPL, motionsUpplagBPL, "BPL_Upplag");
+            var supportBPL = new FemDesign.Supports.SurfaceSupport(regionBPL, motionsUpplagBPL, "BMBPL");
             supportBPL.Plane.Origin = new Point3d(AvrageX, AvrageY, AvrageZ);
 
             var supports = new List<FemDesign.GenericClasses.IStructureElement> { supportBPL };

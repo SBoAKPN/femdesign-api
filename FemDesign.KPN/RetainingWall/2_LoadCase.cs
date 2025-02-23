@@ -22,7 +22,7 @@ namespace RetainingWall
 
             LoadCase loadCaseHHW        = new LoadCase("HHW", LoadCaseType.Static, LoadCaseDuration.LongTerm);
             LoadCase loadCaseMW         = new LoadCase("MW", LoadCaseType.Static, LoadCaseDuration.Permanent);
-            LoadCase loadCaseLLW        = new LoadCase("LLW", LoadCaseType.Static, LoadCaseDuration.Permanent);
+            LoadCase loadCaseLLW        = new LoadCase("LLW", LoadCaseType.Static, LoadCaseDuration.LongTerm);
 
             //LoadCase loadCaseEffJHHW    = new LoadCase("Eff J HHW", LoadCaseType.Static, LoadCaseDuration.Permanent);
             //LoadCase loadCaseEffJMW     = new LoadCase("Eff J MW", LoadCaseType.Static, LoadCaseDuration.Permanent);

@@ -6,5 +6,7 @@
     <module>SFRAME</module>
     <logfile>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\logfile.log</logfile>
   </fdscriptheader>
-  <cmdchild>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\Retainingwall_doc_template_v2.dsc</cmdchild>
+  <cmdsave command="; CXL CS2SHELL SAVE">
+    <filename>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\model_loads_saved.struxml</filename>
+  </cmdsave>
 </fdscript>

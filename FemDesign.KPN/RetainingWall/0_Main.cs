@@ -9,6 +9,8 @@ using FemDesign.Results;
 using FemDesign.Shells;
 using RetainingWall;
 using FemDesign.Loads;
+using FemDesign.Reinforcement;
+using FemDesign.Materials;
 
 
 namespace FemDesign.RetainingWall
@@ -18,9 +20,9 @@ namespace FemDesign.RetainingWall
         static void Main()
         {
             double[] FundIterStop = { 0.90, 1 };
-            double Ug = 0; //FundIterStop.Average();
+            double Ug = 0; 
             var Ug_List = new List<double>();
-            double bx_BPL = 2.6;
+            double bx_BPL = 2.5;
             double MeshSize = 0.5;
 
             var model = new Model(Country.S);
@@ -31,7 +33,7 @@ namespace FemDesign.RetainingWall
             var slabs = new List<Slab>();
             var loadcombinations = new List<LoadCombination>();
 
-            // model analysis slabs loadcombinations
+            //// model analysis slabs loadcombinations
 
             while (Ug < FundIterStop[0] || Ug > FundIterStop[1])
             {
@@ -44,7 +46,7 @@ namespace FemDesign.RetainingWall
 
                 // Class 2
                 var loadcases = Loadcase.loadcases();
-
+                
                 // Class 3
                 var loads = Load.loads(slabs,loadcases);
 
@@ -53,7 +55,7 @@ namespace FemDesign.RetainingWall
 
                 // Class 5
                 string ReinfMaterial = "B500B";
-                var (slabstoRemove,reinfElements) = ReinForcement.straightReinfElements(slabs, ReinfMaterial);
+                var (slabstoRemove, reinfElements, shearControlRegions) = ReinForcement.straightReinfElements(slabs, ReinfMaterial);
 
                 // Removing reinforced slabs before adding, to prevent multiple instances of same element
                 elements.RemoveAll(slabs => slabstoRemove.Contains(slabs));
@@ -61,20 +63,23 @@ namespace FemDesign.RetainingWall
 
                 // Class 6
                 var labelledsections = Resultprocessing.labelledsections(slabs);
-                var resultpoints = Resultprocessing.resultpoints(slabs);
+                var rp_model = Resultprocessing.resultpoints_Model(slabs);
+
+                //elements.AddRange(labelledsections);
+                //elements.AddRange(rp_model);
 
                 // Assemble the model
+                
                 model.AddElements(elements);
                 model.AddLoads(loads);
                 model.AddLoadCases(loadcases);
                 model.AddLoadCombinations(loadcombinations);
-                //model.AddEntities(slabcontrolregion);
-                //model.AddLabelledSection(labelledsections);
-                // model.AddSection(LabelledSections);
+                //model.Entities.NoShearControlRegions.Add(shearControlRegions[0]);
+
 
                 // Designing foundation dimensions
                 // Create a direct link to FEM-Design and comunicate with it
-                using (var foundationDesignFEM = new FemDesign.FemDesignConnection(minimized : false, keepOpen: false))
+                using (var foundationDesignFEM = new FemDesign.FemDesignConnection(minimized: false, keepOpen: false))
                 {
                     foundationDesignFEM.Open(model);
 
@@ -83,24 +88,26 @@ namespace FemDesign.RetainingWall
                     var SupportResultant = foundationDesignFEM.GetLoadCombinationResults<Results.SurfaceSupportResultant>();
 
                     var SupportResultant_UG_B1 = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_B")).ToList();
-                    var SupportResultant_UG_B2 = SupportResultant_UG_B1.Concat(SupportResultant_UG_B1).ToList();
-                    
-                    var SupportResultant_UG_G = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_G")).ToList(); 
-                    var SupportResultant_UG_S = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_S")).ToList(); 
-                    var SupportResultant_UG_SLS = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_SLS")).ToList(); 
+                    var SupportResultant_UG_B2 = SupportResultant_UG_B1.Concat(SupportResultant_UG_B1).ToList(); // Testar både dränerat och odrännerat tillstånd
 
-                    var (Ug_B, qb_rd_ULS) = FundationDesign.Bärighet(SupportResultant_UG_B2, slabs, false);
-                    var Ug_G = FundationDesign.Glidning(SupportResultant_UG_G, slabs, false);
-                    var Ug_S = FundationDesign.Stjälpning(SupportResultant_UG_S, slabs, false);
-                    var Ug_SLS = FundationDesign.Krypdeformation(qb_rd_ULS, SupportResultant_UG_SLS, slabs, false);
+                    var SupportResultant_UG_G1 = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_G")).ToList();
+                    var SupportResultant_UG_G2 = SupportResultant_UG_G1.Concat(SupportResultant_UG_G1).ToList(); // Testar både dränerat och odrännerat tillstånd
+                    var SupportResultant_UG_S = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_S ")).ToList();
+                    var SupportResultant_UG_SLS = SupportResultant.Where(Lcc => Lcc.CaseIdentifier.Contains("UG_SLS")).ToList();
 
-                      Ug_List = Ug_B.Concat(Ug_G).Concat(Ug_S).Concat(Ug_SLS).ToList(); 
+                    var (Ug_B, qb_rd_ULS) = FundationDesign.Bärighet(SupportResultant_UG_B2, slabs, true);
+                    var Ug_G = FundationDesign.Glidning(SupportResultant_UG_G2, slabs, true);
+                    var Ug_S = FundationDesign.Stjälpning(SupportResultant_UG_S, slabs, true);
+                    var Ug_SLS = FundationDesign.Krypdeformation(qb_rd_ULS, SupportResultant_UG_SLS, slabs, true);
+
+                    Ug_List = Ug_B.Concat(Ug_G).Concat(Ug_S).Concat(Ug_SLS).ToList();
                 }
 
                 // Justering av Plattbredd
                 Ug = Ug_List.Max();
-                if (Ug < FundIterStop[0]) 
+                if (Ug < FundIterStop[0])
                 {
+                    
                     if (Ug < 0.8)
                     {
                         bx_BPL -= 0.3;
@@ -109,6 +116,9 @@ namespace FemDesign.RetainingWall
                     {
                         bx_BPL -= 0.1;
                     }
+                    Console.WriteLine();
+                    Console.WriteLine($"Utnyttjandegrad = {Math.Round(Ug, 2)} (för liten)");
+                    Console.WriteLine($"Fundamentlängd minskas till {bx_BPL} m");
                 }
                 if (Ug > FundIterStop[1])
                 {
@@ -120,20 +130,30 @@ namespace FemDesign.RetainingWall
                     {
                         bx_BPL += 0.1;
                     }
+                    Console.WriteLine();
+                    Console.WriteLine($"Utnyttjandegrad = {Math.Round(Ug, 2)} (för stor)");
+                    Console.WriteLine($"Fundamentlängd ökas till {bx_BPL} m");
                 }
             }
-            Console.WriteLine("\n FoundationDesign complete!");
+            Console.WriteLine();
+            Console.WriteLine($"Utnyttjandegrad = {Math.Round(Ug,2)} OK!");
+            Console.WriteLine("FoundationDesign complete!");
 
             //Define the design settings
             var design = new FemDesign.Calculate.Design(autoDesign: false, check: true, loadCombination: true, applyChanges: true);
             var config = new FemDesign.Calculate.ConcreteDesignConfig(0, true, false, false, false);
+            var rp_result = Resultprocessing.resultpoints_Result(slabs);
 
             //Define Path for documentation printing
+
             string docxFilePath = @"C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\Appendix.docx";
-            string dscTemplateFilePath = @"C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\Retainingwall_doc_template.dsc";
+            string dscTemplateFilePath = @"C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\Retainingwall_doc_template_v2.dsc";
 
             // Define Path for outputDir
+
             string MyoutputDir = @"C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall";
+
+            string fullPath_config = @"C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\cfg.xml";
 
             // Set project description
             // project, description, designer, signature, comment, items
@@ -145,34 +165,42 @@ namespace FemDesign.RetainingWall
             {
                 ReinforcementDesignFEM.Open(model);
                 ReinforcementDesignFEM.SetConfig(config);
+                
+                ReinforcementDesignFEM.RunAnalysis(analysis);
 
-                // RCDesign
+                var SupportResultant = ReinforcementDesignFEM.GetLoadCombinationResults<Results.SurfaceSupportResultant>();
+
+                // Resultprocessing
+                //var feaNodes = ReinforcementDesignFEM.GetFeaNodes();
+                //var disp = ReinforcementDesignFEM.GetResults<Results.NodalDisplacement>();
+
+                var unitResults = UnitResults.Default();
+                unitResults.Displacement = Displacement.mm;
+                var dispAtPoints = ReinforcementDesignFEM.GetResultsOnPoints<Results.ShellDisplacement>(rp_result, unitResults);
+                var Disp_table_Sf = Resultprocessing.deformationsX(slabs, dispAtPoints, loadcombinations[0]);
+                var Disp_table_Sq = Resultprocessing.deformationsX(slabs, dispAtPoints, loadcombinations[1]);
+
+                var normDeformation_Var = Resultprocessing.normDeformations_Var(slabs, dispAtPoints, loadcombinations);
+                var normDeformation_Sq = Resultprocessing.normDeformations_Sq(slabs, dispAtPoints, loadcombinations);
+
+                // Resultprinting
+                String resultFilepath = Resultprinting.createExcel();
+                Resultprinting.deformationsX(resultFilepath, slabs, Disp_table_Sf, Disp_table_Sq, normDeformation_Var, normDeformation_Sq);
+                Resultprinting.GrundResultant(resultFilepath, SupportResultant);
+
+                // Set crack width
+                ReinforcementDesignFEM.SetConfig(fullPath_config);
+
+                // Calculate RC Design
                 ReinforcementDesignFEM.RunDesign(Calculate.CmdUserModule.RCDESIGN, design, null);
 
                 // Create documentation from template
                 ReinforcementDesignFEM.SetProjDescription(ProjDescruption[0], ProjDescruption[1], ProjDescruption[2], ProjDescruption[3], ProjDescruption[4]);
+                Console.WriteLine();
+                Console.WriteLine("Kör betongberäkning manuellt innan utskrift av bilaga"); // pga att shear controll region inte kan läggas till.
+                Console.ReadKey();
                 ReinforcementDesignFEM.SaveDocx(docxFilePath, dscTemplateFilePath);
 
-                //ReinforcementDesignFEM.RunAnalysis(analysis);
-                var SupportResultant = ReinforcementDesignFEM.GetLoadCombinationResults<Results.SurfaceSupportResultant>();
-
-                // Resultprocessing
-                var feaNodes = ReinforcementDesignFEM.GetFeaNodes();
-                var disp = ReinforcementDesignFEM.GetResults<NodalDisplacement>();
-                //var disp = ReinforcementDesignFEM.GetResults<ShellDisplacement>();
-
-                var deformation_Sf = Resultprocessing.deformationsX(slabs, feaNodes, disp, loadcombinations[4]);
-                var deformation_Sq = Resultprocessing.deformationsX(slabs, feaNodes, disp, loadcombinations[2]);
-                //var deformation_Sq_ÖLP = Resultprocessing.deformationsX(slabs, feaNodes, disp, loadcombinations[9]);
-
-                var normDeformation_Var = Resultprocessing.normDeformations_Var(slabs, feaNodes, disp, loadcombinations);
-                var normDeformation_Sq = Resultprocessing.normDeformations_Sq(slabs, feaNodes, disp, loadcombinations);
-
-                // Resultprinting
-                String resultFilepath = Resultprinting.createExcel();
-                Resultprinting.deformationsX(resultFilepath, slabs, deformation_Sf, deformation_Sq, normDeformation_Var, normDeformation_Sq);
-                //Resultprinting.deformationsX(resultFilepath, slabs, deformation_Sf, deformation_Sq, deformation_Sq_ÖLP, normDeformation_Var, normDeformation_Sq);
-                //Resultprinting.GrundResultant(resultFilepath, loadcombinations, SupportResultant);
             }
             Console.WriteLine("\n ReinforcementDesign complete!");
             Console.WriteLine("\n Calculation complete!");

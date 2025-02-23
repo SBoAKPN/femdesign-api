@@ -342,7 +342,7 @@
       </units>
       <units>
         <num>6</num>
-        <unit>3</unit>
+        <unit>0</unit>
       </units>
       <units>
         <num>7</num>
@@ -573,8 +573,8 @@
         <unit>0</unit>
       </units>
       <options>
-        <bar>0</bar>
-        <surface>1</surface>
+        <bar>2</bar>
+        <surface>2</surface>
       </options>
       <restype>1</restype>
     </doctable>

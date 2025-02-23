@@ -8,6 +8,7 @@ using FemDesign.Loads;
 using FemDesign.GenericClasses;
 using FemDesign.Shells;
 using FemDesign.Geometry;
+using Microsoft.Office.Interop.Excel;
 
 namespace RetainingWall
 {
@@ -60,6 +61,8 @@ namespace RetainingWall
             double qJ = 18.0; // new List<double> { 18, 11 };     // Fyllning Naturfuktig, Effektiv tunghet under GVY
             var Hpack1 = 0.3;
             var qpack = 12; // Vibratorplatta 100 kg enligt PGHB kap 2.33 tabell 2:1
+            double yd = 0.91; // Säkerhetsklass 1 / 2 / 3  0.83 / 0.91 / 1.0
+            var pkoff_Geo = new List<double> { yd * 1.1, yd * 1.4 }; 
 
             // Tillbakafyllning , Motfyllning
             var K_ULS = new List<double> { 0.30, 3.30 };
@@ -75,9 +78,7 @@ namespace RetainingWall
             double T_BPL_min = T_BPL[1].Value;
             double T_BPL_max = T_BPL[0].Value;
             // --- Surcharge ---
-
-            double yd = 0.91; // Säkerhetsklass 1 / 2 / 3  0.83 / 0.91 / 1.0
-            var pkoff_Geo = new List<double> { 0.91 * 1.1, 0.91 * 1.4 };
+            
             double QÖLU0 = 15; // (270 + 180) / 2;     // Överlaststyngd (kN)
             double LU0 = 1; //  2.2;                   // Längd för spridning vid ytan
             double BU0 = 1; //  3.0;                   // Bredd för spridning vid ytan
@@ -227,7 +228,6 @@ namespace RetainingWall
 
                 var Hpack2 =0.0;
                 // Packning del 2
-                // Förutsätter paritalfaktor 1.4 används för överlast
 
                 // Höjd då Överlast är konstant
                 if (SpridLU == 0)
@@ -686,43 +686,100 @@ namespace RetainingWall
             var lineMomentJMKH = new FemDesign.Loads.LineLoad(LineBPL_MotH, qJMKH_L2, qJMKH_L3, loadCaseJK, ForceLoadType.Moment, "LM_JMKH", true, false);
 
             // --- 4. HHW ---
+            
+            Region regionBPL = SlabBPL.Region;
+            double tmean_BPL = (T_BPL_min + T_BPL_max) / 2;
+
+            Region regionMUR = SlabMUR.Region;
+            double tmean_MUR = (T_MUR[0].Value + T_MUR[1].Value) / 2;
+
+            var DummyLoad = new Vector3d(0, 0, 0);
+
+            SurfaceLoad SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, DummyLoad, loadCaseHHW, false, "");
+            SurfaceLoad SurfaceLoadHHW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, DummyLoad, loadCaseHHW, false, "");
 
             if (HHW >= T_BPL_max)
             {
-                //  V
-                var HHWLoadV = new Vector3d(0, 0, -(HHW - T_BPL[0].Value) * qW);
-                var SurfaceLoadHHW_V_baktass = new FemDesign.Loads.SurfaceLoad(regionBaktass, HHWLoadV, loadCaseHHW, false, "");
-                var SurfaceLoadHHW_V_framtass = new FemDesign.Loads.SurfaceLoad(regionFramtass, HHWLoadV, loadCaseHHW, false, "");
 
                 //  lift
                 // BPL
-                // var LiftLoadBPL = new Vector3d(0,0, VolumeBPL * qW/ AreaBPL);
-                // var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW,false,"");
+                
+                var LiftLoadBPL = new Vector3d(0,0, tmean_BPL * qW);
+                SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW,false, "");
 
                 // MUR
-                double meanZMUR = (P_MUR[0].Z + P_MUR[3].Z) / 2;
-                double AndelliftMUR = (HHW - T_BPL_max) / meanZMUR;
-                //  double AreaMUR = FemDesign.Results.QuantityEstimationConcrete.Slab2.Area;
-                //  double VolumeMUR = FemDesign.Results.QuantityEstimationConcrete.Slab2.Volume;
-                //  var LiftLoadMUR = new Vector3d(0, 0, AndelliftMUR * VolumeMUR * qW/ AreaMUR);
-                var regionMUR = SlabMUR.Region;
-                //  var SurfaceLoadHHW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, LiftLoadMUR, loadCaseHHW, false, "");
+                double meanZMUR = (P_MUR[0].Z + P_MUR[3].Z) / 2- T_BPL_max;
+                double AndelliftMUR = (HHW - T_BPL_max) / meanZMUR ;
+
+                var LiftLoadMUR = new Vector3d(0, 0, AndelliftMUR * tmean_MUR * qW);
+                SurfaceLoadHHW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, LiftLoadMUR, loadCaseHHW, false, "");
 
             }
             else if (HHW > 0)
             {
                 //  lift BPL
-                double meanZBPL = (T_BPL_min + T_BPL_max) / 2;
-                double AndelliftBPL = HHW / meanZBPL;
-                //   var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL*VolumeBPL * qW / AreaBPL);
-                //   var SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW, false, "");
+                double AndelliftBPL = HHW / tmean_BPL;
+                var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL* tmean_BPL * qW);
+                SurfaceLoadHHW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseHHW, false, "");
             }
 
             // --- 5.0 MW ---
+            SurfaceLoad SurfaceLoadMW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, DummyLoad, loadCaseMW, false, "");
+            SurfaceLoad SurfaceLoadMW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, DummyLoad, loadCaseMW, false, "");
 
+            if (MW >= T_BPL_max)
+            {
+
+                //  lift
+                // BPL
+
+                var LiftLoadBPL = new Vector3d(0, 0, tmean_BPL * qW);
+                SurfaceLoadMW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseMW, false, "");
+
+                // MUR
+                double meanZMUR = (P_MUR[0].Z + P_MUR[3].Z) / 2 - T_BPL_max;
+                double AndelliftMUR = (MW - T_BPL_max) / meanZMUR;
+
+                var LiftLoadMUR = new Vector3d(0, 0, AndelliftMUR * tmean_MUR * qW);
+                SurfaceLoadMW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, LiftLoadMUR, loadCaseMW, false, "");
+
+            }
+            else if (MW > 0)
+            {
+                //  lift BPL
+                double AndelliftBPL = MW / tmean_BPL;
+                var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL * tmean_BPL * qW);
+                SurfaceLoadMW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseMW, false, "");
+            }
 
             // --- 6.0 LLW ---
+            SurfaceLoad SurfaceLoadLLW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, DummyLoad, loadCaseLLW, false, "");
+            SurfaceLoad SurfaceLoadLLW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, DummyLoad, loadCaseLLW, false, "");
 
+            if (LLW >= T_BPL_max)
+            {
+
+                //  lift
+                // BPL
+
+                var LiftLoadBPL = new Vector3d(0, 0, tmean_BPL * qW);
+                SurfaceLoadLLW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseLLW, false, "");
+
+                // MUR
+                double meanZMUR = (P_MUR[0].Z + P_MUR[3].Z) / 2 - T_BPL_max;
+                double AndelliftMUR = (LLW - T_BPL_max) / meanZMUR;
+
+                var LiftLoadMUR = new Vector3d(0, 0, AndelliftMUR * tmean_MUR * qW);
+                SurfaceLoadLLW_liftMUR = new FemDesign.Loads.SurfaceLoad(regionMUR, LiftLoadMUR, loadCaseLLW, false, "");
+
+            }
+            else if (LLW > 0)
+            {
+                //  lift BPL
+                double AndelliftBPL = LLW / tmean_BPL;
+                var LiftLoadBPL = new Vector3d(0, 0, AndelliftBPL * tmean_BPL * qW);
+                SurfaceLoadLLW_liftBPL = new FemDesign.Loads.SurfaceLoad(regionBPL, LiftLoadBPL, loadCaseLLW, false, "");
+            }
 
             // --- 7. ÖL U ---
             //  V
@@ -822,6 +879,12 @@ namespace RetainingWall
               SurfaceLoadJMKH,
               lineLoadJMKH,
               lineMomentJMKH,
+              SurfaceLoadHHW_liftBPL,
+              SurfaceLoadHHW_liftMUR,
+              SurfaceLoadMW_liftBPL,
+              SurfaceLoadMW_liftMUR,
+              SurfaceLoadLLW_liftBPL,
+              SurfaceLoadLLW_liftMUR,
               SurfaceLoadÖLVU,
               SurfaceLoadÖLHU,
               lineLoadÖLUH,

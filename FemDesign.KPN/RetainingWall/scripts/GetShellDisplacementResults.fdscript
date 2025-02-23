@@ -7,6 +7,16 @@
     <logfile>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\logfile.log</logfile>
   </fdscriptheader>
   <cmduser command="; CXL $MODULE RESMODE" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="0" z="0.4" name="@RPR1" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="0" z="1.3" name="@RPR2" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="0" z="2.2" name="@RPR3" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="0" z="3.1" name="@RPR4" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="0" z="4" name="@RPR5" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="10" z="0.4" name="@RPR6" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="10" z="1.3" name="@RPR7" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="10" z="2.2" name="@RPR8" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="10" z="3.1" name="@RPR9" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+  <cmdrespoint command="$ MODULECOM RESPOINT" x="0.65" y="10" z="4" name="@RPR10" guid="f42d2623-fb17-4f39-9a21-edda24944298" />
   <cmdlistgen command="$ MODULECOM LISTGEN" bscfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\scripts\bsc\ShellDisplacementLoadCase.bsc" outfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\results\ShellDisplacementLoadCase.csv" regional="false" headers="true" fillcells="true" ignorecasename="false" />
   <cmdlistgen command="$ MODULECOM LISTGEN" bscfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\scripts\bsc\ShellDisplacementLoadCombination.bsc" outfile="C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\results\ShellDisplacementLoadCombination.csv" regional="false" headers="true" fillcells="true" ignorecasename="false" />
 </fdscript>

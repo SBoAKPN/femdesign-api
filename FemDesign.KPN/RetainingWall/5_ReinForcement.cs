@@ -15,7 +15,7 @@ namespace RetainingWall
 {
     internal class ReinForcement
     {
-        public static (List<Slab> , List<FemDesign.GenericClasses.IStructureElement>) straightReinfElements(List<Slab> slabs, string ReinfMaterial)
+        public static (List<Slab> , List<FemDesign.GenericClasses.IStructureElement>, List<ShearControlRegionType>) straightReinfElements(List<Slab> slabs, string ReinfMaterial)
         {
             // Predefinition from input data
             // slabs
@@ -226,20 +226,38 @@ namespace RetainingWall
             var reinfMUR = FemDesign.Reinforcement.SurfaceReinforcement.AddReinforcementToSlab(SlabMUR, srfReinf_MUR);
             var reinfBPLMUR = FemDesign.Reinforcement.SurfaceReinforcement.AddReinforcementToSlab(SlabBPLMUR, srfReinf_BPLMUR);
 
-            var shearControlRegion = new ShearControlRegionType
-            {
-                BasePlate = reinfBPLMUR.SlabPart.Guid,
-                IgnoreShearCheck = true, // Sätt ignore shear check till true
-                X = 0.5 // Sätt x-koordinaten
-            };
-            var entities = new FemDesign.Entities();
-            entities.NoShearControlRegions.Add(shearControlRegion);
+            //var ConnectBPLMUR_Guid = reinfBPLMUR.SlabPart.Guid;
 
+            var ConnectBPLMUR = new ShearControlAutoType
+            {
+                ConnectedStructureGuid = SlabBPLMUR.SlabPart.Guid
+            };
+
+            var shearControlRegionBPL = new ShearControlRegionType
+            {
+                BasePlate = SlabBPL.SlabPart.Guid,
+                IgnoreShearCheck = true, // Sätt ignore shear check till true
+                X = 0.45, // Sätt x-koordinaten
+                Automatic = ConnectBPLMUR,
+            };
+
+            var ConnectBPL = new ShearControlAutoType
+            {
+                ConnectedStructureGuid = SlabBPL.SlabPart.Guid
+            };
+
+            var shearControlRegionBPLMUR = new ShearControlRegionType
+            {
+                BasePlate = SlabBPLMUR.SlabPart.Guid,
+                IgnoreShearCheck = true, // Sätt ignore shear check till true
+                X = 0.55, // Sätt x-koordinaten
+                Automatic = ConnectBPL,
+            };
 
             var straightReinfElements = new List<FemDesign.GenericClasses.IStructureElement> { reinfBPL, reinfMUR, reinfBPLMUR };
-            
+            var shearControlRegions = new List<ShearControlRegionType> { shearControlRegionBPL, shearControlRegionBPLMUR };
 
-            return (slabstoRemove, straightReinfElements);
+            return (slabstoRemove, straightReinfElements, shearControlRegions);
         }
         public static List<FemDesign.GenericClasses.IStructureElement> shearReinfElements (List<Slab> slabs, string ReinfMaterial)
         {

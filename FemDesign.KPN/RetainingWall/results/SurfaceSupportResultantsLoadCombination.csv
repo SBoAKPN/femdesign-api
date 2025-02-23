@@ -1,25 +1,25 @@
-Surface support, Resultants, Load comb.: LC1  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S 
+Surface support, Resultants, Load comb.: LC1  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn 
 ID	Fx'	Fy'	Fz'	Mx'	My'	Mz'	Comb.
 	[kN]	[kN]	[kN]	[kNm]	[kNm]	[kNm]	[-]
-BPL_Upplag.1	-515.553	0.000	-1850.736	0.000	-862.341	0.000	1 LC1  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S 
+BMBPL.2	-745.243	0.000	-1758.833	0.000	-925.524	0.000	1 LC1  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn 
 
-Surface support, Resultants, Load comb.: LC2  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S 
+Surface support, Resultants, Load comb.: LC2  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS
 ID	Fx'	Fy'	Fz'	Mx'	My'	Mz'	Comb.
 	[kN]	[kN]	[kN]	[kNm]	[kNm]	[kNm]	[-]
-BPL_Upplag.1	-285.948	0.000	-1728.433	0.000	-363.412	0.000	2 LC2  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S 
+BMBPL.2	-682.243	0.000	-1650.833	0.000	-841.269	0.000	2 LC2  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS
 
-Surface support, Resultants, Load comb.: LC3  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS
+Surface support, Resultants, Load comb.: LC3  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS
 ID	Fx'	Fy'	Fz'	Mx'	My'	Mz'	Comb.
 	[kN]	[kN]	[kN]	[kNm]	[kNm]	[kNm]	[-]
-BPL_Upplag.1	-682.243	0.000	-1728.433	0.000	-849.892	0.000	3 LC3  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS
+BMBPL.2	-610.243	0.000	-1578.833	0.000	-725.098	0.000	3 LC3  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS
 
-Surface support, Resultants, Load comb.: LC4  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS
+Surface support, Resultants, Load comb.: LC4  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S 
 ID	Fx'	Fy'	Fz'	Mx'	My'	Mz'	Comb.
 	[kN]	[kN]	[kN]	[kNm]	[kNm]	[kNm]	[-]
-BPL_Upplag.1	-610.243	0.000	-1728.433	0.000	-705.892	0.000	4 LC4  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS
+BMBPL.2	-515.553	0.000	-2002.196	0.000	-757.241	0.000	4 LC4  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S 
 
-Surface support, Resultants, Load comb.: LC5  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn 
+Surface support, Resultants, Load comb.: LC5  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S 
 ID	Fx'	Fy'	Fz'	Mx'	My'	Mz'	Comb.
 	[kN]	[kN]	[kN]	[kNm]	[kNm]	[kNm]	[-]
-BPL_Upplag.1	-745.243	0.000	-1728.433	0.000	-975.892	0.000	5 LC5  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn 
+BMBPL.2	-285.948	0.000	-1578.833	0.000	-382.618	0.000	5 LC5  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S 
 

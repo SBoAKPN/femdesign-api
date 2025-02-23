@@ -1,2076 +1,105 @@
+step: cmdconfig
+t: 02/11 13.01.22.601
+cmdconfig:'$ MODULECOM APPLYCFG'
+<CONFIG> element expected
+t: 02/11 13.01.22.603
+aborting script execution
+Script file finished
 step: cmdopen
-t: 01/26 19.21.12.348
+t: 02/11 14.50.11.483
 cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/26 19.21.13.862
+t: 02/11 14.50.12.632
 Script file finished
 step: cmdconfig
-t: 01/26 19.21.14.499
+t: 02/11 14.50.13.357
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/26 19.21.14.499
+t: 02/11 14.50.13.362
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RESMODE'
 step: cmdcalculation
-t: 01/26 19.21.14.984
+t: 02/11 14.50.13.833
 cmdcalculation:'; CXL $MODULE CALC'
-t: 01/26 19.21.22.398
+t: 02/11 14.50.21.106
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RESMODE'
 step: cmdlistgen
-t: 01/26 19.21.22.481
+t: 02/11 14.50.21.167
 cmdlistgen:'$ MODULECOM LISTGEN'
 listgen successful
-t: 01/26 19.21.22.489
+t: 02/11 14.50.21.179
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RESMODE'
+step: cmdrespoint
+t: 02/11 14.50.21.487
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.491
+step: cmdrespoint
+t: 02/11 14.50.21.492
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.495
+step: cmdrespoint
+t: 02/11 14.50.21.497
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.499
+step: cmdrespoint
+t: 02/11 14.50.21.500
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.501
+step: cmdrespoint
+t: 02/11 14.50.21.502
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.503
+step: cmdrespoint
+t: 02/11 14.50.21.504
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.504
+step: cmdrespoint
+t: 02/11 14.50.21.505
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.508
+step: cmdrespoint
+t: 02/11 14.50.21.509
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.510
+step: cmdrespoint
+t: 02/11 14.50.21.511
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.512
+step: cmdrespoint
+t: 02/11 14.50.21.513
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 14.50.21.514
 step: cmdlistgen
-t: 01/26 19.21.22.889
+t: 02/11 14.50.21.515
 cmdlistgen:'$ MODULECOM LISTGEN'
 listgen successful
-t: 01/26 19.21.22.900
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
+t: 02/11 14.50.21.552
 step: cmdlistgen
-t: 01/26 19.21.23.298
+t: 02/11 14.50.21.556
 cmdlistgen:'$ MODULECOM LISTGEN'
 listgen successful
-t: 01/26 19.21.23.548
-step: cmdlistgen
-t: 01/26 19.21.23.553
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/26 19.21.23.600
-Script file finished
-step: cmdopen
-t: 01/28 19.43.05.673
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 19.43.06.981
+t: 02/11 14.50.21.567
 Script file finished
 step: cmdconfig
-t: 01/28 19.43.15.044
+t: 02/11 14.50.35.113
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 19.43.15.048
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 19.43.16.728
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 19.43.23.776
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 19.43.52.748
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 19.43.52.758
-Script file finished
-step: cmdopen
-t: 01/28 19.46.16.200
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 19.46.17.406
-Script file finished
-step: cmdconfig
-t: 01/28 19.46.18.084
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 19.46.18.084
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 19.46.18.538
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 19.46.26.244
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 19.46.26.414
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 19.46.26.426
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 19.46.26.815
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 19.46.26.826
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 19.46.27.238
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 19.46.27.447
-step: cmdlistgen
-t: 01/28 19.46.27.452
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 19.46.27.507
-Script file finished
-step: cmdopen
-t: 01/28 20.02.48.792
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 20.02.50.003
-Script file finished
-step: cmdconfig
-t: 01/28 20.02.50.781
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 20.02.50.782
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 20.02.51.232
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 20.02.59.169
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.02.59.322
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.02.59.332
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.02.59.733
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.02.59.740
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.06.50.219
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.06.50.466
-step: cmdlistgen
-t: 01/28 20.06.50.466
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.06.50.522
-Script file finished
-step: cmdopen
-t: 01/28 20.14.53.500
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 20.14.54.670
-Script file finished
-step: cmdconfig
-t: 01/28 20.14.55.466
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 20.14.55.466
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 20.14.55.931
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 20.15.03.739
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.15.03.819
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.15.03.833
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.15.04.214
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.15.04.224
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.15.11.550
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.15.11.737
-step: cmdlistgen
-t: 01/28 20.15.11.737
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.15.11.789
-Script file finished
-step: cmdopen
-t: 01/28 20.25.15.886
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 20.25.17.133
-Script file finished
-step: cmdconfig
-t: 01/28 20.25.17.658
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 20.25.17.662
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 20.25.18.119
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 20.25.25.888
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.25.25.989
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.25.26.000
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.25.26.392
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.25.26.399
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 20.25.32.340
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.25.32.562
-step: cmdlistgen
-t: 01/28 20.25.32.564
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 20.25.32.620
-Script file finished
-step: cmdopen
-t: 01/28 21.05.16.123
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 21.05.17.429
-Script file finished
-step: cmdconfig
-t: 01/28 21.05.18.143
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 21.05.18.145
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 21.05.18.616
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 21.05.26.320
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.05.26.359
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.05.26.371
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.05.26.690
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.05.26.696
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.06.42.962
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.06.43.210
-step: cmdlistgen
-t: 01/28 21.06.43.213
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.06.43.271
-Script file finished
-step: cmdopen
-t: 01/28 21.15.17.290
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 21.15.18.592
-Script file finished
-step: cmdconfig
-t: 01/28 21.15.19.237
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 21.15.19.241
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 21.15.19.706
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 21.15.27.248
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.15.27.366
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.15.27.378
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.15.27.786
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.15.27.794
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.15.28.183
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.15.28.355
-step: cmdlistgen
-t: 01/28 21.15.28.355
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.15.28.409
-Script file finished
-step: cmdopen
-t: 01/28 21.22.25.186
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 21.22.26.492
-Script file finished
-step: cmdconfig
-t: 01/28 21.22.27.116
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 21.22.27.118
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 21.22.27.576
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 21.22.35.299
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.22.35.350
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.22.35.363
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.22.35.677
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.22.35.684
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.22.36.079
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.22.36.264
-step: cmdlistgen
-t: 01/28 21.22.36.268
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.22.36.312
-Script file finished
-step: cmdopen
-t: 01/28 21.38.09.887
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/28 21.38.11.247
-Script file finished
-step: cmdconfig
-t: 01/28 21.38.12.005
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/28 21.38.12.009
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/28 21.38.12.473
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/28 21.38.20.089
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.38.20.153
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.38.20.167
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.38.20.535
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.38.20.543
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/28 21.38.20.957
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.38.21.126
-step: cmdlistgen
-t: 01/28 21.38.21.129
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/28 21.38.21.176
-Script file finished
-step: cmdopen
-t: 01/29 20.01.55.705
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.01.56.994
-Script file finished
-step: cmdconfig
-t: 01/29 20.01.57.642
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.01.57.646
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.01.58.101
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.02.05.812
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.02.05.859
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.02.05.872
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.02.06.176
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.02.06.187
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.02.06.598
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.02.06.770
-step: cmdlistgen
-t: 01/29 20.02.06.773
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.02.06.818
-Script file finished
-step: cmdopen
-t: 01/29 20.08.26.380
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.08.27.675
-Script file finished
-step: cmdconfig
-t: 01/29 20.08.28.395
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.08.28.399
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.08.28.859
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.08.36.594
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.08.36.636
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.08.36.646
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.08.36.960
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.08.36.967
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.08.37.363
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.08.37.533
-step: cmdlistgen
-t: 01/29 20.08.37.536
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.08.37.582
-Script file finished
-step: cmdopen
-t: 01/29 20.11.21.465
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.11.22.993
-Script file finished
-step: cmdconfig
-t: 01/29 20.11.23.568
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.11.23.574
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.11.24.028
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.11.31.770
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.11.31.821
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.11.31.834
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.11.32.135
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.11.32.142
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.11.32.535
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.11.32.733
-step: cmdlistgen
-t: 01/29 20.11.32.736
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.11.32.791
-Script file finished
-step: cmdopen
-t: 01/29 20.17.55.744
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.17.57.059
-Script file finished
-step: cmdconfig
-t: 01/29 20.17.57.729
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.17.57.734
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.17.58.200
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.18.05.684
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.18.05.735
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.18.05.749
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.18.06.066
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.18.06.074
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.18.06.472
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.18.06.648
-step: cmdlistgen
-t: 01/29 20.18.06.653
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.18.06.700
-Script file finished
-step: cmdopen
-t: 01/29 20.22.16.256
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.22.17.621
-Script file finished
-step: cmdconfig
-t: 01/29 20.22.18.257
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.22.18.260
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.22.18.708
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.22.26.425
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.22.26.473
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.22.26.484
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.22.26.779
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.22.26.785
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.22.27.208
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.22.27.425
-step: cmdlistgen
-t: 01/29 20.22.27.428
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.22.27.478
-Script file finished
-step: cmdopen
-t: 01/29 20.23.09.128
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.23.10.422
-Script file finished
-step: cmdconfig
-t: 01/29 20.23.11.153
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.23.11.157
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.23.11.616
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.23.19.103
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.23.19.147
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.23.19.160
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.23.19.485
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.23.19.494
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.23.19.902
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.23.20.075
-step: cmdlistgen
-t: 01/29 20.23.20.080
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.23.20.131
-Script file finished
-step: cmdopen
-t: 01/29 20.29.58.169
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.29.59.459
-Script file finished
-step: cmdconfig
-t: 01/29 20.30.00.159
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.30.00.163
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.30.00.613
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.30.08.308
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.30.08.354
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.30.08.370
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.30.08.702
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.30.08.708
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.30.09.102
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.30.09.275
-step: cmdlistgen
-t: 01/29 20.30.09.280
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.30.09.323
-Script file finished
-step: cmdopen
-t: 01/29 20.34.14.056
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/29 20.34.15.350
-Script file finished
-step: cmdconfig
-t: 01/29 20.34.16.035
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/29 20.34.16.038
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdcalculation
-t: 01/29 20.34.16.492
-cmdcalculation:'; CXL $MODULE CALC'
-t: 01/29 20.34.23.999
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.34.24.043
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.34.24.054
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.34.24.361
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.34.24.368
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmdlistgen
-t: 01/29 20.34.24.762
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.34.24.941
-step: cmdlistgen
-t: 01/29 20.34.24.945
-cmdlistgen:'$ MODULECOM LISTGEN'
-listgen successful
-t: 01/29 20.34.24.993
+<CONFIG> element expected
+t: 02/11 14.50.35.116
+aborting script execution
 Script file finished
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RCDESIGN'
 step: cmdcalculation
-t: 01/29 20.34.44.241
+t: 02/11 14.50.36.099
 cmdcalculation:'; CXL $MODULE CALC'
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=0.200 m.
-Warning: Reinforcement necessary for crack width calculation, but there is no reinforcement at the given point.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=0.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.869 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.356 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.894 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.381 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=9.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=9.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=1.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=1.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=7.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=8.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=2.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=7.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=0.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=0.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=3.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=6.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=4.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=3.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=6.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=2.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=4.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=8.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=5.750 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.163 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.487 m, Y=5.250 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=1.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.115 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.652 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.115 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.135 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.140 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.652 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.623 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.135 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.138 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.625 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.110 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.112 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.627 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.627 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.110 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=2.600 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.140 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=1.623 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=1.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=7.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=8.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=9.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.323 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=10.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=1.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.325 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=2.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.648 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=2.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.327 m, Y=1.003 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=9.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.323 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=0.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=0.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=7.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=8.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=3.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.327 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.648 m, Y=0.997 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=6.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=5.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=4.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=6.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=3.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=5.000 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.000 m, Y=4.500 m, Z=0.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=3.743 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=3.229 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.250 m, Z=2.714 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.250 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.750 m, Z=2.200 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.750 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.250 m, Z=1.686 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.250 m, Z=0.657 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.750 m, Z=1.171 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=2.455 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=1.945 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=1.426 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=1.431 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=2.969 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=0.912 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=2.460 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=1.940 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=0.917 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=1.940 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.914 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=1.426 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=1.431 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=0.917 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=0.912 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=2.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=4.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=3.488 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=2.969 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=2.460 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=3.488 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=3.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=1.429 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=9.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=2.974 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=1.003 m, Z=3.483 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=2.971 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=3.483 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=3.486 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=2.974 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=1.943 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=2.455 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.997 m, Z=1.945 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.500 m, Z=4.000 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=5.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=0.000 m, Z=2.457 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=7.500 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=8.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.400 m.
-Warning: The steel bars crossing each other on both faces.
-Global coordinates: X=0.650 m, Y=6.000 m, Z=0.400 m.
 Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.000 m.
+Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
 analysis
-t: 01/29 20.34.46.026
+t: 02/11 14.50.37.208
 aborting script execution
 Script file finished
 step: cmduser
@@ -2079,700 +108,186 @@ step: cmduser
 cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
 Script file finished
 step: cmdprojdescr
-t: 01/29 20.35.12.709
+t: 02/11 14.50.37.547
 cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/29 20.35.12.713
+t: 02/11 14.50.37.549
 Script file finished
 step: cmdopen
-t: 01/31 20.22.20.392
+t: 02/11 20.05.34.561
 cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 20.22.21.733
+t: 02/11 20.05.35.706
 Script file finished
 step: cmdconfig
-t: 01/31 20.22.22.577
+t: 02/11 20.05.36.483
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 20.22.22.584
-Script file finished
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RCDESIGN'
-step: cmdcalculation
-t: 01/31 20.23.24.664
-cmdcalculation:'; CXL $MODULE CALC'
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.500 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.000 m, Z=2.971 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=3.486 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.250 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=0.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=1.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=10.000 m, Z=2.457 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=2.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.000 m, Z=4.000 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.500 m, Z=1.943 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=3.229 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=0.914 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=3.743 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=2.714 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.000 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.500 m, Z=1.429 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.500 m, Z=0.400 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.750 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.750 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=4.250 m, Z=0.657 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=3.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=8.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.250 m, Z=1.686 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=6.250 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=7.750 m, Z=2.200 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=5.750 m, Z=1.171 m.
-Warning: Invalid cover. (Larger than 40% of shell thickness at this point.)
-Global coordinates: X=0.650 m, Y=9.250 m, Z=1.171 m.
-Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-analysis
-t: 01/31 20.23.33.369
-aborting script execution
+t: 02/11 20.05.36.483
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RESMODE'
-step: cmduser
-cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
-Script file finished
-step: cmdopen
-t: 01/31 20.27.54.456
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 20.27.55.735
-Script file finished
-step: cmdconfig
-t: 01/31 20.27.56.378
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 20.27.56.383
-Script file finished
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RCDESIGN'
 step: cmdcalculation
-t: 01/31 20.29.21.519
+t: 02/11 20.05.36.931
 cmdcalculation:'; CXL $MODULE CALC'
-Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-analysis
-t: 01/31 20.29.30.038
-aborting script execution
+t: 02/11 20.05.44.735
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RESMODE'
-step: cmduser
-cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
+step: cmdlistgen
+t: 02/11 20.05.44.862
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/11 20.05.44.874
 Script file finished
-step: cmdopen
-t: 01/31 20.35.15.177
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 20.35.16.484
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdrespoint
+t: 02/11 20.05.45.266
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.266
+step: cmdrespoint
+t: 02/11 20.05.45.266
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.266
+step: cmdrespoint
+t: 02/11 20.05.45.266
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.266
+step: cmdrespoint
+t: 02/11 20.05.45.266
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.276
+step: cmdrespoint
+t: 02/11 20.05.45.276
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.276
+step: cmdrespoint
+t: 02/11 20.05.45.276
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.282
+step: cmdrespoint
+t: 02/11 20.05.45.282
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.282
+step: cmdrespoint
+t: 02/11 20.05.45.286
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.287
+step: cmdrespoint
+t: 02/11 20.05.45.287
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.287
+step: cmdrespoint
+t: 02/11 20.05.45.287
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/11 20.05.45.287
+step: cmdlistgen
+t: 02/11 20.05.45.287
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/11 20.05.45.330
+step: cmdlistgen
+t: 02/11 20.05.45.334
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/11 20.05.45.335
 Script file finished
 step: cmdconfig
-t: 01/31 20.35.17.023
+t: 02/11 20.06.15.976
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 20.35.17.030
+t: 02/11 20.06.15.976
+Script file finished
+step: cmdopen
+t: 02/20 10.26.51.605
+cmdopen:'; CXL CS2SHELL OPEN'
+t: 02/20 10.26.52.874
+Script file finished
+step: cmdconfig
+t: 02/20 10.26.53.539
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/20 10.26.53.544
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdcalculation
+t: 02/20 10.26.54.005
+cmdcalculation:'; CXL $MODULE CALC'
+t: 02/20 10.27.03.075
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdlistgen
+t: 02/20 10.27.03.161
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.27.03.172
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdrespoint
+t: 02/20 10.27.03.520
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.525
+step: cmdrespoint
+t: 02/20 10.27.03.525
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.527
+step: cmdrespoint
+t: 02/20 10.27.03.528
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.530
+step: cmdrespoint
+t: 02/20 10.27.03.531
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.532
+step: cmdrespoint
+t: 02/20 10.27.03.534
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.534
+step: cmdrespoint
+t: 02/20 10.27.03.534
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.534
+step: cmdrespoint
+t: 02/20 10.27.03.534
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.534
+step: cmdrespoint
+t: 02/20 10.27.03.544
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.544
+step: cmdrespoint
+t: 02/20 10.27.03.544
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.548
+step: cmdrespoint
+t: 02/20 10.27.03.550
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.27.03.552
+step: cmdlistgen
+t: 02/20 10.27.03.554
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.27.03.595
+step: cmdlistgen
+t: 02/20 10.27.03.597
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.27.03.607
+Script file finished
+step: cmdconfig
+t: 02/20 10.27.16.575
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/20 10.27.16.584
 Script file finished
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RCDESIGN'
 step: cmdcalculation
-t: 01/31 20.35.17.881
+t: 02/20 10.27.17.633
 cmdcalculation:'; CXL $MODULE CALC'
 Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
 Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
 analysis
-t: 01/31 20.35.26.349
+t: 02/20 10.27.19.169
 aborting script execution
 Script file finished
 step: cmduser
@@ -2781,52 +296,110 @@ step: cmduser
 cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
 Script file finished
 step: cmdprojdescr
-t: 01/31 20.35.26.764
+t: 02/20 10.27.19.613
 cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/31 20.35.26.768
+t: 02/20 10.27.19.615
 Script file finished
 step: cmdchild
 Script file finished
 step: cmdsavedocx
-t: 01/31 20.35.31.835
+t: 02/20 10.28.14.426
 cmdsavedocx:'$ DOC SAVEDOCX'
-t: 01/31 20.35.36.923
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
+t: 02/20 10.28.20.640
 Script file finished
 step: cmdopen
-t: 01/31 20.59.57.808
+t: 02/20 10.33.57.113
 cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 20.59.59.240
+t: 02/20 10.33.58.384
 Script file finished
 step: cmdconfig
-t: 01/31 20.59.59.731
+t: 02/20 10.33.59.112
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 20.59.59.734
+t: 02/20 10.33.59.112
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdcalculation
+t: 02/20 10.33.59.575
+cmdcalculation:'; CXL $MODULE CALC'
+t: 02/20 10.34.08.073
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdlistgen
+t: 02/20 10.34.08.191
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.34.08.199
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdrespoint
+t: 02/20 10.34.08.474
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.476
+step: cmdrespoint
+t: 02/20 10.34.08.479
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.481
+step: cmdrespoint
+t: 02/20 10.34.08.483
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.484
+step: cmdrespoint
+t: 02/20 10.34.08.484
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.484
+step: cmdrespoint
+t: 02/20 10.34.08.484
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.492
+step: cmdrespoint
+t: 02/20 10.34.08.492
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.492
+step: cmdrespoint
+t: 02/20 10.34.08.492
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.500
+step: cmdrespoint
+t: 02/20 10.34.08.501
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.503
+step: cmdrespoint
+t: 02/20 10.34.08.504
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.505
+step: cmdrespoint
+t: 02/20 10.34.08.506
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 10.34.08.508
+step: cmdlistgen
+t: 02/20 10.34.08.509
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.34.08.543
+step: cmdlistgen
+t: 02/20 10.34.08.551
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 10.34.08.561
+Script file finished
+step: cmdconfig
+t: 02/20 10.34.24.137
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/20 10.34.24.142
 Script file finished
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RCDESIGN'
 step: cmdcalculation
-t: 01/31 21.00.00.592
+t: 02/20 10.34.25.177
 cmdcalculation:'; CXL $MODULE CALC'
 Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
 Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
 analysis
-t: 01/31 21.00.09.319
+t: 02/20 10.34.26.679
 aborting script execution
 Script file finished
 step: cmduser
@@ -2835,52 +408,103 @@ step: cmduser
 cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
 Script file finished
 step: cmdprojdescr
-t: 01/31 21.00.09.694
+t: 02/20 10.34.27.032
 cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/31 21.00.09.701
-Script file finished
-step: cmdchild
-Script file finished
-step: cmdsavedocx
-t: 01/31 21.00.15.378
-cmdsavedocx:'$ DOC SAVEDOCX'
-t: 01/31 21.00.20.468
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
+t: 02/20 10.34.27.042
 Script file finished
 step: cmdopen
-t: 01/31 21.07.21.647
+t: 02/20 15.56.03.856
 cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 21.07.22.914
+t: 02/20 15.56.05.197
 Script file finished
 step: cmdconfig
-t: 01/31 21.07.23.438
+t: 02/20 15.56.06.036
 cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 21.07.23.442
+t: 02/20 15.56.06.037
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdcalculation
+t: 02/20 15.56.06.496
+cmdcalculation:'; CXL $MODULE CALC'
+t: 02/20 15.56.15.265
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdlistgen
+t: 02/20 15.56.15.315
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 15.56.15.324
+Script file finished
+step: cmduser
+cmduser:'; CXL $MODULE RESMODE'
+step: cmdrespoint
+t: 02/20 15.56.15.620
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.624
+step: cmdrespoint
+t: 02/20 15.56.15.624
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.630
+step: cmdrespoint
+t: 02/20 15.56.15.630
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.634
+step: cmdrespoint
+t: 02/20 15.56.15.634
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.634
+step: cmdrespoint
+t: 02/20 15.56.15.640
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.642
+step: cmdrespoint
+t: 02/20 15.56.15.643
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.645
+step: cmdrespoint
+t: 02/20 15.56.15.646
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.648
+step: cmdrespoint
+t: 02/20 15.56.15.650
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.651
+step: cmdrespoint
+t: 02/20 15.56.15.652
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.654
+step: cmdrespoint
+t: 02/20 15.56.15.656
+cmdrespoint:'$ MODULECOM RESPOINT'
+t: 02/20 15.56.15.657
+step: cmdlistgen
+t: 02/20 15.56.15.659
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 15.56.15.694
+step: cmdlistgen
+t: 02/20 15.56.15.694
+cmdlistgen:'$ MODULECOM LISTGEN'
+listgen successful
+t: 02/20 15.56.15.707
+Script file finished
+step: cmdconfig
+t: 02/20 15.56.33.522
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/20 15.56.33.522
 Script file finished
 Script file finished
 step: cmduser
 cmduser:'; CXL $MODULE RCDESIGN'
 step: cmdcalculation
-t: 01/31 21.07.24.312
+t: 02/20 15.56.34.518
 cmdcalculation:'; CXL $MODULE CALC'
 Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
 Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
 analysis
-t: 01/31 21.07.32.948
+t: 02/20 15.56.35.755
 aborting script execution
 Script file finished
 step: cmduser
@@ -2889,137 +513,14 @@ step: cmduser
 cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
 Script file finished
 step: cmdprojdescr
-t: 01/31 21.07.33.404
+t: 02/20 15.56.36.156
 cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/31 21.07.33.410
+t: 02/20 15.56.36.158
 Script file finished
 step: cmdchild
 Script file finished
 step: cmdsavedocx
-t: 01/31 21.07.38.490
+t: 02/20 15.57.20.315
 cmdsavedocx:'$ DOC SAVEDOCX'
-t: 01/31 21.07.43.336
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmdopen
-t: 01/31 21.22.31.454
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 21.22.32.744
-Script file finished
-step: cmdconfig
-t: 01/31 21.22.33.553
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 21.22.33.562
-Script file finished
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RCDESIGN'
-step: cmdcalculation
-t: 01/31 21.22.34.433
-cmdcalculation:'; CXL $MODULE CALC'
-Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-analysis
-t: 01/31 21.22.43.198
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmduser
-cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
-Script file finished
-step: cmdprojdescr
-t: 01/31 21.22.43.541
-cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/31 21.22.43.550
-Script file finished
-step: cmdchild
-Script file finished
-step: cmdsavedocx
-t: 01/31 21.22.49.634
-cmdsavedocx:'$ DOC SAVEDOCX'
-t: 01/31 21.22.55.454
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmdopen
-t: 01/31 22.14.16.340
-cmdopen:'; CXL CS2SHELL OPEN'
-t: 01/31 22.14.17.620
-Script file finished
-step: cmdconfig
-t: 01/31 22.14.18.252
-cmdconfig:'$ MODULECOM APPLYCFG'
-t: 01/31 22.14.18.256
-Script file finished
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RCDESIGN'
-step: cmdcalculation
-t: 01/31 22.14.19.115
-cmdcalculation:'; CXL $MODULE CALC'
-Error: Error in calculation of reduced shear forces. Maybe the shell is too small.
-Global coordinates: X=0.650 m, Y=4.000 m, Z=0.400 m.
-analysis
-t: 01/31 22.14.27.847
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-step: cmduser
-cmduser:'; CXL FEM $CODE(DESCHANGESAPPLY)'
-Script file finished
-step: cmdprojdescr
-t: 01/31 22.14.28.213
-cmdprojdescr:'$ MODULECOM PROJDESCR'
-t: 01/31 22.14.28.213
-Script file finished
-step: cmdchild
-Script file finished
-step: cmdsavedocx
-t: 01/31 22.14.33.305
-cmdsavedocx:'$ DOC SAVEDOCX'
-t: 01/31 22.14.37.996
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
-Script file finished
-step: cmduser
-cmduser:'; CXL $MODULE RESMODE'
-invalid command
-aborting script execution
+t: 02/20 15.57.26.921
 Script file finished

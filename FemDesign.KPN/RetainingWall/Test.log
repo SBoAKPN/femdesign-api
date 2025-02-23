@@ -1,0 +1,31 @@
+step: cmdconfig
+t: 02/07 15.44.10.354
+cmdconfig:'$ MODULECOM APPLYCFG'
+<CONFIG> element expected
+t: 02/07 15.44.10.355
+aborting script execution
+Script file finished
+step: cmdconfig
+t: 02/10 15.34.09.192
+cmdconfig:'$ MODULECOM APPLYCFG'
+<CONFIG> element expected
+t: 02/10 15.34.09.192
+aborting script execution
+Script file finished
+step: cmdopen
+t: 02/10 15.42.02.892
+cmdopen:'; CXL CS2SHELL OPEN'
+t: 02/10 15.42.04.158
+step: cmdconfig
+t: 02/10 15.42.04.160
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/10 15.42.04.161
+step: cmdconfig
+t: 02/10 15.42.04.163
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/10 15.42.04.164
+step: cmdconfig
+t: 02/10 15.42.04.165
+cmdconfig:'$ MODULECOM APPLYCFG'
+t: 02/10 15.42.04.168
+Script file finished

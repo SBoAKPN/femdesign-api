@@ -573,9 +573,8 @@
         <unit>0</unit>
       </units>
       <options>
-        <bar>1</bar>
-        <step>0.5</step>
-        <surface>1</surface>
+        <bar>2</bar>
+        <surface>2</surface>
       </options>
       <restype>3</restype>
     </doctable>

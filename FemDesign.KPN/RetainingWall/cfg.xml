@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Face_0 = UK	Face_1 = ÖK -->
+	<!-- BPL -->
+		<CONFIG face_0_rCwLimit="0.25" face_1_rCwLimit="0.30" type="ECCALCPARAMSHELLRC">
+			<GUID>A951B736-3394-4FE4-B38F-D17F1161EB3A</GUID>
+		</CONFIG>
+		<!-- MUR -->
+		<CONFIG face_0_rCwLimit="0.35" face_1_rCwLimit="0.40" type="ECCALCPARAMSHELLRC">
+			<GUID>F42D2623-FB17-4F39-9A21-EDDA24944298</GUID>
+		</CONFIG>
+		<!-- BPLMUR -->
+		<CONFIG face_0_rCwLimit="0.45" face_1_rCwLimit="0.50" type="ECCALCPARAMSHELLRC">
+			<GUID>2E290437-E86A-4E36-AF7D-ACDE6A6146C8</GUID>
+		</CONFIG>
+</configs>

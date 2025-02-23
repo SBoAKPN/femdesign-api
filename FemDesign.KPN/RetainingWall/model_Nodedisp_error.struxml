@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- (c) StruSoft 2012-2023, http://www.strusoft.com -->
-<database struxml_version="01.00.000" source_software="FEM-Design 23.00.007" start_time="1970-01-01T00:00:00.000" end_time="2025-02-01T09:48:44.000" guid="ec6416fa-0347-433b-9f07-8443df7ddf85" convertid="00000000-0000-0000-0000-000000000000" standard="EC" country="S" xmlns="urn:strusoft">
+<database struxml_version="01.00.000" source_software="FEM-Design 23.00.007" start_time="1970-01-01T00:00:00.000" end_time="2025-02-04T11:26:38.000" guid="8e51174a-a39d-4df0-ab89-7f205ee0d717" convertid="00000000-0000-0000-0000-000000000000" standard="EC" country="S" xmlns="urn:strusoft">
 	<entities>
-		<slab name="BPL.1" guid="937ecf92-055c-4954-ab54-6096af136a0e" last_change="2025-01-31T19:34:57.000" action="added" type="plate">
-			<slab_part guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73" last_change="2025-01-31T19:34:57.000" action="added" name="@BPL.1.1" complex_material="b40fb18e-bdcf-4337-9282-7d50e328f78b" alignment="bottom" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
+		<slab name="BPL.1" guid="a639c0ff-5431-40d6-9f06-4291bb8e0109" last_change="2025-02-03T21:36:41.000" action="added" type="plate">
+			<slab_part guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f" last_change="2025-02-03T21:36:41.000" action="added" name="@BPL.1.1" complex_material="2d1d0f14-4a2c-4ee3-ba49-8bdd532f3e3c" alignment="bottom" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
 				<contour>
 					<edge type="line">
 						<point x="0" y="0" z="0"></point>
@@ -36,8 +36,8 @@
 			</slab_part>
 			<end></end>
 		</slab>
-		<slab name="MUR.2" guid="a5cc0544-99bd-4b96-bd04-279f9b613323" last_change="2025-01-31T19:34:57.000" action="added" type="plate">
-			<slab_part guid="14f80814-827a-453d-90fd-45f0a85527de" last_change="2025-01-31T19:34:57.000" action="added" name="@MUR.2.1" complex_material="d4e3848e-ec9b-440e-bd9d-ece0b405cc89" alignment="center" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
+		<slab name="MUR.2" guid="08e644d4-1a4c-4aa0-9360-023bfc7395ca" last_change="2025-02-03T21:36:41.000" action="added" type="plate">
+			<slab_part guid="397b6075-2bed-454e-a3cd-5f63c3191343" last_change="2025-02-03T21:36:41.000" action="added" name="@MUR.2.1" complex_material="43d62448-1e52-4f81-8857-653841569197" alignment="center" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
 				<contour>
 					<edge type="line">
 						<point x="0.65" y="0" z="4"></point>
@@ -70,8 +70,8 @@
 			</slab_part>
 			<end></end>
 		</slab>
-		<slab name="BPL-MUR.3" guid="641152ec-30f8-4b88-bf7b-bb1f9e87dc93" last_change="2025-01-31T19:34:57.000" action="added" type="plate">
-			<slab_part guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94" last_change="2025-01-31T19:34:57.000" action="added" name="@BPL-MUR.3.1" complex_material="d4a652f8-a107-4e64-92a5-a8b6917e1353" alignment="center" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
+		<slab name="BPLMUR.3" guid="6bca433d-8c7b-485e-afbe-55185a1f177a" last_change="2025-02-03T21:36:41.000" action="added" type="plate">
+			<slab_part guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139" last_change="2025-02-03T21:36:41.000" action="added" name="@BPLMUR.3.1" complex_material="d1881406-d3e4-4181-98cc-c4f0037d12b1" alignment="center" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5">
 				<contour>
 					<edge type="line">
 						<point x="0.65" y="0" z="0.4"></point>
@@ -102,7 +102,7 @@
 			</slab_part>
 			<end></end>
 		</slab>
-		<shell_buckling base_shell="9508642d-70a8-4a7c-8eb9-7e8d865adc73" guid="8ad5afc5-3629-4902-9598-5dcc6ecea826" last_change="2025-01-31T19:35:17.000" action="added">
+		<shell_buckling base_shell="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f" guid="8509509d-b88c-4717-b478-cee3e4e58002" last_change="2025-02-04T11:21:59.000" action="added">
 			<direction x="1" y="0" z="0"></direction>
 			<contour>
 				<edge type="line">
@@ -127,7 +127,7 @@
 				</edge>
 			</contour>
 		</shell_buckling>
-		<shell_buckling base_shell="14f80814-827a-453d-90fd-45f0a85527de" guid="f0c9e256-835b-4b48-bff7-7a2fe1fdf5ab" last_change="2025-01-31T19:35:17.000" action="added">
+		<shell_buckling base_shell="397b6075-2bed-454e-a3cd-5f63c3191343" guid="22e0ecde-b21e-4c5d-b800-6ee985b21e2a" last_change="2025-02-04T11:21:59.000" action="added">
 			<direction x="0" y="0" z="-1"></direction>
 			<contour>
 				<edge type="line">
@@ -152,7 +152,7 @@
 				</edge>
 			</contour>
 		</shell_buckling>
-		<shell_buckling base_shell="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94" guid="8af9ec36-956e-46d0-8ec2-25c6d507da64" last_change="2025-01-31T19:35:17.000" action="added">
+		<shell_buckling base_shell="34612ee8-e0be-4309-a8ed-dd3e52e2e139" guid="7b4f6e2a-17c5-4133-a549-bbe7418bbf6f" last_change="2025-02-04T11:21:59.000" action="added">
 			<direction x="0" y="0" z="-1"></direction>
 			<contour>
 				<edge type="line">
@@ -177,27 +177,27 @@
 				</edge>
 			</contour>
 		</shell_buckling>
-		<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
+		<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
 			<center x="0" y="0" z="0" polar_system="false"></center>
 			<x_direction x="1" y="0" z="0"></x_direction>
 			<y_direction x="0" y="1" z="0"></y_direction>
 		</surface_reinforcement_parameters>
-		<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
+		<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
 			<center x="0" y="0" z="0" polar_system="false"></center>
 			<x_direction x="0" y="0" z="-1"></x_direction>
 			<y_direction x="0" y="1" z="0"></y_direction>
 		</surface_reinforcement_parameters>
-		<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
+		<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
 			<center x="0" y="0" z="0" polar_system="false"></center>
 			<x_direction x="0" y="0" z="-1"></x_direction>
 			<y_direction x="0" y="1" z="0"></y_direction>
 		</surface_reinforcement_parameters>
-		<surface_reinforcement guid="2280de30-9e79-40b6-b0dd-ff25fb49864c" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="74ea3690-8843-43be-b8c2-c5bf46f9a285" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.2" cover="0.12"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -225,9 +225,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="b153bdb0-8e40-402e-80ce-0b1489a4cc3c" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="846e35b5-63c3-491d-a708-014cf112c30d" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.2" cover="0.075"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -255,9 +255,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="c4e16f85-48c5-43a8-9024-b7a308be0b3f" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="5f0ce6e3-3238-4640-a335-54abe1b5c249" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.2" cover="0.1"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -285,9 +285,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="4846d36a-b38f-42ed-99e3-8708a6b8fb8f" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="9a44291d-0506-4fa7-9735-f58301183cd3" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.2" cover="0.055"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -315,9 +315,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="91b29c03-eb16-4b33-831e-224a09c2430d" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="6f510c33-4351-4232-905e-44237b7f8df9" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.4" cover="0.12"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -345,9 +345,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="58e8cb2a-f370-4d25-bd1a-b1385c1ed2f2" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="05df29c6-79c8-4f87-88a3-35789b32df81" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.4" cover="0.075"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -375,9 +375,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="bb9d20a6-3921-4606-9196-9e3aa41bed66" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="3542e62e-a4af-42cc-9afe-50a01f2ee209" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.4" cover="0.1"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -405,9 +405,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="f7b8875f-92cc-4325-826a-beafe092c8cc" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></base_shell>
-			<surface_reinforcement_parameters guid="89fdcaaa-1c5e-4202-8758-64ceae4d8a95"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="ebe39d5b-93fe-4ded-bc4a-857869b92cd9" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></base_shell>
+			<surface_reinforcement_parameters guid="89f1ab88-3afa-4118-ac2a-813d2821a3ee"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.4" cover="0.055"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -435,9 +435,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="fe4e0ca8-cf54-412f-82df-a1fa6b68a49d" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="2ecc73ae-dc78-4563-abac-53621e3a9908" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.2" cover="0.075"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -465,9 +465,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="80448456-c89c-42e4-a6a2-b0f2e7dce854" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="284a37b7-10e2-4495-9c3d-467906339ff0" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.2" cover="0.075"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -495,9 +495,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="bc24fb12-5398-4337-a872-96eb8e81fb57" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="472e928c-8529-4bb9-90c5-ea28332b4a07" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.2" cover="0.055"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -525,9 +525,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="9e376206-d13d-416b-be44-06c67f4ad296" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="427bbb00-5ed3-43f9-852e-27bc159be675" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.2" cover="0.055"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -555,9 +555,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="48338069-806b-4b10-bc99-89b372d8e415" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="5433df35-c68c-46d3-8543-61ac92481409" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.4" cover="0.075"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -585,9 +585,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="39d3de52-539c-4dc7-bfe1-28b5c71bccda" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="f3e53449-74d1-413c-ac00-8c357b7ae1e2" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.4" cover="0.075"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -615,9 +615,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="a6176a8b-da00-4cfd-82e0-821ecbf77a07" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="36ed2ed0-e52b-4eb1-9b18-53728245ff2d" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.4" cover="0.055"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -645,9 +645,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="6e672ea5-91a2-4997-8910-3c86f7871d22" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="14f80814-827a-453d-90fd-45f0a85527de"></base_shell>
-			<surface_reinforcement_parameters guid="2495130f-50f3-4137-b583-0a02286d2219"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="cdda3239-9768-4ef6-a956-8277fb1034bb" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="397b6075-2bed-454e-a3cd-5f63c3191343"></base_shell>
+			<surface_reinforcement_parameters guid="7d15da5a-7b8d-4b81-9f85-d2caeee0fe9f"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.4" cover="0.055"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -675,9 +675,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="d0633a1d-2da9-4469-9195-103518fd2d93" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="7524e6b1-d1ab-4c1c-8fbc-0eaaefa143a4" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.2" cover="0.075"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -705,9 +705,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="5581c1ce-b2fa-4744-b223-2b01a0ea33f5" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="52a78ba6-b855-42b8-ba10-955f266f3d23" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.2" cover="0.075"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -735,9 +735,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="e8b534b1-bcb9-4aa5-97c5-9416e6075ca8" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="492464d4-f7f5-4deb-b082-87ec1585ccab" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.2" cover="0.055"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -765,9 +765,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="dfddfb93-b454-4a17-bdc9-9cfded3b4249" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="8d3b80f3-135c-47dd-a5b4-af72d7e05ddb" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.2" cover="0.055"></straight>
 			<wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -795,9 +795,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="25309fed-350b-4429-ac9e-44c1e65fc0fb" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="3ea90b92-7897-48e1-9db7-a558eaba2a52" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="x" space="0.4" cover="0.075"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -825,9 +825,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="8fa71754-0ffa-4e46-acf7-f56d99a78926" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="25cd6657-9ede-4edf-a8c3-e6b61b2e9ac5" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="top" direction="x" space="0.4" cover="0.075"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -855,9 +855,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="0a1d9b58-f004-4902-9505-312a27535fd3" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="43fa37ac-e2eb-4331-a57b-aadb0e42f56e" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="bottom" direction="y" space="0.4" cover="0.055"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -885,9 +885,9 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<surface_reinforcement guid="15370efd-8129-4a99-af67-7e7db8b35e9b" last_change="2025-01-31T19:34:57.000" action="added">
-			<base_shell guid="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></base_shell>
-			<surface_reinforcement_parameters guid="f1187d35-d205-4999-ad6b-aa79c58594a5"></surface_reinforcement_parameters>
+		<surface_reinforcement guid="390634dd-f067-47bb-95f9-afc5643987dc" last_change="2025-02-03T21:36:41.000" action="added">
+			<base_shell guid="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></base_shell>
+			<surface_reinforcement_parameters guid="4482346e-28c2-44c8-bae8-d2085b495e5f"></surface_reinforcement_parameters>
 			<straight face="top" direction="y" space="0.4" cover="0.055"></straight>
 			<wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e"></wire>
 			<region>
@@ -915,14 +915,14 @@
 				</contour>
 			</region>
 		</surface_reinforcement>
-		<shear_control_region base_plate="9508642d-70a8-4a7c-8eb9-7e8d865adc73" ignore_shear_check="true" x="0.5" reduce_shear_forces="true" guid="3c427ebb-bbc4-4d2d-a353-1990e69f4a94" last_change="2025-02-01T09:48:44.000" action="added" name="@.0">
-			<automatic connected_structure="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94"></automatic>
+		<shear_control_region base_plate="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f" ignore_shear_check="false" x="1" reduce_shear_forces="true" guid="f4878a5b-5d97-4d23-a0da-ed1bdfea12b9" last_change="2025-02-04T11:26:38.000" action="added" name="@.0">
+			<automatic connected_structure="34612ee8-e0be-4309-a8ed-dd3e52e2e139"></automatic>
 		</shear_control_region>
-		<shear_control_region base_plate="8197f6bf-8eae-40e8-a5c8-b0f182a8ae94" ignore_shear_check="true" x="0.5" reduce_shear_forces="true" guid="ff9c9ba6-5f8d-4ea0-8e2e-3ee1b65cd308" last_change="2025-02-01T09:48:44.000" action="added" name="@.0">
-			<automatic connected_structure="9508642d-70a8-4a7c-8eb9-7e8d865adc73"></automatic>
+		<shear_control_region base_plate="34612ee8-e0be-4309-a8ed-dd3e52e2e139" ignore_shear_check="false" x="1" reduce_shear_forces="true" guid="6eb6fc76-193c-4fb8-99fa-54c3d35b2718" last_change="2025-02-04T11:26:38.000" action="added" name="@.0">
+			<automatic connected_structure="6b3eb0e9-4027-4ed9-b08e-d7d46b68672f"></automatic>
 		</shear_control_region>
 		<loads>
-			<line_load load_case="3f53d8dd-8514-4599-a1c5-55d8f32a43cc" guid="92a24e47-f47b-4f46-8018-a4af50d483b8" last_change="2025-01-31T19:34:57.000" action="added" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="6dfd3dae-c94b-47d5-a644-a269a6d0c9d8" guid="99325ada-d13f-41c2-955c-49c94bdc295a" last_change="2025-02-03T21:36:41.000" action="added" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="0.65" y="10" z="4"></point>
 					<point x="0.65" y="0" z="4"></point>
@@ -933,7 +933,7 @@
 				<load x="0.65" y="10" z="4" val="1"></load>
 				<load x="0.65" y="0" z="4" val="1"></load>
 			</line_load>
-			<line_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="a9b12092-8db1-41e6-aa6f-fc06f056caf7" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JUH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="c3166679-c49c-4e7f-9d4a-fba5468c3f1b" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JUH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -944,7 +944,7 @@
 				<load x="2.6" y="0" z="0" val="8.208"></load>
 				<load x="2.6" y="10" z="0" val="8.208"></load>
 			</line_load>
-			<line_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="12f00961-ea77-4653-b718-f78d5133aecb" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_JUH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="514a196a-a7a0-4f09-984d-5f28175967d0" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_JUH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -955,7 +955,7 @@
 				<load x="2.6" y="0" z="0" val="1.6416"></load>
 				<load x="2.6" y="10" z="0" val="1.6416"></load>
 			</line_load>
-			<line_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="2ec01286-6b71-4845-9ec8-3e7840c0e2f9" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JMUH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="85ab0db4-6517-4f58-8597-666615515ad8" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JMUH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -966,7 +966,7 @@
 				<load x="0" y="10" z="0" val="12.1612354691834"></load>
 				<load x="0" y="0" z="0" val="12.1612354691834"></load>
 			</line_load>
-			<line_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="343ab92c-b3df-43c7-9251-5a02fd470d50" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_JMUH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="b7773187-6cd6-410b-be48-a9da9666d01e" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_JMUH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -977,7 +977,7 @@
 				<load x="0" y="10" z="0" val="2.43224709383669"></load>
 				<load x="0" y="0" z="0" val="2.43224709383669"></load>
 			</line_load>
-			<line_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="9628e9e4-6c5f-44af-9f11-021593918fe0" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JAH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="a9c8667a-46f2-475d-b432-92ebd0c249aa" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JAH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -988,7 +988,7 @@
 				<load x="2.6" y="0" z="0" val="8.208"></load>
 				<load x="2.6" y="10" z="0" val="8.208"></load>
 			</line_load>
-			<line_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="da760ae5-73c8-45b5-a6f1-58929b294bc0" last_change="2025-01-31T19:34:57.000" action="added" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="04ccc01f-465a-4b61-9b4b-82434136a949" last_change="2025-02-03T21:36:41.000" action="added" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -999,7 +999,7 @@
 				<load x="2.6" y="0" z="0" val="1.6416"></load>
 				<load x="2.6" y="10" z="0" val="1.6416"></load>
 			</line_load>
-			<line_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="67bdf7be-3a0c-42de-9434-1905bcf93b94" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JMAH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="7d8e6584-2f4a-49aa-b26f-c2291b1aa807" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JMAH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -1010,7 +1010,7 @@
 				<load x="0" y="10" z="0" val="12.1612354691834"></load>
 				<load x="0" y="0" z="0" val="12.1612354691834"></load>
 			</line_load>
-			<line_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="f729dc6d-d4cb-469b-94d8-4ec486d59145" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_JMAH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="eb2174af-618a-4060-9c0b-71fb902f1d3a" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_JMAH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -1021,7 +1021,7 @@
 				<load x="0" y="10" z="0" val="2.43224709383669"></load>
 				<load x="0" y="0" z="0" val="2.43224709383669"></load>
 			</line_load>
-			<line_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="ec47d797-18cd-43ea-bbf6-4673eebaf057" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JKH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="ee9bcc2c-b18d-49b3-876a-cd704fa7c126" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JKH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1032,7 +1032,7 @@
 				<load x="2.6" y="0" z="0" val="10.944"></load>
 				<load x="2.6" y="10" z="0" val="10.944"></load>
 			</line_load>
-			<line_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="c99db09a-c8a5-4aa2-bebd-fb9834eaf7f1" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_JKH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="0fd1e807-5960-4e75-932f-011262c09251" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_JKH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1043,7 +1043,7 @@
 				<load x="2.6" y="0" z="0" val="2.1888"></load>
 				<load x="2.6" y="10" z="0" val="2.1888"></load>
 			</line_load>
-			<line_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="0dadfe1d-2bc6-4d3b-a76a-97ba667af756" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_JMKH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="a9eb9569-0d4d-463a-bdc4-261ddbf712ce" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_JMKH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -1054,7 +1054,7 @@
 				<load x="0" y="10" z="0" val="1.47408914777981"></load>
 				<load x="0" y="0" z="0" val="1.47408914777981"></load>
 			</line_load>
-			<line_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="f6e87a15-913f-4caf-800f-e2480183b3fa" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_JMKH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="f616e619-3c54-440f-879b-b428eadb09b2" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_JMKH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="0" y="10" z="0"></point>
 					<point x="0" y="0" z="0"></point>
@@ -1065,7 +1065,7 @@
 				<load x="0" y="10" z="0" val="0.294817829555962"></load>
 				<load x="0" y="0" z="0" val="0.294817829555962"></load>
 			</line_load>
-			<line_load load_case="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" guid="68df8e7f-1743-4ec0-bd2e-7caa07306b4a" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_ÖLUH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="4f3af966-e567-4afc-b455-cf009e07209e" guid="e2385e99-4708-41cc-b493-d7b828b5dbbb" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_ÖLUH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1076,7 +1076,7 @@
 				<load x="2.6" y="0" z="0" val="1.8"></load>
 				<load x="2.6" y="10" z="0" val="1.8"></load>
 			</line_load>
-			<line_load load_case="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" guid="d49e21fb-6be4-4ca4-83ca-68a8108c06c6" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_ÖLUH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="4f3af966-e567-4afc-b455-cf009e07209e" guid="f42ebbf6-9c35-44e6-ba79-04d12ed7a72b" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_ÖLUH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1087,7 +1087,7 @@
 				<load x="2.6" y="0" z="0" val="0.36"></load>
 				<load x="2.6" y="10" z="0" val="0.36"></load>
 			</line_load>
-			<line_load load_case="8f7c2922-97d1-438b-9442-f7bfd7e25580" guid="78cf7029-50ae-4331-b5b7-06317f22cb4a" last_change="2025-01-31T19:34:57.000" action="added" comment="LL_ÖLPH" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="b6dba9fb-54de-4d04-bd34-ad25ef55ffb8" guid="946d0e72-ea6b-4599-870f-8afcd63a53bd" last_change="2025-02-03T21:36:41.000" action="added" comment="LL_ÖLPH" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1098,7 +1098,7 @@
 				<load x="2.6" y="0" z="0" val="0.72"></load>
 				<load x="2.6" y="10" z="0" val="0.72"></load>
 			</line_load>
-			<line_load load_case="8f7c2922-97d1-438b-9442-f7bfd7e25580" guid="cd6c4442-d9d1-4de7-82b5-abcaf7a2789f" last_change="2025-01-31T19:34:57.000" action="added" comment="LM_ÖLPH" load_dir="constant" load_projection="false" load_type="moment">
+			<line_load load_case="b6dba9fb-54de-4d04-bd34-ad25ef55ffb8" guid="83e32538-1d8e-4144-bc6b-c92d27bf286a" last_change="2025-02-03T21:36:41.000" action="added" comment="LM_ÖLPH" load_dir="constant" load_projection="false" load_type="moment">
 				<edge type="line">
 					<point x="2.6" y="0" z="0"></point>
 					<point x="2.6" y="10" z="0"></point>
@@ -1109,7 +1109,7 @@
 				<load x="2.6" y="0" z="0" val="0.144"></load>
 				<load x="2.6" y="10" z="0" val="0.144"></load>
 			</line_load>
-			<line_load load_case="b2017dc5-5fa9-4856-a0aa-9fd194e1f8fc" guid="a1fd7376-7cb3-4fb8-8a75-e75ee01473ef" last_change="2025-01-31T19:34:57.000" action="added" comment="Acc" load_dir="constant" load_projection="false" load_type="force">
+			<line_load load_case="3231352c-cb9b-4731-8f60-ff288d64da26" guid="9e0fe297-f1d9-4bb9-b4fd-322252d181e0" last_change="2025-02-03T21:36:41.000" action="added" comment="Acc" load_dir="constant" load_projection="false" load_type="force">
 				<edge type="line">
 					<point x="0.65" y="10" z="4"></point>
 					<point x="0.65" y="0" z="4"></point>
@@ -1120,7 +1120,7 @@
 				<load x="0.65" y="10" z="4" val="16"></load>
 				<load x="0.65" y="0" z="4" val="16"></load>
 			</line_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="a1e07650-bfe0-471e-b1ec-38aa20125df4" last_change="2025-01-31T19:34:57.000" action="added" comment="JUV" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="bd1198dd-38df-437a-969d-71205b625d33" last_change="2025-02-03T21:36:41.000" action="added" comment="JUV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1150,7 +1150,7 @@
 				<load x="2.6" y="0" z="0" val="64.8"></load>
 				<load x="2.6" y="10" z="0" val="64.8"></load>
 			</surface_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="7173e1bf-faf0-40f6-b468-eb9ba76be5bc" last_change="2025-01-31T19:34:57.000" action="added" comment="JUH" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="290d6621-d6dd-411b-8486-47b5ba1b49cf" last_change="2025-02-03T21:36:41.000" action="added" comment="JUH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1180,7 +1180,7 @@
 				<load x="0.65" y="0" z="0.4" val="19.44"></load>
 				<load x="0.65" y="10" z="0.4" val="19.44"></load>
 			</surface_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="1c2ba968-e92c-49d8-ae89-6d19fe077b66" last_change="2025-01-31T19:34:57.000" action="added" comment="pack1" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="88014082-4405-44f9-be99-04ae98cdeb1a" last_change="2025-02-03T21:36:41.000" action="added" comment="pack1" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1210,7 +1210,7 @@
 				<load x="0.65" y="0" z="3.7" val="4.64538"></load>
 				<load x="0.65" y="10" z="3.7" val="4.64538"></load>
 			</surface_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="b6d1a180-75fa-40eb-9b71-6d016f4527e6" last_change="2025-01-31T19:34:57.000" action="added" comment="pack2" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="13f252f5-8684-4869-bf3a-8016cb9cdd36" last_change="2025-02-03T21:36:41.000" action="added" comment="pack2" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1240,7 +1240,7 @@
 				<load x="0.65" y="0" z="2.84060384060384" val="0"></load>
 				<load x="0.65" y="10" z="2.84060384060384" val="0"></load>
 			</surface_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="1e6cf1e5-1856-438c-b90d-070a01b5b5ec" last_change="2025-01-31T19:34:57.000" action="added" comment="JMUV" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="48d1e507-51c1-48be-bb34-507532fe180b" last_change="2025-02-03T21:36:41.000" action="added" comment="JMUV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1270,7 +1270,7 @@
 				<load x="0.5" y="0" z="0" val="7.2"></load>
 				<load x="0.5" y="10" z="0" val="7.2"></load>
 			</surface_load>
-			<surface_load load_case="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" guid="bc2f3299-d180-4b3b-a672-77e0e74e29cd" last_change="2025-01-31T19:34:57.000" action="added" comment="JMUH" load_projection="false" load_type="force">
+			<surface_load load_case="2b461c4f-5b7f-49da-948d-0b95bfd83e60" guid="1446ff27-5906-4a9c-b0c9-10422a6d8eb4" last_change="2025-02-03T21:36:41.000" action="added" comment="JMUH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1300,7 +1300,7 @@
 				<load x="0.65" y="0" z="0.4" val="23.76"></load>
 				<load x="0.65" y="10" z="0.4" val="23.76"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="53cd8e6d-9bbb-4a54-b967-2780c5227a5c" last_change="2025-01-31T19:34:57.000" action="added" comment="JAV" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="97bb85a2-6e4c-404b-9f95-f9a2295d6b78" last_change="2025-02-03T21:36:41.000" action="added" comment="JAV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1330,7 +1330,7 @@
 				<load x="2.6" y="0" z="0" val="64.8"></load>
 				<load x="2.6" y="10" z="0" val="64.8"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="78b19be8-694d-43e3-a59c-2dedd91bb65f" last_change="2025-01-31T19:34:57.000" action="added" comment="JAH" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="b88b9b58-aba1-4ea0-9fe9-2840b0ae951f" last_change="2025-02-03T21:36:41.000" action="added" comment="JAH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1360,7 +1360,7 @@
 				<load x="0.65" y="0" z="0.4" val="19.44"></load>
 				<load x="0.65" y="10" z="0.4" val="19.44"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="1119d654-077f-407f-8486-337180cb7fe6" last_change="2025-01-31T19:34:57.000" action="added" comment="pack1" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="2cb45c05-70a4-4e15-acf1-3a341dd5bf7e" last_change="2025-02-03T21:36:41.000" action="added" comment="pack1" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1390,7 +1390,7 @@
 				<load x="0.65" y="0" z="3.7" val="4.64538"></load>
 				<load x="0.65" y="10" z="3.7" val="4.64538"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="211f0818-310e-46cd-ac49-767f9ed2cad7" last_change="2025-01-31T19:34:57.000" action="added" comment="pack2" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="ca385303-d334-4f26-b8d5-efa801e6c299" last_change="2025-02-03T21:36:41.000" action="added" comment="pack2" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1420,7 +1420,7 @@
 				<load x="0.65" y="0" z="2.84060384060384" val="0"></load>
 				<load x="0.65" y="10" z="2.84060384060384" val="0"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="fdd74f97-73a1-4d94-a9b5-00324af69e01" last_change="2025-01-31T19:34:57.000" action="added" comment="JMAV" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="4f7b0fba-d9df-4ad1-a183-e250112d886c" last_change="2025-02-03T21:36:41.000" action="added" comment="JMAV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1450,7 +1450,7 @@
 				<load x="0.5" y="0" z="0" val="7.2"></load>
 				<load x="0.5" y="10" z="0" val="7.2"></load>
 			</surface_load>
-			<surface_load load_case="30b4441f-c121-4ed9-b453-adc964b21439" guid="4a1c3474-4712-43f4-ad58-0e38de50b8a3" last_change="2025-01-31T19:34:57.000" action="added" comment="JMAH" load_projection="false" load_type="force">
+			<surface_load load_case="59a26294-a6b0-42bd-9a90-d2810066f64d" guid="ca4ec8f8-b899-4f1b-97af-ed9287878b82" last_change="2025-02-03T21:36:41.000" action="added" comment="JMAH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1480,7 +1480,7 @@
 				<load x="0.65" y="0" z="0.4" val="23.76"></load>
 				<load x="0.65" y="10" z="0.4" val="23.76"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="3a3becae-5009-49e8-ac53-c218f94a65d7" last_change="2025-01-31T19:34:57.000" action="added" comment="JKV" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="b110aef2-e525-4291-a5fe-b7c954d0d16d" last_change="2025-02-03T21:36:41.000" action="added" comment="JKV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1510,7 +1510,7 @@
 				<load x="2.6" y="0" z="0" val="64.8"></load>
 				<load x="2.6" y="10" z="0" val="64.8"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="a9148a50-3966-421a-9aac-81ee6cedbbe2" last_change="2025-01-31T19:34:57.000" action="added" comment="JKH" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="c6d861f8-4a28-4a3a-a2a2-7992da31b6aa" last_change="2025-02-03T21:36:41.000" action="added" comment="JKH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1540,7 +1540,7 @@
 				<load x="0.65" y="0" z="0.4" val="25.92"></load>
 				<load x="0.65" y="10" z="0.4" val="25.92"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="4a9d8258-b380-4fea-8fa3-715a3aaa6ebf" last_change="2025-01-31T19:34:57.000" action="added" comment="pack1" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="f06ac860-f7e1-4472-8fd3-08587d9cd718" last_change="2025-02-03T21:36:41.000" action="added" comment="pack1" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1570,7 +1570,7 @@
 				<load x="0.65" y="0" z="3.7" val="8.04"></load>
 				<load x="0.65" y="10" z="3.7" val="8.04"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="ac692e3e-e3c8-4b33-9fba-0a343dc0460e" last_change="2025-01-31T19:34:57.000" action="added" comment="pack2" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="f701c8f4-1ce7-4eb5-81e1-7220fd3719a4" last_change="2025-02-03T21:36:41.000" action="added" comment="pack2" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1600,7 +1600,7 @@
 				<load x="0.65" y="0" z="2.58333333333333" val="0"></load>
 				<load x="0.65" y="10" z="2.58333333333333" val="0"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="9054dae0-ae2d-4eb3-aaba-204ee49b163c" last_change="2025-01-31T19:34:57.000" action="added" comment="JMKV" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="7597c893-5759-402f-89c6-c2cde3bfac53" last_change="2025-02-03T21:36:41.000" action="added" comment="JMKV" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1630,7 +1630,7 @@
 				<load x="0.5" y="0" z="0" val="7.2"></load>
 				<load x="0.5" y="10" z="0" val="7.2"></load>
 			</surface_load>
-			<surface_load load_case="753ab487-e660-4b40-8b21-858a3411a6c1" guid="46d39cde-1632-47c9-a05d-e9312140a993" last_change="2025-01-31T19:34:57.000" action="added" comment="JMKH" load_projection="false" load_type="force">
+			<surface_load load_case="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" guid="d70b955c-1974-444e-ae09-b09872a369bd" last_change="2025-02-03T21:36:41.000" action="added" comment="JMKH" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1660,7 +1660,175 @@
 				<load x="0.65" y="0" z="0.4" val="2.88"></load>
 				<load x="0.65" y="10" z="0.4" val="2.88"></load>
 			</surface_load>
-			<surface_load load_case="a34e1615-dfcb-415d-b0b6-375d6eab248c" guid="832e21f1-f806-47a2-a9fb-507cc2a54b76" last_change="2025-01-31T19:34:57.000" action="added" comment="ÖLVU" load_projection="false" load_type="force">
+			<surface_load load_case="a96830d9-1542-4406-91b9-3e44b309a037" guid="0d1892a0-9935-474a-af31-ae16380859af" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0" y="0" z="0"></point>
+							<point x="2.6" y="0" z="0"></point>
+							<normal x="0" y="1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="0" z="0"></point>
+							<point x="2.6" y="10" z="0"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="10" z="0"></point>
+							<point x="0" y="10" z="0"></point>
+							<normal x="0" y="-1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0" y="10" z="0"></point>
+							<point x="0" y="0" z="0"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="1"></direction>
+				<load x="0" y="0" z="0" val="4"></load>
+			</surface_load>
+			<surface_load load_case="a96830d9-1542-4406-91b9-3e44b309a037" guid="03ac0b38-8d6b-4ac9-a27a-ccd32841cc73" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0.65" y="0" z="4"></point>
+							<point x="0.65" y="0" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="0" z="0.4"></point>
+							<point x="0.65" y="10" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="0.4"></point>
+							<point x="0.65" y="10" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="4"></point>
+							<point x="0.65" y="0" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="1"></direction>
+				<load x="0.65" y="0" z="4" val="1.33333333333333"></load>
+			</surface_load>
+			<surface_load load_case="ee930e99-1407-4083-a4d2-9832cedd2c42" guid="b10d2990-6d5b-41ed-816c-4b2ae145ca0e" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0" y="0" z="0"></point>
+							<point x="2.6" y="0" z="0"></point>
+							<normal x="0" y="1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="0" z="0"></point>
+							<point x="2.6" y="10" z="0"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="10" z="0"></point>
+							<point x="0" y="10" z="0"></point>
+							<normal x="0" y="-1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0" y="10" z="0"></point>
+							<point x="0" y="0" z="0"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="1"></direction>
+				<load x="0" y="0" z="0" val="4"></load>
+			</surface_load>
+			<surface_load load_case="ee930e99-1407-4083-a4d2-9832cedd2c42" guid="6b0f4110-fde5-4780-b692-6128cccbcbe5" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0.65" y="0" z="4"></point>
+							<point x="0.65" y="0" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="0" z="0.4"></point>
+							<point x="0.65" y="10" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="0.4"></point>
+							<point x="0.65" y="10" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="4"></point>
+							<point x="0.65" y="0" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="1"></direction>
+				<load x="0.65" y="0" z="4" val="0.5"></load>
+			</surface_load>
+			<surface_load load_case="eba78a2e-83ce-4115-a35c-030c1ccc7232" guid="b224d844-e820-4125-9532-78bf3a42523e" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0" y="0" z="0"></point>
+							<point x="2.6" y="0" z="0"></point>
+							<normal x="0" y="1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="0" z="0"></point>
+							<point x="2.6" y="10" z="0"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="2.6" y="10" z="0"></point>
+							<point x="0" y="10" z="0"></point>
+							<normal x="0" y="-1" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0" y="10" z="0"></point>
+							<point x="0" y="0" z="0"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="0"></direction>
+				<load x="0" y="0" z="0" val="0"></load>
+			</surface_load>
+			<surface_load load_case="eba78a2e-83ce-4115-a35c-030c1ccc7232" guid="bd3e07e5-82bc-4200-b8ac-a8e2d9b0a1bb" last_change="2025-02-03T21:36:41.000" action="added" load_projection="false" load_type="force">
+				<region>
+					<contour>
+						<edge type="line">
+							<point x="0.65" y="0" z="4"></point>
+							<point x="0.65" y="0" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="0" z="0.4"></point>
+							<point x="0.65" y="10" z="0.4"></point>
+							<normal x="-1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="0.4"></point>
+							<point x="0.65" y="10" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+						<edge type="line">
+							<point x="0.65" y="10" z="4"></point>
+							<point x="0.65" y="0" z="4"></point>
+							<normal x="1" y="0" z="0"></normal>
+						</edge>
+					</contour>
+				</region>
+				<direction x="0" y="0" z="0"></direction>
+				<load x="0.65" y="0" z="4" val="0"></load>
+			</surface_load>
+			<surface_load load_case="a3302c81-8d66-4d84-8a7b-796ce702a606" guid="13201d71-9738-4d1f-a2cc-3d21ae74a652" last_change="2025-02-03T21:36:41.000" action="added" comment="ÖLVU" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1690,7 +1858,7 @@
 				<load x="2.6" y="0" z="0" val="15"></load>
 				<load x="2.6" y="10" z="0" val="15"></load>
 			</surface_load>
-			<surface_load load_case="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" guid="255d5beb-941a-43aa-9994-2c87a85c0398" last_change="2025-01-31T19:34:57.000" action="added" comment="ÖLHU" load_projection="false" load_type="force">
+			<surface_load load_case="4f3af966-e567-4afc-b455-cf009e07209e" guid="445fb566-2d0a-4608-ba98-da7eb4b68749" last_change="2025-02-03T21:36:41.000" action="added" comment="ÖLHU" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1720,7 +1888,7 @@
 				<load x="0.65" y="0" z="0.4" val="4.5"></load>
 				<load x="0.65" y="10" z="0.4" val="4.5"></load>
 			</surface_load>
-			<surface_load load_case="83948913-6305-41dd-9a24-5b65628d31da" guid="2df8e86c-4609-4f44-a430-272780a856d2" last_change="2025-01-31T19:34:57.000" action="added" comment="ÖLVP" load_projection="false" load_type="force">
+			<surface_load load_case="c57884cf-b5ee-4536-ab35-183fe2bdf950" guid="2c1490c9-0510-4b2a-8d30-45d7e4b2d86b" last_change="2025-02-03T21:36:41.000" action="added" comment="ÖLVP" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1750,7 +1918,7 @@
 				<load x="2.6" y="0" z="0" val="4.5"></load>
 				<load x="2.6" y="10" z="0" val="4.5"></load>
 			</surface_load>
-			<surface_load load_case="8f7c2922-97d1-438b-9442-f7bfd7e25580" guid="8c42c6ed-d4d9-47b2-9ca2-10c9cd3a9269" last_change="2025-01-31T19:34:57.000" action="added" comment="ÖLHP" load_projection="false" load_type="force">
+			<surface_load load_case="b6dba9fb-54de-4d04-bd34-ad25ef55ffb8" guid="a1ed4a05-53a2-4ffc-8623-dc1df1b3c8f0" last_change="2025-02-03T21:36:41.000" action="added" comment="ÖLHP" load_projection="false" load_type="force">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1780,48 +1948,45 @@
 				<load x="0.65" y="0" z="0.4" val="1.8"></load>
 				<load x="0.65" y="10" z="0.4" val="1.8"></load>
 			</surface_load>
-			<load_case type="dead_load" duration_class="permanent" guid="93eca073-c27a-4aec-98e2-5ff6338431cc" last_change="2025-01-31T19:34:57.000" action="added" name="DL"></load_case>
-			<load_case type="static" duration_class="permanent" guid="3f53d8dd-8514-4599-a1c5-55d8f32a43cc" last_change="2025-01-31T19:34:57.000" action="added" name="Räcke"></load_case>
-			<load_case type="static" duration_class="permanent" guid="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" last_change="2025-01-31T19:34:57.000" action="added" name="JordU"></load_case>
-			<load_case type="static" duration_class="permanent" guid="753ab487-e660-4b40-8b21-858a3411a6c1" last_change="2025-01-31T19:34:57.000" action="added" name="JordK"></load_case>
-			<load_case type="static" duration_class="permanent" guid="30b4441f-c121-4ed9-b453-adc964b21439" last_change="2025-01-31T19:34:57.000" action="added" name="JordA"></load_case>
-			<load_case type="static" duration_class="long-term" guid="2ffc79f8-0542-4bcc-9c6d-acbfa4f40e7a" last_change="2025-01-31T19:34:57.000" action="added" name="HHW"></load_case>
-			<load_case type="static" duration_class="permanent" guid="aa9eb053-ab5b-419d-bb5a-d53df00f931f" last_change="2025-01-31T19:34:57.000" action="added" name="MW"></load_case>
-			<load_case type="static" duration_class="permanent" guid="44148e12-780c-4bcf-85a9-382e1675bbcd" last_change="2025-01-31T19:34:57.000" action="added" name="LLW"></load_case>
-			<load_case type="static" duration_class="permanent" guid="5be80b99-d7bf-41a3-8d53-54c11812a616" last_change="2025-01-31T19:34:57.000" action="added" name="Eff J HHW"></load_case>
-			<load_case type="static" duration_class="permanent" guid="3f748bfc-362d-4936-b799-9a7bc061d039" last_change="2025-01-31T19:34:57.000" action="added" name="Eff J MW"></load_case>
-			<load_case type="static" duration_class="permanent" guid="1fc48478-4c89-4794-9592-74135f7556e8" last_change="2025-01-31T19:34:57.000" action="added" name="Eff J LLW"></load_case>
-			<load_case type="static" duration_class="short-term" guid="a34e1615-dfcb-415d-b0b6-375d6eab248c" last_change="2025-01-31T19:34:57.000" action="added" name="ÖLVU"></load_case>
-			<load_case type="static" duration_class="short-term" guid="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" last_change="2025-01-31T19:34:57.000" action="added" name="ÖLHU"></load_case>
-			<load_case type="static" duration_class="permanent" guid="83948913-6305-41dd-9a24-5b65628d31da" last_change="2025-01-31T19:34:57.000" action="added" name="ÖLVP"></load_case>
-			<load_case type="static" duration_class="permanent" guid="8f7c2922-97d1-438b-9442-f7bfd7e25580" last_change="2025-01-31T19:34:57.000" action="added" name="ÖLHP"></load_case>
-			<load_case type="static" duration_class="instantaneous" guid="b2017dc5-5fa9-4856-a0aa-9fd194e1f8fc" last_change="2025-01-31T19:34:57.000" action="added" name="Olycka"></load_case>
-			<load_combination guid="4ffa9b47-3c60-4aa6-9a67-b70c17d75ae2" last_change="2025-01-31T19:34:57.000" action="added" name="LC1  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S " type="ultimate_ordinary">
-				<load_case guid="93eca073-c27a-4aec-98e2-5ff6338431cc" gamma="1.2285"></load_case>
-				<load_case guid="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" gamma="1.001"></load_case>
-				<load_case guid="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" gamma="1.274"></load_case>
+			<load_case type="dead_load" duration_class="permanent" guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" last_change="2025-02-03T21:36:41.000" action="added" name="DL"></load_case>
+			<load_case type="static" duration_class="permanent" guid="6dfd3dae-c94b-47d5-a644-a269a6d0c9d8" last_change="2025-02-03T21:36:41.000" action="added" name="Räcke"></load_case>
+			<load_case type="static" duration_class="permanent" guid="2b461c4f-5b7f-49da-948d-0b95bfd83e60" last_change="2025-02-03T21:36:41.000" action="added" name="JordU"></load_case>
+			<load_case type="static" duration_class="permanent" guid="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" last_change="2025-02-03T21:36:41.000" action="added" name="JordK"></load_case>
+			<load_case type="static" duration_class="permanent" guid="59a26294-a6b0-42bd-9a90-d2810066f64d" last_change="2025-02-03T21:36:41.000" action="added" name="JordA"></load_case>
+			<load_case type="static" duration_class="long-term" guid="a96830d9-1542-4406-91b9-3e44b309a037" last_change="2025-02-03T21:36:41.000" action="added" name="HHW"></load_case>
+			<load_case type="static" duration_class="permanent" guid="ee930e99-1407-4083-a4d2-9832cedd2c42" last_change="2025-02-03T21:36:41.000" action="added" name="MW"></load_case>
+			<load_case type="static" duration_class="permanent" guid="eba78a2e-83ce-4115-a35c-030c1ccc7232" last_change="2025-02-03T21:36:41.000" action="added" name="LLW"></load_case>
+			<load_case type="static" duration_class="short-term" guid="a3302c81-8d66-4d84-8a7b-796ce702a606" last_change="2025-02-03T21:36:41.000" action="added" name="ÖLVU"></load_case>
+			<load_case type="static" duration_class="short-term" guid="4f3af966-e567-4afc-b455-cf009e07209e" last_change="2025-02-03T21:36:41.000" action="added" name="ÖLHU"></load_case>
+			<load_case type="static" duration_class="permanent" guid="c57884cf-b5ee-4536-ab35-183fe2bdf950" last_change="2025-02-03T21:36:41.000" action="added" name="ÖLVP"></load_case>
+			<load_case type="static" duration_class="permanent" guid="b6dba9fb-54de-4d04-bd34-ad25ef55ffb8" last_change="2025-02-03T21:36:41.000" action="added" name="ÖLHP"></load_case>
+			<load_case type="static" duration_class="instantaneous" guid="3231352c-cb9b-4731-8f60-ff288d64da26" last_change="2025-02-03T21:36:41.000" action="added" name="Olycka"></load_case>
+			<load_combination guid="2154d520-74df-4df8-8de4-bd8e17454b74" last_change="2025-02-03T21:36:41.000" action="added" name="LC1  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn " type="serviceability_frequent">
+				<load_case guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" gamma="1"></load_case>
+				<load_case guid="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" gamma="1"></load_case>
+				<load_case guid="4f3af966-e567-4afc-b455-cf009e07209e" gamma="0.75"></load_case>
 			</load_combination>
-			<load_combination guid="7e832393-a5aa-41c6-9151-cf62d8a2c724" last_change="2025-01-31T19:34:57.000" action="added" name="LC2  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S " type="ultimate_ordinary">
-				<load_case guid="93eca073-c27a-4aec-98e2-5ff6338431cc" gamma="1"></load_case>
-				<load_case guid="49bb45e2-4dc9-4d50-a6b4-87f1d66cf612" gamma="1"></load_case>
+			<load_combination guid="ff6793de-4188-4876-85dc-5db557da5a4e" last_change="2025-02-03T21:36:41.000" action="added" name="LC2  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS" type="serviceability_quasi_permanent">
+				<load_case guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" gamma="1"></load_case>
+				<load_case guid="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" gamma="1"></load_case>
+				<load_case guid="b6dba9fb-54de-4d04-bd34-ad25ef55ffb8" gamma="1"></load_case>
 			</load_combination>
-			<load_combination guid="25b4e086-f860-4e7f-8067-c3e98a615ec2" last_change="2025-01-31T19:34:57.000" action="added" name="LC3  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS" type="serviceability_quasi_permanent">
-				<load_case guid="93eca073-c27a-4aec-98e2-5ff6338431cc" gamma="1"></load_case>
-				<load_case guid="753ab487-e660-4b40-8b21-858a3411a6c1" gamma="1"></load_case>
-				<load_case guid="8f7c2922-97d1-438b-9442-f7bfd7e25580" gamma="1"></load_case>
+			<load_combination guid="2a5254de-14e2-40fe-b900-b29610b457e7" last_change="2025-02-03T21:36:41.000" action="added" name="LC3  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS" type="serviceability_quasi_permanent">
+				<load_case guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" gamma="1"></load_case>
+				<load_case guid="34e0a477-9fc6-4b83-bc2a-aa8da7eaf4a5" gamma="1"></load_case>
 			</load_combination>
-			<load_combination guid="8a0a4612-3d8d-4561-ad44-fa6cf06f9970" last_change="2025-01-31T19:34:57.000" action="added" name="LC4  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS" type="serviceability_quasi_permanent">
-				<load_case guid="93eca073-c27a-4aec-98e2-5ff6338431cc" gamma="1"></load_case>
-				<load_case guid="753ab487-e660-4b40-8b21-858a3411a6c1" gamma="1"></load_case>
+			<load_combination guid="4e016fa6-0e5c-458d-8169-e3adc9edf044" last_change="2025-02-03T21:36:41.000" action="added" name="LC4  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S " type="ultimate_ordinary">
+				<load_case guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" gamma="1.2285"></load_case>
+				<load_case guid="2b461c4f-5b7f-49da-948d-0b95bfd83e60" gamma="1.001"></load_case>
+				<load_case guid="4f3af966-e567-4afc-b455-cf009e07209e" gamma="1.274"></load_case>
 			</load_combination>
-			<load_combination guid="7a136276-bfe2-4b38-ab77-7ee519068735" last_change="2025-01-31T19:34:57.000" action="added" name="LC5  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn " type="serviceability_frequent">
-				<load_case guid="93eca073-c27a-4aec-98e2-5ff6338431cc" gamma="1"></load_case>
-				<load_case guid="753ab487-e660-4b40-8b21-858a3411a6c1" gamma="1"></load_case>
-				<load_case guid="f3b28eab-4b2c-4831-972f-ca8cd8f92bea" gamma="0.75"></load_case>
+			<load_combination guid="d87f30e3-cb03-4be3-94d1-e40bb05f5538" last_change="2025-02-03T21:36:41.000" action="added" name="LC5  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S " type="ultimate_ordinary">
+				<load_case guid="64d220cc-41ce-4dfa-8777-1c12b40f6334" gamma="1"></load_case>
+				<load_case guid="2b461c4f-5b7f-49da-948d-0b95bfd83e60" gamma="1"></load_case>
 			</load_combination>
 		</loads>
 		<supports>
-			<surface_support guid="c7945b4e-b5e6-4779-a673-01384c410a0d" last_change="2025-01-31T19:34:57.000" action="added" name="@BPL_Upplag.1">
+			<surface_support guid="e425d1f5-d2f9-4e59-b131-3cfd18e47cfa" last_change="2025-02-03T21:36:41.000" action="added" name="@BMBPL.1">
 				<region>
 					<contour>
 						<edge type="line">
@@ -1857,41 +2022,71 @@
 			</surface_support>
 		</supports>
 		<result_points>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="a2a12e8a-9c8a-46fa-a89b-f9662255c60d" last_change="2025-01-31T19:52:17.000" action="added" name="@PT.1">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="b93ef300-d133-44e8-8c38-fb707bdb5f50" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.1">
 				<position x="0.65" y="0" z="0.4"></position>
 			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="15e62fe3-702b-49c4-a31e-2623cbe4a6d7" last_change="2025-01-31T19:52:18.000" action="added" name="@PT.2">
-				<position x="0.65" y="0" z="1.3"></position>
-			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="841c5f4f-a229-4a1e-b4ca-36e5fb8b1420" last_change="2025-01-31T19:52:19.000" action="added" name="@PT.3">
-				<position x="0.65" y="0" z="2.2"></position>
-			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="32079a16-56d4-426c-a6aa-fd3a6dce621c" last_change="2025-01-31T19:52:20.000" action="added" name="@PT.4">
-				<position x="0.65" y="0" z="3.1"></position>
-			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="832140cc-1bc7-4f98-906c-ee0e95bfc3fc" last_change="2025-01-31T19:52:21.000" action="added" name="@PT.5">
-				<position x="0.65" y="0" z="4"></position>
-			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="cc2f9de2-b1b2-457f-9eb8-99c805b1e5c0" last_change="2025-01-31T19:52:25.000" action="added" name="@PT.6">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="b1506689-a95d-46a2-b0f6-c12bd1fc24a7" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.2">
 				<position x="0.65" y="10" z="0.4"></position>
 			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="001bc8e9-83cc-4068-9f82-ccdb50a504db" last_change="2025-01-31T19:52:26.000" action="added" name="@PT.7">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="d8e1e80c-7b50-4c11-b225-f0a8e434d07e" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.3">
+				<position x="0.65" y="0" z="1.3"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="ee556745-ef05-4531-a34b-4ecaa86105a6" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.4">
 				<position x="0.65" y="10" z="1.3"></position>
 			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="a353a923-2385-4946-b853-cffb87df7b78" last_change="2025-01-31T19:52:28.000" action="added" name="@PT.8">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="a4ca7ede-5e00-49e6-b241-d58f8aab5465" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.5">
+				<position x="0.65" y="0" z="2.2"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="07a533d1-711a-4e38-a979-4d9ac4c910de" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.6">
 				<position x="0.65" y="10" z="2.2"></position>
 			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="2908c7d2-df75-4d21-9541-6cf3e9d876fa" last_change="2025-01-31T19:52:29.000" action="added" name="@PT.9">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="d06d709a-21f2-4aea-a168-0eb5ee3aa2b3" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.7">
+				<position x="0.65" y="0" z="3.1"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="e70c220a-61b6-42f5-8ff5-2d543a11b741" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.8">
 				<position x="0.65" y="10" z="3.1"></position>
 			</result_point>
-			<result_point base_entity="14f80814-827a-453d-90fd-45f0a85527de" guid="6e404369-f6e2-411e-9c2d-ef8fb649f2bc" last_change="2025-01-31T19:52:31.000" action="added" name="@PT.10">
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="5f1cef58-9360-409f-8782-ea7a53cd9cf7" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.9">
+				<position x="0.65" y="0" z="4"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="8d877929-8761-4dd2-b852-a0f365311165" last_change="2025-02-03T21:36:41.000" action="added" name="@RPM.10">
+				<position x="0.65" y="10" z="4"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="c010386b-3689-4fa0-831c-0b58a94e156c" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR1.0">
+				<position x="0.65" y="0" z="0.4"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="ebdbd878-a68d-4219-a1a1-a22c887a79f5" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR2.0">
+				<position x="0.65" y="10" z="0.4"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="7904c9aa-09e9-400e-af9e-0215f596d319" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR3.0">
+				<position x="0.65" y="0" z="1.3"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="9c9775b2-370d-4c48-a7f2-e2a604870ed4" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR4.0">
+				<position x="0.65" y="10" z="1.3"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="8886b912-36b4-49ed-8dd1-dbf4a6adfc66" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR5.0">
+				<position x="0.65" y="0" z="2.2"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="40cad95f-61e1-45c6-a3ff-2ed6cb168f18" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR6.0">
+				<position x="0.65" y="10" z="2.2"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="e851ebe0-17de-4ebd-8844-390f8fa9af47" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR7.0">
+				<position x="0.65" y="0" z="3.1"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="8bd92cbd-6773-40c2-9060-da6d9457079a" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR8.0">
+				<position x="0.65" y="10" z="3.1"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="8ef033e6-fef4-4e77-a007-78e11a81ff09" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR9.0">
+				<position x="0.65" y="0" z="4"></position>
+			</result_point>
+			<result_point base_entity="397b6075-2bed-454e-a3cd-5f63c3191343" guid="7e9b0e57-6854-402d-81c6-a25cd5c0a769" last_change="2025-02-03T21:37:10.000" action="added" name="@RPR10.0">
 				<position x="0.65" y="10" z="4"></position>
 			</result_point>
 		</result_points>
 	</entities>
 	<materials>
-		<material guid="d4e3848e-ec9b-440e-bd9d-ece0b405cc89" last_change="2025-01-31T19:34:57.000" action="added" standard="EC" country="S" name="C35/45">
-			<concrete mass="2.54842" E_0="34000000" E_1="34000000" E_2="34000000" nu_0="0.2" nu_1="0.2" nu_2="0.2" alfa_0="0.00001" alfa_1="0.00001" alfa_2="0.00001" G_0="14166666.6666667" G_1="14166666.6666667" G_2="14166666.6666667" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="23.3333333333333" Fcd_1="29.1666666666667" Fctd_0="1.46666666666667" Fctd_1="1.83333333333333" Ecd_0="22666.6666666667" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="2.0238" creep_slf="2.0238" creep_slc="2.0238" shrinkage="0.00024258" nu="0.2" alfa="0.00001">
+		<material guid="d1881406-d3e4-4181-98cc-c4f0037d12b1" last_change="2025-02-03T21:36:41.000" action="added" standard="EC" country="S" name="C35/45NoMass">
+			<concrete mass="0" E_0="34000000" E_1="34000000" E_2="34000000" nu_0="0.2" nu_1="0.2" nu_2="0.2" alfa_0="0.00001" alfa_1="0.00001" alfa_2="0.00001" G_0="14166666.6666667" G_1="14166666.6666667" G_2="14166666.6666667" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="23.3333333333333" Fcd_1="29.1666666666667" Fctd_0="1.46666666666667" Fctd_1="1.83333333333333" Ecd_0="22666.6666666667" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" shrinkage="0" nu="0.2" alfa="0.00001">
 				<plastic_analysis_data>
 					<U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true"></U>
 					<Sq elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true"></Sq>
@@ -1900,7 +2095,7 @@
 				</plastic_analysis_data>
 			</concrete>
 		</material>
-		<material guid="b40fb18e-bdcf-4337-9282-7d50e328f78b" last_change="2025-01-31T19:34:57.000" action="added" standard="EC" country="S" name="C35/45">
+		<material guid="2d1d0f14-4a2c-4ee3-ba49-8bdd532f3e3c" last_change="2025-02-03T21:36:41.000" action="added" standard="EC" country="S" name="C35/45">
 			<concrete mass="2.54842" E_0="34000000" E_1="34000000" E_2="34000000" nu_0="0.2" nu_1="0.2" nu_2="0.2" alfa_0="0.00001" alfa_1="0.00001" alfa_2="0.00001" G_0="14166666.6666667" G_1="14166666.6666667" G_2="14166666.6666667" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="23.3333333333333" Fcd_1="29.1666666666667" Fctd_0="1.46666666666667" Fctd_1="1.83333333333333" Ecd_0="22666.6666666667" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="1.6435" creep_slf="1.6435" creep_slc="1.6435" shrinkage="0.0000625" nu="0.2" alfa="0.00001">
 				<plastic_analysis_data>
 					<U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true"></U>
@@ -1910,8 +2105,8 @@
 				</plastic_analysis_data>
 			</concrete>
 		</material>
-		<material guid="d4a652f8-a107-4e64-92a5-a8b6917e1353" last_change="2025-01-31T19:34:57.000" action="added" standard="EC" country="S" name="C35/45NoMass">
-			<concrete mass="0" E_0="34000000" E_1="34000000" E_2="34000000" nu_0="0.2" nu_1="0.2" nu_2="0.2" alfa_0="0.00001" alfa_1="0.00001" alfa_2="0.00001" G_0="14166666.6666667" G_1="14166666.6666667" G_2="14166666.6666667" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="23.3333333333333" Fcd_1="29.1666666666667" Fctd_0="1.46666666666667" Fctd_1="1.83333333333333" Ecd_0="22666.6666666667" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" shrinkage="0" nu="0.2" alfa="0.00001">
+		<material guid="43d62448-1e52-4f81-8857-653841569197" last_change="2025-02-03T21:36:41.000" action="added" standard="EC" country="S" name="C35/45">
+			<concrete mass="2.54842" E_0="34000000" E_1="34000000" E_2="34000000" nu_0="0.2" nu_1="0.2" nu_2="0.2" alfa_0="0.00001" alfa_1="0.00001" alfa_2="0.00001" G_0="14166666.6666667" G_1="14166666.6666667" G_2="14166666.6666667" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="23.3333333333333" Fcd_1="29.1666666666667" Fctd_0="1.46666666666667" Fctd_1="1.83333333333333" Ecd_0="22666.6666666667" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="2.0238" creep_slf="2.0238" creep_slc="2.0238" shrinkage="0.00024258" nu="0.2" alfa="0.00001">
 				<plastic_analysis_data>
 					<U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true"></U>
 					<Sq elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true"></Sq>
@@ -1926,45 +2121,5 @@
 			<reinforcing_steel fyk="500" Es="200000" Epsilon_uk="0.05" Epsilon_ud="0.045" k="1.08"></reinforcing_steel>
 		</material>
 	</reinforcing_materials>
-	<geometry>
-		<curve type="line">
-			<point x="0.65" y="0" z="4"></point>
-			<point x="0.65" y="0" z="0.4"></point>
-			<normal x="-1" y="0" z="0"></normal>
-			<style layer="0"></style>
-		</curve>
-		<curve type="line">
-			<point x="0.65" y="10" z="4"></point>
-			<point x="0.65" y="10" z="0.4"></point>
-			<normal x="-1" y="0" z="0"></normal>
-			<style layer="0"></style>
-		</curve>
-		<point>
-			<location x="0.65" y="0" z="3.1"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<point>
-			<location x="0.65" y="0" z="2.2"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<point>
-			<location x="0.65" y="0" z="1.3"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<point>
-			<location x="0.65" y="10" z="3.1"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<point>
-			<location x="0.65" y="10" z="2.2"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<point>
-			<location x="0.65" y="10" z="1.3"></location>
-			<style layer="0" point_style="dot"></style>
-		</point>
-		<line_type name="CONTINUOUS"></line_type>
-		<layer name="0" colour="000000" hidden="false" protected="false"></layer>
-	</geometry>
 	<end></end>
 </database>

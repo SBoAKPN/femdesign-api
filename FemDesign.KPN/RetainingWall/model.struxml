@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" country="S" standard="EC" soil_as_solid="false" convertid="00000000-0000-0000-0000-000000000000" guid="9249ac16-f741-4a60-8d36-fcb0ed18eb5c" end_time="2025-01-31T21:13:58.521" start_time="1970-01-01T00:00:00.000" source_software="FEM-Design API SDK 23.6.1.0" struxml_version="01.00.000" xmlns="urn:strusoft">
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" country="S" standard="EC" soil_as_solid="false" convertid="00000000-0000-0000-0000-000000000000" guid="a41cf128-06cc-467f-87bb-3b5e60cdedca" end_time="2025-02-20T14:55:23.571" start_time="1970-01-01T00:00:00.000" source_software="FEM-Design API SDK 23.6.1.0" struxml_version="01.00.000" xmlns="urn:strusoft">
   <entities>
     <foundations />
-    <slab last_change="2025-01-31T21:13:58.726" guid="f90d02e5-d27f-4c28-9df6-2888489d3e39" action="added" name="@BPL.1" type="plate" stage="1">
-      <slab_part last_change="2025-01-31T21:13:58.725" guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" action="added" name="@BPL.1.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="d416347c-2f0f-45e6-b22c-9d9c36b079ec" alignment="bottom" ecc_calc="false" ecc_crack="false">
+    <slab last_change="2025-02-20T14:55:23.571" guid="a87f97c8-d5a2-4d73-bb36-29e88b05c86b" action="added" name="@BPL.4" type="plate" stage="1">
+      <slab_part last_change="2025-02-20T14:55:23.571" guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" action="added" name="@BPL.4.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="febaff8e-d2ef-471c-89e2-3f18c578c010" alignment="bottom" ecc_calc="false" ecc_crack="false">
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0" y="0" z="0" />
-            <point x="2.6" y="0" z="0" />
+            <point x="2.4" y="0" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="1" y="0" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="0" z="0" />
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="0" z="0" />
+            <point x="2.4" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="0" y="1" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="10" z="0" />
             <point x="0" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="-1" y="0" z="0" />
@@ -31,8 +31,8 @@
           </edge>
         </contour>
         <thickness x="0" y="0" z="0" val="0.4" />
-        <thickness x="2.6" y="0" z="0" val="0.4" />
-        <thickness x="2.6" y="10" z="0" val="0.4" />
+        <thickness x="2.4" y="0" z="0" val="0.4" />
+        <thickness x="2.4" y="10" z="0" val="0.4" />
         <local_pos x="0" y="0" z="0" />
         <local_x x="1" y="0" z="0" />
         <local_y x="0" y="1" z="0" />
@@ -40,8 +40,8 @@
       </slab_part>
       <end />
     </slab>
-    <slab last_change="2025-01-31T21:13:58.727" guid="83b7449a-7acd-4a9d-9c2b-99a55a912653" action="added" name="@MUR.2" type="plate" stage="1">
-      <slab_part last_change="2025-01-31T21:13:58.727" guid="1e7ef302-5efc-4a79-8953-abcd210960c5" action="added" name="@MUR.2.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="45ee6fcf-308d-4392-9586-7673219407d0" alignment="center" ecc_calc="false" ecc_crack="false">
+    <slab last_change="2025-02-20T14:55:23.571" guid="c526f72a-9c0f-4350-a298-c6cde0944769" action="added" name="@MUR.5" type="plate" stage="1">
+      <slab_part last_change="2025-02-20T14:55:23.571" guid="f42d2623-fb17-4f39-9a21-edda24944298" action="added" name="@MUR.5.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="8dbd4ca1-41d8-4885-b7b9-02e2415d5ee4" alignment="center" ecc_calc="false" ecc_crack="false">
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0.65" y="0" z="4" />
@@ -78,8 +78,8 @@
       </slab_part>
       <end />
     </slab>
-    <slab last_change="2025-01-31T21:13:58.727" guid="1f6203c3-16ab-4654-b723-c12fd017cc59" action="added" name="@BPL-MUR.3" type="plate" stage="1">
-      <slab_part last_change="2025-01-31T21:13:58.727" guid="2095835a-bafc-4d7c-93e7-be2f421ca874" action="added" name="@BPL-MUR.3.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="ededc26a-9dbe-49b6-8c40-c4ce27923541" alignment="center" ecc_calc="false" ecc_crack="false">
+    <slab last_change="2025-02-20T14:55:23.572" guid="e664eefe-e6f9-4ed6-a15d-ba6fb038a974" action="added" name="@BPLMUR.6" type="plate" stage="1">
+      <slab_part last_change="2025-02-20T14:55:23.572" guid="2e290437-e86a-4e36-af7d-acde6a6146c8" action="added" name="@BPLMUR.6.1" align_offset="0" ortho_alfa="0" ortho_ratio="1" mesh_size="0.5" complex_material="2dc3e1a8-ba26-418b-8625-3347c195a276" alignment="center" ecc_calc="false" ecc_crack="false">
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0.65" y="0" z="0.4" />
@@ -114,45 +114,45 @@
       </slab_part>
       <end />
     </slab>
-    <surface_reinforcement_parameters last_change="2025-01-31T21:13:58.801" guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" action="added" single_layer_reinforcement="false">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
+    <surface_reinforcement_parameters last_change="2025-02-20T14:55:23.572" guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" action="added" single_layer_reinforcement="false">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
       <center x="0" y="0" z="0" polar_system="false" />
       <x_direction x="1" y="0" z="0" />
       <y_direction x="0" y="1" z="0" />
     </surface_reinforcement_parameters>
-    <surface_reinforcement_parameters last_change="2025-01-31T21:13:58.801" guid="87ae3f82-73d2-4eff-afee-da558855f6ca" action="added" single_layer_reinforcement="false">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
+    <surface_reinforcement_parameters last_change="2025-02-20T14:55:23.572" guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" action="added" single_layer_reinforcement="false">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
       <center x="0" y="0" z="0" polar_system="false" />
       <x_direction x="0" y="0" z="-1" />
       <y_direction x="0" y="1" z="0" />
     </surface_reinforcement_parameters>
-    <surface_reinforcement_parameters last_change="2025-01-31T21:13:58.801" guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" action="added" single_layer_reinforcement="false">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
+    <surface_reinforcement_parameters last_change="2025-02-20T14:55:23.572" guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" action="added" single_layer_reinforcement="false">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
       <center x="0" y="0" z="0" polar_system="false" />
       <x_direction x="0" y="0" z="-1" />
       <y_direction x="0" y="1" z="0" />
     </surface_reinforcement_parameters>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="b73630d2-8402-4711-ab43-9bd8d7772286" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="371a6383-42ba-45c8-bf3e-a9a231ecb1e7" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.2" face="bottom" cover="0.12000000000000001" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0" y="0" z="0" />
-            <point x="2.6" y="0" z="0" />
+            <point x="2.4" y="0" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="1" y="0" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="0" z="0" />
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="0" z="0" />
+            <point x="2.4" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="0" y="1" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="10" z="0" />
             <point x="0" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="-1" y="0" z="0" />
@@ -166,27 +166,27 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="84bddbef-0b3f-4452-b63c-59bb59d63769" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="73fab040-9912-487d-b520-51e11ae8b646" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.2" face="top" cover="0.075" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0" y="0" z="0" />
-            <point x="2.6" y="0" z="0" />
+            <point x="2.4" y="0" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="1" y="0" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="0" z="0" />
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="0" z="0" />
+            <point x="2.4" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="0" y="1" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="10" z="0" />
             <point x="0" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="-1" y="0" z="0" />
@@ -200,27 +200,27 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="c1cca69b-a7a0-480e-8cfd-890a478cce7f" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="024b1d4f-ea0f-4435-aecf-726f9063e991" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.2" face="bottom" cover="0.1" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0" y="0" z="0" />
-            <point x="2.6" y="0" z="0" />
+            <point x="2.4" y="0" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="1" y="0" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="0" z="0" />
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="0" z="0" />
+            <point x="2.4" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="0" y="1" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="10" z="0" />
             <point x="0" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="-1" y="0" z="0" />
@@ -234,27 +234,27 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="af23cea9-1eff-4671-9b16-4e05b52539de" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="3c6ab282-fc8d-4a9d-b20a-01bfeee618c8" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.2" face="top" cover="0.055" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
         <contour>
           <edge type="line" start_angle="0" end_angle="0">
             <point x="0" y="0" z="0" />
-            <point x="2.6" y="0" z="0" />
+            <point x="2.4" y="0" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="1" y="0" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="0" z="0" />
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="0" z="0" />
+            <point x="2.4" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="0" y="1" z="0" />
           </edge>
           <edge type="line" start_angle="0" end_angle="0">
-            <point x="2.6" y="10" z="0" />
+            <point x="2.4" y="10" z="0" />
             <point x="0" y="10" z="0" />
             <normal x="0" y="0" z="1" />
             <x_axis x="-1" y="0" z="0" />
@@ -268,9 +268,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="7fd9003b-f921-48b6-be83-dc9448e3c199" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="d4732a66-284e-4e63-8f0e-c46db145bb4c" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.4" face="bottom" cover="0.12000000000000001" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -302,9 +302,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="2848e2c3-3093-4749-bd34-86250884ce54" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="b4fb7878-f788-4335-bb5a-33d6b2193a45" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.4" face="top" cover="0.075" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -336,9 +336,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="ab22f1e0-3bd9-483a-a887-4d2a34c4aa7a" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="530c55af-37b7-4b06-930a-94b42b790f66" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.4" face="bottom" cover="0.1" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -370,9 +370,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.792" guid="c7f4d6fe-cb8e-4480-b38e-9794f696c4ff" action="added">
-      <base_shell guid="dec03b9e-a11f-427a-b5ce-a4d17f4378e4" />
-      <surface_reinforcement_parameters guid="d395344b-8302-4a9e-a43a-d13fb90f7da5" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="19061415-80af-43d9-a269-05b3aa358ea5" action="added">
+      <base_shell guid="a951b736-3394-4fe4-b38f-d17f1161eb3a" />
+      <surface_reinforcement_parameters guid="debaf48d-2570-40c7-a0cb-0e5f52b50b2b" />
       <straight space="0.4" face="top" cover="0.055" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -404,9 +404,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="bbc57225-f841-4fcf-9885-ec3edb76760f" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="9d450f53-ef86-47ff-95a5-581bcc2ba2c0" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.2" face="bottom" cover="0.075" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -438,9 +438,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="ddc6353e-af35-4bc6-b28c-d0250f9655f4" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="c7da09f4-66ac-4ac4-97ef-40b335a054b0" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.2" face="top" cover="0.075" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -472,9 +472,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="2b3a12d7-e4ea-4370-9e71-f9d33a70d7c3" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="0fae428f-2165-4127-a572-02d7c09ff3c5" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.2" face="bottom" cover="0.055" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -506,9 +506,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="505a73ec-8304-4782-9af1-f03b5feb9ef5" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="aef2c45d-2ea6-4a17-aa56-689d137ba0f4" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.2" face="top" cover="0.055" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -540,9 +540,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="e7753ff6-6596-4cf1-a3e6-ffa7643c4736" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="101a9ea2-d22d-4a60-a884-eca4410bbdcb" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.4" face="bottom" cover="0.075" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -574,9 +574,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="ed7807d6-15bf-4417-a912-b825b9278cd4" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="1f3d56fe-155d-4ba6-98c7-8ad8aa4007e9" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.4" face="top" cover="0.075" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -608,9 +608,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="925e7d45-505b-410d-9e3c-80702d76950f" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="a97028c6-ac7a-4d62-9ccd-d9129e67d608" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.4" face="bottom" cover="0.055" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -642,9 +642,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="43fc70dc-2ab2-4497-89e6-7c0923f15a62" action="added">
-      <base_shell guid="1e7ef302-5efc-4a79-8953-abcd210960c5" />
-      <surface_reinforcement_parameters guid="87ae3f82-73d2-4eff-afee-da558855f6ca" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="428d8ea6-bcec-4661-8274-6ee7a931e5e7" action="added">
+      <base_shell guid="f42d2623-fb17-4f39-9a21-edda24944298" />
+      <surface_reinforcement_parameters guid="cc44f681-e1ab-4ff1-bb9a-d9e5fb5c988f" />
       <straight space="0.4" face="top" cover="0.055" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -676,9 +676,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="d09e1bfe-3952-4b06-a174-ba8cae6183be" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="9e9d1a56-ad6e-4ad3-8ac5-6f12b628fea6" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.2" face="bottom" cover="0.075" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -710,9 +710,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="09a135d5-bb72-4f2f-920b-23cf7a84ef61" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="119aefce-bb61-49db-bd82-aa523a234de4" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.2" face="top" cover="0.075" direction="x" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -744,9 +744,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="83bb0fb9-4f5b-4363-903e-296309755d47" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="0ffd4e71-4d70-4c83-bd49-4df392abd7da" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.2" face="bottom" cover="0.055" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -778,9 +778,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="d6cc8abd-6d68-4c44-86a7-e877e5b2090b" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="d4578869-cda9-4149-8fd8-86184ab999cf" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.2" face="top" cover="0.055" direction="y" />
       <wire diameter="0.02" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -812,9 +812,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="38c712ea-01fc-451d-928c-9970a573d7f1" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="0473b786-0e5a-4fd2-b906-246a9ecb3b35" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.4" face="bottom" cover="0.075" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -846,9 +846,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="c0dc67d1-ca4b-4c8c-9521-c5856a0ad37a" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="d8d6292f-ae1b-4b9e-9df5-765c79f1c244" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.4" face="top" cover="0.075" direction="x" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -880,9 +880,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="6668af98-a7fd-438c-b1b6-50d242349c48" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="ae2f59dd-2951-4d68-8f02-3dfa8a82c5bf" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.4" face="bottom" cover="0.055" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -914,9 +914,9 @@
         </contour>
       </region>
     </surface_reinforcement>
-    <surface_reinforcement last_change="2025-01-31T21:13:58.801" guid="a1d4d187-513b-4f0f-8424-3cadcce2d326" action="added">
-      <base_shell guid="2095835a-bafc-4d7c-93e7-be2f421ca874" />
-      <surface_reinforcement_parameters guid="4a71d5b4-5220-49e0-917e-e00273b8ea63" />
+    <surface_reinforcement last_change="2025-02-20T14:55:23.572" guid="a597dd0f-b4a9-4c2d-a18d-4279815ae73a" action="added">
+      <base_shell guid="2e290437-e86a-4e36-af7d-acde6a6146c8" />
+      <surface_reinforcement_parameters guid="dc5ee3de-0995-4bcc-a9f0-7353f5942f32" />
       <straight space="0.4" face="top" cover="0.055" direction="y" />
       <wire diameter="0.016" reinforcing_material="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" />
       <region>
@@ -949,7 +949,7 @@
       </region>
     </surface_reinforcement>
     <loads>
-      <line_load last_change="2025-01-31T21:13:58.752" guid="e313eae7-b087-4fef-8987-e0495eae52e9" action="added" load_case="1ac64bfd-92da-400f-8a64-b0ccb7d3412c" comment="" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="6dd22f27-5ab7-413e-baf8-0e87c3d425ed" action="added" load_case="2a102cf5-7101-48ff-aaab-8cf6763c83ff" comment="" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0.65" y="10" z="4" />
           <point x="0.65" y="0" z="4" />
@@ -961,31 +961,31 @@
         <load x="0.65" y="10" z="4" val="1" />
         <load x="0.65" y="0" z="4" val="1" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.753" guid="f66c3d92-d885-4d08-87cc-74e6bbc449a4" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="LL_JUH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="e641c2b5-b88c-4dca-ae42-2c09ffe3e609" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="LL_JUH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="-1" y="0" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="8.207999999999998" />
-        <load x="2.6" y="10" z="0" val="8.207999999999998" />
+        <load x="2.4" y="0" z="0" val="8.207999999999998" />
+        <load x="2.4" y="10" z="0" val="8.207999999999998" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.753" guid="798e5725-e8cb-4a3e-9568-9cc957a43d6f" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="LM_JUH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="70f58ecb-0564-4710-9663-d2500a5c56ca" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="LM_JUH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="0" y="-1" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="1.6415999999999997" />
-        <load x="2.6" y="10" z="0" val="1.6415999999999997" />
+        <load x="2.4" y="0" z="0" val="1.6415999999999997" />
+        <load x="2.4" y="10" z="0" val="1.6415999999999997" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="a8d10c83-9f6e-4d56-8e2c-341df047c313" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="LL_JMUH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="14af7a6b-1678-4ded-bd1d-d3c34e404f54" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="LL_JMUH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -997,7 +997,7 @@
         <load x="0" y="10" z="0" val="12.161235469183438" />
         <load x="0" y="0" z="0" val="12.161235469183438" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="9b775450-1795-4aee-91da-99246deb7f12" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="LM_JMUH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="ab1c6b21-0e7e-47b0-8eed-aaf233d12c31" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="LM_JMUH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -1009,31 +1009,31 @@
         <load x="0" y="10" z="0" val="2.432247093836688" />
         <load x="0" y="0" z="0" val="2.432247093836688" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="d21b9aad-c409-4e69-b6e8-e522d873ee46" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="LL_JAH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="fd96e26c-606f-4492-8fdf-d0267e5b48dc" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="LL_JAH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="-1" y="0" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="8.207999999999998" />
-        <load x="2.6" y="10" z="0" val="8.207999999999998" />
+        <load x="2.4" y="0" z="0" val="8.207999999999998" />
+        <load x="2.4" y="10" z="0" val="8.207999999999998" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="f6752dd0-eddc-40f6-840c-fe89174ada71" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="bccbad45-ebb7-45c4-a95e-1e9414109cfd" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="0" y="-1" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="1.6415999999999997" />
-        <load x="2.6" y="10" z="0" val="1.6415999999999997" />
+        <load x="2.4" y="0" z="0" val="1.6415999999999997" />
+        <load x="2.4" y="10" z="0" val="1.6415999999999997" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="5f4ff803-5c07-4c2b-8bb3-c467a31cfcd3" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="LL_JMAH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="89c33d1c-8f8e-4eaa-8ede-733538dbc047" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="LL_JMAH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -1045,7 +1045,7 @@
         <load x="0" y="10" z="0" val="12.161235469183438" />
         <load x="0" y="0" z="0" val="12.161235469183438" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="cf8401ef-cd69-4ba4-969a-71627f958763" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="LM_JMAH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="8f2bb739-0ded-4fe7-8997-926d43581c9c" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="LM_JMAH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -1057,31 +1057,31 @@
         <load x="0" y="10" z="0" val="2.432247093836688" />
         <load x="0" y="0" z="0" val="2.432247093836688" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="a006f984-7aed-498e-8c22-39a0f8b0cfa0" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="LL_JKH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="2c39309f-10b6-4c3b-9bb0-affc86241ad7" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="LL_JKH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="-1" y="0" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="10.944" />
-        <load x="2.6" y="10" z="0" val="10.944" />
+        <load x="2.4" y="0" z="0" val="10.944" />
+        <load x="2.4" y="10" z="0" val="10.944" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="8c17b588-ea6f-434b-bbc8-1253c530ee75" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="LM_JKH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="f59a3245-a036-442a-b4e6-7287cef32f69" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="LM_JKH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="0" y="-1" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="2.1888" />
-        <load x="2.6" y="10" z="0" val="2.1888" />
+        <load x="2.4" y="0" z="0" val="2.1888" />
+        <load x="2.4" y="10" z="0" val="2.1888" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="d98b40ca-8889-4710-889d-5d7564be96b3" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="LL_JMKH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="26d306f7-e49b-48ac-b92a-f2a573598828" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="LL_JMKH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -1093,7 +1093,7 @@
         <load x="0" y="10" z="0" val="1.4740891477798108" />
         <load x="0" y="0" z="0" val="1.4740891477798108" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="0ff4d249-263d-4f27-96b6-6427b2d3f128" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="LM_JMKH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="471b5743-0207-44b7-87f0-ea05f7955d2a" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="LM_JMKH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0" y="10" z="0" />
           <point x="0" y="0" z="0" />
@@ -1105,55 +1105,55 @@
         <load x="0" y="10" z="0" val="0.2948178295559622" />
         <load x="0" y="0" z="0" val="0.2948178295559622" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="ebc6f70b-3868-4f13-9347-ab57807424c5" action="added" load_case="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" comment="LL_ÖLUH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="e30c9737-6a6d-4578-955d-a94a0cb459f2" action="added" load_case="0fa21927-71c1-4bff-b252-30e96f50bc69" comment="LL_ÖLUH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="-1" y="0" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="1.8" />
-        <load x="2.6" y="10" z="0" val="1.8" />
+        <load x="2.4" y="0" z="0" val="1.8" />
+        <load x="2.4" y="10" z="0" val="1.8" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="94624fcb-2863-44f7-a375-14f93e38cf2f" action="added" load_case="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" comment="LM_ÖLUH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="a86887bc-9b3e-4937-a028-54b5b7f766f3" action="added" load_case="0fa21927-71c1-4bff-b252-30e96f50bc69" comment="LM_ÖLUH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="0" y="-1" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="0.36000000000000004" />
-        <load x="2.6" y="10" z="0" val="0.36000000000000004" />
+        <load x="2.4" y="0" z="0" val="0.36000000000000004" />
+        <load x="2.4" y="10" z="0" val="0.36000000000000004" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="7442ced8-0527-489c-8989-0df99c5d0163" action="added" load_case="239b6319-e68e-4331-a071-a1fb5b2bc523" comment="LL_ÖLPH" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="df6bcafc-bbd5-489f-9233-1a10d7d1ad59" action="added" load_case="b91af11f-6e9b-4f0e-894f-3454c8d0eee6" comment="LL_ÖLPH" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="-1" y="0" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="0.7200000000000001" />
-        <load x="2.6" y="10" z="0" val="0.7200000000000001" />
+        <load x="2.4" y="0" z="0" val="0.7200000000000001" />
+        <load x="2.4" y="10" z="0" val="0.7200000000000001" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="04c411ea-8214-44ff-8406-355c1753b2ed" action="added" load_case="239b6319-e68e-4331-a071-a1fb5b2bc523" comment="LM_ÖLPH" load_type="moment" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="b709c747-ce90-4e6d-8099-13ffe18c8569" action="added" load_case="b91af11f-6e9b-4f0e-894f-3454c8d0eee6" comment="LM_ÖLPH" load_type="moment" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
-          <point x="2.6" y="0" z="0" />
-          <point x="2.6" y="10" z="0" />
+          <point x="2.4" y="0" z="0" />
+          <point x="2.4" y="10" z="0" />
           <normal x="0" y="0" z="1" />
           <x_axis x="0" y="1" z="0" />
         </edge>
         <direction x="0" y="-1" z="0" />
         <normal x="1" y="0" z="0" />
-        <load x="2.6" y="0" z="0" val="0.14400000000000002" />
-        <load x="2.6" y="10" z="0" val="0.14400000000000002" />
+        <load x="2.4" y="0" z="0" val="0.14400000000000002" />
+        <load x="2.4" y="10" z="0" val="0.14400000000000002" />
       </line_load>
-      <line_load last_change="2025-01-31T21:13:58.777" guid="1a4cbb62-8e18-4275-b1da-3a6c07da9fa6" action="added" load_case="9a42fbcf-d083-4673-ba15-22aa0c5ef328" comment="Acc" load_type="force" load_dir="constant" load_projection="false">
+      <line_load last_change="2025-02-20T14:55:23.572" guid="d4f30354-7ab6-4d4c-8a5d-dc33a1a87d4d" action="added" load_case="7aebd339-e075-40ba-9124-54f7f8373a3b" comment="Acc" load_type="force" load_dir="constant" load_projection="false">
         <edge type="line" start_angle="0" end_angle="0">
           <point x="0.65" y="10" z="4" />
           <point x="0.65" y="0" z="4" />
@@ -1165,23 +1165,23 @@
         <load x="0.65" y="10" z="4" val="16" />
         <load x="0.65" y="0" z="4" val="16" />
       </line_load>
-      <surface_load last_change="2025-01-31T21:13:58.753" guid="b684a23f-8ed1-4f8b-baed-49755b17c440" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="JUV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="3eb1a117-54d6-478c-911e-c7a50a1ce689" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="JUV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
               <point x="0.8" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
               <point x="0.8" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1196,10 +1196,10 @@
         </region>
         <direction x="0" y="0" z="-1" />
         <load x="0.8" y="0" z="0" val="64.8" />
-        <load x="2.6" y="0" z="0" val="64.8" />
-        <load x="2.6" y="10" z="0" val="64.8" />
+        <load x="2.4" y="0" z="0" val="64.8" />
+        <load x="2.4" y="10" z="0" val="64.8" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.753" guid="654ad2c1-a7af-4a97-a5e3-6332c372f71b" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="JUH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="69f64382-04c8-43df-a2b9-088547f862e9" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="JUH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1233,7 +1233,7 @@
         <load x="0.65" y="0" z="0.4" val="19.439999999999998" />
         <load x="0.65" y="10" z="0.4" val="19.439999999999998" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.753" guid="bfa08020-ebbf-4926-a3aa-5aa8a9b5d76b" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="pack1" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="11fca564-d9e6-43fc-adac-27e2ee5fd370" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="pack1" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1267,7 +1267,7 @@
         <load x="0.65" y="0" z="3.7" val="4.64538" />
         <load x="0.65" y="10" z="3.7" val="4.64538" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.753" guid="efa71e7a-53ff-43df-8cb8-ce82b715e809" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="pack2" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="937bca7d-f173-4601-959e-7c72002c3129" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="pack2" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1301,7 +1301,7 @@
         <load x="0.65" y="0" z="2.8406038406038405" val="0" />
         <load x="0.65" y="10" z="2.8406038406038405" val="0" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="b00e5fc1-f4cc-47c4-9613-8f50e17ac01f" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="JMUV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="faa62093-5f97-407c-8359-abc353c4dcde" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="JMUV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1335,7 +1335,7 @@
         <load x="0.5" y="0" z="0" val="7.2" />
         <load x="0.5" y="10" z="0" val="7.2" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="ce88d08a-2a3a-43a6-9c36-573a910bfdd7" action="added" load_case="47168172-45ea-4aad-8de6-817e1e385a6a" comment="JMUH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="2d79953e-fe31-4fb1-b2fc-a723e1f7f5da" action="added" load_case="2eee3b4b-4907-46b7-82ab-8413c015a67d" comment="JMUH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1369,23 +1369,23 @@
         <load x="0.65" y="0" z="0.4" val="23.76" />
         <load x="0.65" y="10" z="0.4" val="23.76" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="3375313e-09cb-46ea-870a-0959dc288438" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="JAV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="5fd6b13e-ae9c-40ea-9492-35e0bf689f2a" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="JAV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
               <point x="0.8" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
               <point x="0.8" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1400,10 +1400,10 @@
         </region>
         <direction x="0" y="0" z="-1" />
         <load x="0.8" y="0" z="0" val="64.8" />
-        <load x="2.6" y="0" z="0" val="64.8" />
-        <load x="2.6" y="10" z="0" val="64.8" />
+        <load x="2.4" y="0" z="0" val="64.8" />
+        <load x="2.4" y="10" z="0" val="64.8" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="a0ab9682-8c50-4cd9-9c91-ee8b18fcfbd9" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="JAH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="a85c4b7f-99e2-4cc0-a46b-f0ae9876059f" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="JAH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1437,7 +1437,7 @@
         <load x="0.65" y="0" z="0.4" val="19.439999999999998" />
         <load x="0.65" y="10" z="0.4" val="19.439999999999998" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="eb5e4d8f-a5ac-401d-b44f-7e0ae7e3bd64" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="pack1" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="82260cd3-3978-4e2e-90be-e6ae95fb4006" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="pack1" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1471,7 +1471,7 @@
         <load x="0.65" y="0" z="3.7" val="4.64538" />
         <load x="0.65" y="10" z="3.7" val="4.64538" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="cc83720a-3e3f-44b6-a6d0-7255c7f853bc" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="pack2" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="45e9f846-c506-4132-ae58-b2e3c14da2ce" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="pack2" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1505,7 +1505,7 @@
         <load x="0.65" y="0" z="2.8406038406038405" val="0" />
         <load x="0.65" y="10" z="2.8406038406038405" val="0" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="a5fed06b-eb9b-48b0-b49a-844e56d276d3" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="JMAV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="835d4c93-39aa-45d3-b95a-b112baa5da3b" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="JMAV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1539,7 +1539,7 @@
         <load x="0.5" y="0" z="0" val="7.2" />
         <load x="0.5" y="10" z="0" val="7.2" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="da9ad0cd-6b91-45c0-9f25-04c1df00c132" action="added" load_case="1eaeed75-5010-4a8b-8e5d-d82c6573d146" comment="JMAH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="594a34e2-675a-4b8f-a07c-1d696cf968f5" action="added" load_case="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" comment="JMAH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1573,23 +1573,23 @@
         <load x="0.65" y="0" z="0.4" val="23.76" />
         <load x="0.65" y="10" z="0.4" val="23.76" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="e1d32eee-c5e7-448e-9f5d-b345092e5ecb" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="JKV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="77d30069-970d-4bae-934c-54b28d5ce798" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="JKV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
               <point x="0.8" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
               <point x="0.8" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1604,10 +1604,10 @@
         </region>
         <direction x="0" y="0" z="-1" />
         <load x="0.8" y="0" z="0" val="64.8" />
-        <load x="2.6" y="0" z="0" val="64.8" />
-        <load x="2.6" y="10" z="0" val="64.8" />
+        <load x="2.4" y="0" z="0" val="64.8" />
+        <load x="2.4" y="10" z="0" val="64.8" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="60add48a-cfc9-4d9d-b5d7-a72fc024b3ce" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="JKH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="626e00af-4654-4aab-9655-aab6b5fe2d08" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="JKH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1641,7 +1641,7 @@
         <load x="0.65" y="0" z="0.4" val="25.92" />
         <load x="0.65" y="10" z="0.4" val="25.92" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="ea7ce341-a116-4b1d-afb7-8fb9e3cedfac" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="pack1" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="442544b8-a8df-4a8f-ab6a-aa5527f7de3b" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="pack1" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1675,7 +1675,7 @@
         <load x="0.65" y="0" z="3.7" val="8.040000000000001" />
         <load x="0.65" y="10" z="3.7" val="8.040000000000001" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="afa85491-f188-4388-bd90-084057d07524" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="pack2" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="fe43ff15-56cd-47bd-b3c2-6effc179d56b" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="pack2" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1709,7 +1709,7 @@
         <load x="0.65" y="0" z="2.583333333333333" val="0" />
         <load x="0.65" y="10" z="2.583333333333333" val="0" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="31644879-a258-45aa-8844-76f9ae623a7d" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="JMKV" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="eec0d3ba-253c-4ae2-8abf-3e25fd0b24fd" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="JMKV" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1743,7 +1743,7 @@
         <load x="0.5" y="0" z="0" val="7.2" />
         <load x="0.5" y="10" z="0" val="7.2" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="c30a6c01-6568-47e8-9d4e-c208f7adf212" action="added" load_case="9bd8b0d6-b91a-4108-a613-1d587162f878" comment="JMKH" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="babea1d7-807c-448f-b9ed-3d3516c3dade" action="added" load_case="5266a8fa-a516-4cd7-8482-2dffa9781255" comment="JMKH" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1777,23 +1777,215 @@
         <load x="0.65" y="0" z="0.4" val="2.8800000000000003" />
         <load x="0.65" y="10" z="0.4" val="2.8800000000000003" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="1219db36-268e-46e0-af64-3c7544886036" action="added" load_case="20631ce5-6f3d-4c7e-b2e1-2b727fbbff38" comment="ÖLVU" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="4092bd2b-06e5-4b32-a298-e80b9627ba1c" action="added" load_case="abc94b04-64b4-42bf-adf8-b28c7ff8e8fb" comment="" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="0.8" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="0" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
+              <point x="0" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="-1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0" y="10" z="0" />
+              <point x="0" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="0" y="0" z="1" />
+        <load x="0" y="0" z="0" val="4" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="3fe2aa5e-688f-48e1-bf7d-a38b01a7fabc" action="added" load_case="abc94b04-64b4-42bf-adf8-b28c7ff8e8fb" comment="" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="4" />
+              <point x="0.65" y="0" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="-1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="0.4" />
+              <point x="0.65" y="10" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="0.4" />
+              <point x="0.65" y="10" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="4" />
+              <point x="0.65" y="0" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="0" y="0" z="1" />
+        <load x="0.65" y="0" z="4" val="1.3333333333333333" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="cf51dad3-504b-48ac-b85d-808dcc69a36d" action="added" load_case="7e3ae3b2-1ac5-4dca-88b4-477116ef57aa" comment="" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="10" z="0" />
+              <point x="0" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="-1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0" y="10" z="0" />
+              <point x="0" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="0" y="0" z="1" />
+        <load x="0" y="0" z="0" val="4" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="483ca8cb-871f-43e8-91c4-0d3688cec5d6" action="added" load_case="7e3ae3b2-1ac5-4dca-88b4-477116ef57aa" comment="" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="4" />
+              <point x="0.65" y="0" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="-1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="0.4" />
+              <point x="0.65" y="10" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="0.4" />
+              <point x="0.65" y="10" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="4" />
+              <point x="0.65" y="0" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="0" y="0" z="1" />
+        <load x="0.65" y="0" z="4" val="0.49999999999999994" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="442bef55-8db2-48d8-b485-90b7fa921639" action="added" load_case="8afdbc33-2478-4506-8a0c-ce72b9a4e5b0" comment="" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="10" z="0" />
+              <point x="0" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="-1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0" y="10" z="0" />
+              <point x="0" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="NaN" y="NaN" z="NaN" />
+        <load x="0" y="0" z="0" val="0" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="c1ddc47f-25d7-423e-af63-01abcd9d586e" action="added" load_case="8afdbc33-2478-4506-8a0c-ce72b9a4e5b0" comment="" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="4" />
+              <point x="0.65" y="0" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="-1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="0" z="0.4" />
+              <point x="0.65" y="10" z="0.4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="0.4" />
+              <point x="0.65" y="10" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="0" z="1" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.65" y="10" z="4" />
+              <point x="0.65" y="0" z="4" />
+              <normal x="1" y="-0" z="0" />
+              <x_axis x="0" y="-1" z="0" />
+            </edge>
+          </contour>
+        </region>
+        <direction x="NaN" y="NaN" z="NaN" />
+        <load x="0.65" y="0" z="4" val="0" />
+      </surface_load>
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="8b1b7974-9d76-4997-80f8-52ee06c8d76f" action="added" load_case="5bbe6d43-8a8a-411d-a38e-2ed1bdf4ea91" comment="ÖLVU" load_type="force" load_projection="false">
+        <region>
+          <contour>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="0.8" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="1" y="0" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
+              <normal x="0" y="0" z="1" />
+              <x_axis x="0" y="1" z="0" />
+            </edge>
+            <edge type="line" start_angle="0" end_angle="0">
+              <point x="2.4" y="10" z="0" />
               <point x="0.8" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1808,10 +2000,10 @@
         </region>
         <direction x="0" y="0" z="-1" />
         <load x="0.8" y="0" z="0" val="15" />
-        <load x="2.6" y="0" z="0" val="15" />
-        <load x="2.6" y="10" z="0" val="15" />
+        <load x="2.4" y="0" z="0" val="15" />
+        <load x="2.4" y="10" z="0" val="15" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="14db8bc3-957a-4819-a794-4d73feb2c673" action="added" load_case="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" comment="ÖLHU" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="b7114600-1dda-4c09-a068-905ed2a23a27" action="added" load_case="0fa21927-71c1-4bff-b252-30e96f50bc69" comment="ÖLHU" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1845,23 +2037,23 @@
         <load x="0.65" y="0" z="0.4" val="4.5" />
         <load x="0.65" y="10" z="0.4" val="4.5" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="3290432a-4aa2-4c1c-952d-08eb532c85fe" action="added" load_case="f861a5df-aa3b-458a-8b33-9486238caac5" comment="ÖLVP" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="ba1db1ff-1877-4dff-9b2b-49f70a4b16e1" action="added" load_case="434024d0-0149-4310-bb16-2d2c0c05856f" comment="ÖLVP" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
               <point x="0.8" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
               <point x="0.8" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1876,10 +2068,10 @@
         </region>
         <direction x="0" y="0" z="-1" />
         <load x="0.8" y="0" z="0" val="4.5" />
-        <load x="2.6" y="0" z="0" val="4.5" />
-        <load x="2.6" y="10" z="0" val="4.5" />
+        <load x="2.4" y="0" z="0" val="4.5" />
+        <load x="2.4" y="10" z="0" val="4.5" />
       </surface_load>
-      <surface_load last_change="2025-01-31T21:13:58.777" guid="2fa940d6-461b-46e3-ba0c-19eac3c35bcc" action="added" load_case="239b6319-e68e-4331-a071-a1fb5b2bc523" comment="ÖLHP" load_type="force" load_projection="false">
+      <surface_load last_change="2025-02-20T14:55:23.572" guid="566e8ae8-6e17-4179-b7e7-df0054a16334" action="added" load_case="b91af11f-6e9b-4f0e-894f-3454c8d0eee6" comment="ÖLHP" load_type="force" load_projection="false">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
@@ -1913,64 +2105,64 @@
         <load x="0.65" y="0" z="0.4" val="1.8" />
         <load x="0.65" y="10" z="0.4" val="1.8" />
       </surface_load>
-      <load_case last_change="2025-01-31T21:13:58.736" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" action="added" name="DL" type="dead_load" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="1ac64bfd-92da-400f-8a64-b0ccb7d3412c" action="added" name="Räcke" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="47168172-45ea-4aad-8de6-817e1e385a6a" action="added" name="JordU" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="9bd8b0d6-b91a-4108-a613-1d587162f878" action="added" name="JordK" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="1eaeed75-5010-4a8b-8e5d-d82c6573d146" action="added" name="JordA" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="66a99a77-a608-42bb-975b-6bd93a249d29" action="added" name="HHW" type="static" duration_class="long-term" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="e048407f-411c-4189-a94e-0a140eb7275e" action="added" name="MW" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="a90e1442-ffaf-4034-96c0-a002e85d7d6d" action="added" name="LLW" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="18194f41-d8bb-4077-a1f0-578cad0451b8" action="added" name="Eff J HHW" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="1a9bfbe0-2d57-4c6a-a059-697c3b98eb59" action="added" name="Eff J MW" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="b6fbf104-1958-4b68-8b23-bd85267af322" action="added" name="Eff J LLW" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="20631ce5-6f3d-4c7e-b2e1-2b727fbbff38" action="added" name="ÖLVU" type="static" duration_class="short-term" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" action="added" name="ÖLHU" type="static" duration_class="short-term" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="f861a5df-aa3b-458a-8b33-9486238caac5" action="added" name="ÖLVP" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="239b6319-e68e-4331-a071-a1fb5b2bc523" action="added" name="ÖLHP" type="static" duration_class="permanent" />
-      <load_case last_change="2025-01-31T21:13:58.736" guid="9a42fbcf-d083-4673-ba15-22aa0c5ef328" action="added" name="Olycka" type="static" duration_class="instantaneous" />
-      <load_combination last_change="2025-01-31T21:13:58.778" guid="dc9b9bad-ef8d-4c5d-b9f9-844e5ca648de" action="added" name="LC1  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S " type="ultimate_ordinary">
-        <load_case gamma="1.2285000000000001" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" />
-        <load_case gamma="1.0010000000000001" guid="47168172-45ea-4aad-8de6-817e1e385a6a" />
-        <load_case gamma="1.274" guid="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" action="added" name="DL" type="dead_load" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="2a102cf5-7101-48ff-aaab-8cf6763c83ff" action="added" name="Räcke" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="2eee3b4b-4907-46b7-82ab-8413c015a67d" action="added" name="JordU" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="5266a8fa-a516-4cd7-8482-2dffa9781255" action="added" name="JordK" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="5fe7b1ff-13e5-4bf6-a5ea-76286bce4ec6" action="added" name="JordA" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="abc94b04-64b4-42bf-adf8-b28c7ff8e8fb" action="added" name="HHW" type="static" duration_class="long-term" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="7e3ae3b2-1ac5-4dca-88b4-477116ef57aa" action="added" name="MW" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="8afdbc33-2478-4506-8a0c-ce72b9a4e5b0" action="added" name="LLW" type="static" duration_class="long-term" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="5bbe6d43-8a8a-411d-a38e-2ed1bdf4ea91" action="added" name="ÖLVU" type="static" duration_class="short-term" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="0fa21927-71c1-4bff-b252-30e96f50bc69" action="added" name="ÖLHU" type="static" duration_class="short-term" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="434024d0-0149-4310-bb16-2d2c0c05856f" action="added" name="ÖLVP" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="b91af11f-6e9b-4f0e-894f-3454c8d0eee6" action="added" name="ÖLHP" type="static" duration_class="permanent" />
+      <load_case last_change="2025-02-20T14:55:23.572" guid="7aebd339-e075-40ba-9124-54f7f8373a3b" action="added" name="Olycka" type="static" duration_class="instantaneous" />
+      <load_combination last_change="2025-02-20T14:55:23.572" guid="89aa0422-addd-47f0-aa7c-4fecc578917d" action="added" name="LC1  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn " type="serviceability_frequent">
+        <load_case gamma="1" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" />
+        <load_case gamma="1" guid="5266a8fa-a516-4cd7-8482-2dffa9781255" />
+        <load_case gamma="0.75" guid="5bbe6d43-8a8a-411d-a38e-2ed1bdf4ea91" />
+        <load_case gamma="0.75" guid="0fa21927-71c1-4bff-b252-30e96f50bc69" />
       </load_combination>
-      <load_combination last_change="2025-01-31T21:13:58.779" guid="fc233b31-5368-484f-8f4b-34b7cc44a21a" action="added" name="LC2  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S " type="ultimate_ordinary">
-        <load_case gamma="1" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" />
-        <load_case gamma="1" guid="47168172-45ea-4aad-8de6-817e1e385a6a" />
+      <load_combination last_change="2025-02-20T14:55:23.572" guid="7239a254-6c0d-4755-87e1-ad6b488673be" action="added" name="LC2  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS" type="serviceability_quasi_permanent">
+        <load_case gamma="1" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" />
+        <load_case gamma="1" guid="5266a8fa-a516-4cd7-8482-2dffa9781255" />
+        <load_case gamma="1" guid="434024d0-0149-4310-bb16-2d2c0c05856f" />
+        <load_case gamma="1" guid="b91af11f-6e9b-4f0e-894f-3454c8d0eee6" />
       </load_combination>
-      <load_combination last_change="2025-01-31T21:13:58.779" guid="3f3ab65f-d452-48e6-a11f-90502137d7a5" action="added" name="LC3  B, Bruk-kvasi, 6.16  Vogyn_Hogyn_Mogyn | UG_SLS" type="serviceability_quasi_permanent">
-        <load_case gamma="1" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" />
-        <load_case gamma="1" guid="9bd8b0d6-b91a-4108-a613-1d587162f878" />
-        <load_case gamma="1" guid="239b6319-e68e-4331-a071-a1fb5b2bc523" />
+      <load_combination last_change="2025-02-20T14:55:23.572" guid="7522fe0b-ec44-4778-8434-2f0aa536bf70" action="added" name="LC3  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS" type="serviceability_quasi_permanent">
+        <load_case gamma="1" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" />
+        <load_case gamma="1" guid="5266a8fa-a516-4cd7-8482-2dffa9781255" />
       </load_combination>
-      <load_combination last_change="2025-01-31T21:13:58.779" guid="2fd5fba8-0518-4a7e-ad58-abaf9118fdad" action="added" name="LC4  B, Bruk-kvasi, 6.16  Vgyn_Hgyn_Mgyn    | UG_SLS" type="serviceability_quasi_permanent">
-        <load_case gamma="1" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" />
-        <load_case gamma="1" guid="9bd8b0d6-b91a-4108-a613-1d587162f878" />
+      <load_combination last_change="2025-02-20T14:55:23.572" guid="453670de-3cca-42cb-8306-ec7dc9e43a04" action="added" name="LC4  B, 6.10a  Vogyn_Hogyn_Mogyn | UG_B UG_G UG_S " type="ultimate_ordinary">
+        <load_case gamma="1.2285000000000001" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" />
+        <load_case gamma="1.0010000000000001" guid="2eee3b4b-4907-46b7-82ab-8413c015a67d" />
+        <load_case gamma="1.274" guid="5bbe6d43-8a8a-411d-a38e-2ed1bdf4ea91" />
+        <load_case gamma="1.274" guid="0fa21927-71c1-4bff-b252-30e96f50bc69" />
       </load_combination>
-      <load_combination last_change="2025-01-31T21:13:58.779" guid="a5b29a5d-037f-4d8b-b3bb-ba543ddcad3c" action="added" name="LC5  B, Bruk-frek, 6.15  Vogyn_Hogyn_Mogyn " type="serviceability_frequent">
-        <load_case gamma="1" guid="666c98e3-17b9-4da1-968e-1433cc20fb39" />
-        <load_case gamma="1" guid="9bd8b0d6-b91a-4108-a613-1d587162f878" />
-        <load_case gamma="0.75" guid="4118f9fe-cf20-4508-a9e0-b748b4c09cc4" />
+      <load_combination last_change="2025-02-20T14:55:23.572" guid="4538ad70-f9b9-42df-b98c-58f1a8cf87b8" action="added" name="LC5  B, 6.10a  Vgyn_Hgyn_Mgyn    | UG_B UG_G UG_S " type="ultimate_ordinary">
+        <load_case gamma="1" guid="5e096de7-ff15-43f2-9405-26fdd3a04941" />
+        <load_case gamma="1" guid="2eee3b4b-4907-46b7-82ab-8413c015a67d" />
       </load_combination>
     </loads>
     <supports>
-      <surface_support last_change="2025-01-31T21:13:58.736" guid="eded512e-fb0d-48f9-b6cd-37353a3a6c4f" action="added" name="@BPL_Upplag.1" stage="1">
+      <surface_support last_change="2025-02-20T14:55:23.572" guid="5560c263-a3f3-4560-b182-ee5260d07b72" action="added" name="@BMBPL.2" stage="1">
         <region>
           <contour>
             <edge type="line" start_angle="0" end_angle="0">
               <point x="0" y="0" z="0" />
-              <point x="2.6" y="0" z="0" />
+              <point x="2.4" y="0" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="1" y="0" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="0" z="0" />
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="0" z="0" />
+              <point x="2.4" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="0" y="1" z="0" />
             </edge>
             <edge type="line" start_angle="0" end_angle="0">
-              <point x="2.6" y="10" z="0" />
+              <point x="2.4" y="10" z="0" />
               <point x="0" y="10" z="0" />
               <normal x="0" y="0" z="1" />
               <x_axis x="-1" y="0" z="0" />
@@ -1984,10 +2176,10 @@
           </contour>
         </region>
         <rigidity detach="">
-          <motions x_neg="5000" x_pos="5000" y_neg="5000" y_pos="5000" z_neg="10000" z_pos="0" />
+          <motions x_neg="6086.398096984107" x_pos="6086.398096984107" y_neg="6086.398096984107" y_pos="6086.398096984107" z_neg="10000" z_pos="0" />
         </rigidity>
         <local_system>
-          <local_pos x="1.3" y="5" z="0" />
+          <local_pos x="1.2" y="5" z="0" />
           <local_x x="1" y="0" z="0" />
           <local_y x="0" y="1" z="0" />
         </local_system>
@@ -1997,7 +2189,7 @@
   </entities>
   <sections />
   <materials>
-    <material last_change="2025-01-31T21:13:58.721" guid="d416347c-2f0f-45e6-b22c-9d9c36b079ec" action="modified" standard="EC" country="S" name="C35/45">
+    <material last_change="2025-02-20T14:55:23.571" guid="febaff8e-d2ef-471c-89e2-3f18c578c010" action="modified" standard="EC" country="S" name="C35/45">
       <concrete mass="2.54842" E_0="0" E_1="0" E_2="0" nu_0="0" nu_1="0" nu_2="0" alfa_0="0" alfa_1="0" alfa_2="0" G_0="0" G_1="0" G_2="0" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="0" Fcd_1="29.1666666666667" Fctd_0="0" Fctd_1="1.83333333333333" Ecd_0="0" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="1.6435" creep_slf="1.6435" creep_slc="1.6435" shrinkage="6.25E-05" nu="0.2" alfa="0.00001">
         <plastic_analysis_data>
           <U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true" />
@@ -2007,8 +2199,8 @@
         </plastic_analysis_data>
       </concrete>
     </material>
-    <material last_change="2025-01-31T21:13:58.721" guid="45ee6fcf-308d-4392-9586-7673219407d0" action="modified" standard="EC" country="S" name="C35/45">
-      <concrete mass="2.54842" E_0="0" E_1="0" E_2="0" nu_0="0" nu_1="0" nu_2="0" alfa_0="0" alfa_1="0" alfa_2="0" G_0="0" G_1="0" G_2="0" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="0" Fcd_1="29.1666666666667" Fctd_0="0" Fctd_1="1.83333333333333" Ecd_0="0" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="2.0238" creep_slf="2.0238" creep_slc="2.0238" shrinkage="0.00024258" nu="0.2" alfa="0.00001">
+    <material last_change="2025-02-20T14:55:23.571" guid="8dbd4ca1-41d8-4885-b7b9-02e2415d5ee4" action="modified" standard="EC" country="S" name="C35/45">
+      <concrete mass="2.54842" E_0="0" E_1="0" E_2="0" nu_0="0" nu_1="0" nu_2="0" alfa_0="0" alfa_1="0" alfa_2="0" G_0="0" G_1="0" G_2="0" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="0" Fcd_1="29.1666666666667" Fctd_0="0" Fctd_1="1.83333333333333" Ecd_0="0" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="2.1179" creep_slf="2.1179" creep_slc="2.1179" shrinkage="0.00026921" nu="0.2" alfa="0.00001">
         <plastic_analysis_data>
           <U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true" />
           <Sq elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true" />
@@ -2017,7 +2209,7 @@
         </plastic_analysis_data>
       </concrete>
     </material>
-    <material last_change="2025-01-31T21:13:58.720" guid="ededc26a-9dbe-49b6-8c40-c4ce27923541" action="modified" standard="EC" country="S" name="C35/45NoMass">
+    <material last_change="2025-02-20T14:55:23.571" guid="2dc3e1a8-ba26-418b-8625-3347c195a276" action="modified" standard="EC" country="S" name="C35/45NoMass">
       <concrete mass="0" E_0="0" E_1="0" E_2="0" nu_0="0" nu_1="0" nu_2="0" alfa_0="0" alfa_1="0" alfa_2="0" G_0="0" G_1="0" G_2="0" Fck="35" Fck_cube="45" Fctk="2.2" Fctm="3.2" Ecm="34000" gammaC_0="1.5" gammaC_1="1.2" gammaCE="1.2" gammaS_0="1.15" gammaS_1="1.15" alfaCc="1" alfaCt="1" Fcd_0="0" Fcd_1="29.1666666666667" Fctd_0="0" Fctd_1="1.83333333333333" Ecd_0="0" Ecd_1="28333.3333333333" Epsc2="0.002" Epscu2="0.0035" Epsc3="0.00175" Epscu3="0.0035" environment="0" creep="0" creep_sls="0" creep_slf="0" creep_slc="0" shrinkage="0" nu="0.2" alfa="0.00001">
         <plastic_analysis_data>
           <U elasto_plastic_behaviour="false" plastic_hardening="true" concrete_crushing="true" concrete_crushing_option="Prager" tension_strength="true" tension_stiffening="true" tension_stiffening_option="Hinton" tension_stiffening_param="0.5" reduced_compression_strength="true" reduced_compression_strength_option="Vecchio 1" reduced_compression_strength_param="0.55" reduced_transverse_shear_stiffnes="false" ultimate_strain="true" />
@@ -2029,7 +2221,7 @@
     </material>
   </materials>
   <reinforcing_materials>
-    <material last_change="2025-01-31T21:13:58.780" guid="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" action="modified" standard="EC" country="S" name="B500B">
+    <material last_change="2025-02-20T14:55:23.572" guid="5bedc000-5b48-4c84-9bf1-aaa7eac4411e" action="modified" standard="EC" country="S" name="B500B">
       <reinforcing_steel fyk="500" Es="200000" Epsilon_uk="0.05" Epsilon_ud="0.045" k="1.08" />
     </material>
   </reinforcing_materials>

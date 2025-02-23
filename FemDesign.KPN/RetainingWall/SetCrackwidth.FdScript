@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fdscript.xsd">
+  <!-- SCRIPT HEADER  ==================================================================================  -->
+  <fdscriptheader>
+    <title>FEM-Design Test script</title>
+    <version>2300</version>
+    <module>SFRAME</module>
+    <!-- log file where warnings from calculation and other interesting entries may appear -->
+    <logfile>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\SetCrackwidth.log</logfile>
+  </fdscriptheader>
+
+	<!-- SCRIPT	CONFIGURATIONS  ==================================================================================  -->
+  	<!-- EUROCODE CALCULATION PARAMETERS CONCRETE SHELL -->
+  	<!-- Face_0 = UK	Face_1 = OK -->
+  	<!-- BPL -->
+
+	<cmdopen command="; CXL CS2SHELL OPEN">
+	    <filename>C:\Users\kpn\VS local\FemDesign.KPN\RetainingWall\model.struxml</filename>
+	</cmdopen>
+	  
+	<cmdconfig command="$ MODULECOM APPLYCFG">
+  		<CONFIG face_0_rCwLimit="0.25" face_1_rCwLimit="0.30" type="ECCALCPARAMSHELLRC">
+			<GUID>A951B736-3394-4FE4-B38F-D17F1161EB3A</GUID> 
+  		</CONFIG>
+	</cmdconfig>
+  		<!-- MUR -->
+	<cmdconfig command="$ MODULECOM APPLYCFG">
+		<CONFIG face_0_rCwLimit="0.35" face_1_rCwLimit="0.40" type="ECCALCPARAMSHELLRC">
+  			<GUID>F42D2623-FB17-4F39-9A21-EDDA24944298</GUID>
+  		</CONFIG>
+	</cmdconfig>
+	<!-- BPLMUR -->
+	<cmdconfig command="$ MODULECOM APPLYCFG">
+		<CONFIG face_0_rCwLimit="0.45" face_1_rCwLimit="0.50" type="ECCALCPARAMSHELLRC">
+			<GUID>2E290437-E86A-4E36-AF7D-ACDE6A6146C8</GUID>
+		</CONFIG>
+	</cmdconfig>
+
+  <!-- END SESSION 	===================================================================================  -->
+</fdscript>
